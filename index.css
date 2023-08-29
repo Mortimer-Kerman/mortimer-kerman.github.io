@@ -16,13 +16,15 @@ body {
 }
 
 .content {
-	border-radius: 10px;
 	background-color: #1e1e1e;
 	padding: 20px;
 	margin-top: 30vh;
-	margin-left: 5vh;
-	margin-right: 5vh;
-	margin-bottom: 10vh;
+	@media (hover: hover) and (pointer: fine) {
+		border-radius: 10px;
+		margin-left: 5vh;
+		margin-right: 5vh;
+		margin-bottom: 10vh;
+	}
 	width: 100%;
 }
 
