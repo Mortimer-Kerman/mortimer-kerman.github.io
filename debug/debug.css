@@ -1,35 +1,35 @@
 .screen {
     @media not screen {
-        visibility: hidden;
+        display: none;
     }
 }
 
 .hover-hover {
     @media not (hover: hover) {
-        visibility: hidden;
+        display: none;
     }
 }
 
 .hover-none {
     @media not (hover: none) {
-        visibility: hidden;
+        display: none;
     }
 }
 
 .pointer-none {
     @media not (pointer: none) {
-        visibility: hidden;
+        display: none;
     }
 }
 
 .pointer-coarse {
     @media not (pointer: coarse) {
-        visibility: hidden;
+        display: none;
     }
 }
 
 .pointer-fine {
     @media not (pointer: fine) {
-        visibility: hidden;
+        display: none;
     }
 }
