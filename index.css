@@ -84,20 +84,42 @@ h1 {
 
 .image-container img {
     max-width: 100%;
-    height: 225px;
-	width: auto;
-    transition: transform 0.2s;
+	transition: transform 0.2s;
 	border-radius: 5px;
+	@media (pointer: fine) {
+		height: 225px;
+		width: auto;
+	}
+	@media (pointer: coarse) {
+		width: 70%;
+		height: auto;
+	}
 }
 
-.image-container img:not(.videoThumb):hover {
-    transform: scale(1.03);
+@media (pointer: fine) {
+	.image-container img:not(.videoThumb):hover {
+		transform: scale(1.03);
+	}
 }
+@media (pointer: coarse) {
+	.image-container img:not(.videoThumb):hover {
+		transform: scale(0.72);
+	}
+}
+
 
 .playIcon {
 	position: absolute;
-	left: 22%;
 	opacity: 0.7;
+	@media (pointer: fine) {
+		left: 22%;
+	}
+	@media (pointer: coarse) {
+		transform: scale(0.7);
+		left: 15%;
+		bottom: -35%;
+	}
+	
 }
 
 #modal {
@@ -180,7 +202,7 @@ p {
 }
 
 .buddiesPP img {
-	border-radius: 75px;
+	border-radius: 50%;
 }
 
 .buddiesPP img:hover {
