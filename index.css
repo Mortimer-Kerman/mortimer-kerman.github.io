@@ -254,3 +254,47 @@ a:hover {
 	color: #ff4500; 
 	text-decoration: underline; 
 }
+
+.networks-container {
+    display: block;
+	float: right;
+}
+
+.networks-container a svg {
+	margin: 10px;
+	transition: transform 0.2s;
+	@media (pointer: coarse) {
+		margin: 20px;
+	}
+}
+
+@media (pointer: fine) {
+	.github-logo:hover {
+		transform: scale(1.1);
+	}
+	
+	.discord-logo {
+		transform: translateY(4px);
+	}
+
+	.discord-logo:hover  {
+		transform: scale(1.1) translateY(4px);
+	}
+}
+@media (pointer: coarse) {
+	.github-logo {
+		transform: scale(2);
+	}
+
+	.github-logo:hover {
+		transform: scale(2.2);
+	}
+	
+	.discord-logo {
+		transform: scale(2) translateY(4px);
+	}
+
+	.discord-logo:hover  {
+		transform: scale(2.2) translateY(4px);
+	}
+}
