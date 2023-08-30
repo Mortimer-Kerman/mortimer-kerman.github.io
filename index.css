@@ -20,12 +20,13 @@ body {
 	padding: 20px;
 	width: 100%;
 	margin-top: 30vh;
-	@media (pointer: fine) {
-		border-radius: 10px;
-		margin-left: 5vh;
-		margin-right: 5vh;
-		margin-bottom: 10vh;
-	}
+}
+
+[isMobile="false"] .content {
+	border-radius: 10px;
+	margin-left: 5vh;
+	margin-right: 5vh;
+	margin-bottom: 10vh;
 }
 
 .pp_container {
@@ -89,14 +90,16 @@ h1 {
     max-width: 100%;
 	border-radius: 5px;
 	transition: transform 0.2s;
-	@media (pointer: fine) {
-		height: 225px;
-		width: auto;
-	}
-	@media (pointer: coarse) {
-		width: 70%;
-		height: auto;
-	}
+}
+
+[isMobile="false"] .image-container img {
+	height: 225px;
+	width: auto;
+}
+
+[isMobile="true"] .image-container img {
+	width: 70%;
+	height: auto;
 }
 
 .image-container img:not(.videoThumb):not(.playIcon):hover {
@@ -109,19 +112,18 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	opacity: 0.7;
-	@media (pointer: coarse) {
-		transform: translate(-50%, -50%) scale(0.7);
-	}
-	
 }
 
-.playIcon:hover {
-	@media (pointer: fine) {
-		transform: translate(-50%, -50%) scale(1.1);
-	}
-	@media (pointer: coarse) {
-		transform: translate(-50%, -50%) scale(0.75);
-	}
+[isMobile="true"] .playIcon {
+	transform: translate(-50%, -50%) scale(0.7);
+}
+
+[isMobile="false"] .playIcon:hover {
+	transform: translate(-50%, -50%) scale(1.1);
+}
+
+[isMobile="true"] .playIcon:hover {
+	transform: translate(-50%, -50%) scale(0.75);
 }
 
 #modal {
@@ -156,18 +158,18 @@ h1 {
     color: white;
     cursor: pointer;
 	transition: transform 0.2s;
-	@media (pointer: coarse) {
-    	transform: scale(2);
-  	}
 }
 
-.close:hover, .prev:hover, .next:hover  {
-	@media (pointer: fine) {
-    	transform: scale(1.1);
-  	}
-	@media (pointer: coarse) {
-    	transform: scale(2.2);
-  	}
+[isMobile="true"] .close, [isMobile="true"] .prev, [isMobile="true"] .next {
+	transform: scale(2);
+}
+
+[isMobile="false"] .close:hover, [isMobile="false"] .prev:hover, [isMobile="false"] .next:hover {
+	transform: scale(1.1);
+}
+
+[isMobile="true"] .close:hover, [isMobile="true"] .prev:hover, [isMobile="true"] .next:hover {
+	transform: scale(2.2);
 }
 
 .close {
@@ -206,14 +208,15 @@ p {
 
 .buddiesPP {
 	text-align: center;
-	
-	@media (pointer: fine) {
-    	margin: 10px;
-  	}
-	@media (pointer: coarse) {
-    	margin: 30px;
-		min-width: 200px;
-  	}
+}
+
+[isMobile="false"] .buddiesPP {
+	padding: 10px;
+}
+
+[isMobile="true"] .buddiesPP {
+	padding: 30px;
+	min-width: 200px;
 }
 
 .buddiesPP img {
@@ -228,10 +231,11 @@ p {
 .alignedBlocksContainer {
 	width: 100%;
 	border-collapse: collapse;
-	@media (pointer: fine) {
-		display: flex;
-		justify-content: center;
-	}
+}
+
+[isMobile="false"] .alignedBlocksContainer {
+	display: flex;
+	justify-content: center;
 }
 
 .alignedBlock {
@@ -239,9 +243,10 @@ p {
 	text-align: left;
 	padding: 10px;
   	display: inline-block;
-  	@media (pointer: coarse) {
-    	display: block;
-  	}
+}
+
+[isMobile="true"] .alignedBlock {
+	display: block;
 }
 
 a:link {
@@ -265,38 +270,36 @@ a:hover {
 
 .networks-container a svg {
 	transition: transform 0.2s;
-	@media (pointer: fine) {
-		padding: 10px;
-	}
 }
 
-@media (pointer: fine) {
-	.github-logo:hover {
-		transform: scale(1.1);
-	}
-	
-	.discord-logo {
-		transform: translateY(4px);
-	}
-
-	.discord-logo:hover  {
-		transform: scale(1.1) translateY(4px);
-	}
+[isMobile="false"] .networks-container a svg {
+	padding: 10px;
 }
-@media (pointer: coarse) {
-	.github-logo {
-		transform: translateX(-100px) scale(2);
-	}
 
-	.github-logo:hover {
-		transform: translateX(-100px) scale(2.2);
-	}
-	
-	.discord-logo {
-		transform: translateY(4px) translateX(-20px) scale(2);
-	}
+[isMobile="false"] .github-logo:hover {
+	transform: scale(1.1);
+}
 
-	.discord-logo:hover  {
-		transform: translateY(4px) translateX(-20px) scale(2.2);
-	}
+[isMobile="false"] .discord-logo {
+	transform: translateY(4px);
+}
+
+[isMobile="false"] .discord-logo:hover  {
+	transform: scale(1.1) translateY(4px);
+}
+
+[isMobile="true"] .github-logo {
+	transform: translateX(-100px) scale(2);
+}
+
+[isMobile="true"] .github-logo:hover {
+	transform: translateX(-100px) scale(2.2);
+}
+
+[isMobile="true"] .discord-logo {
+	transform: translateY(4px) translateX(-20px) scale(2);
+}
+
+[isMobile="true"] .discord-logo:hover  {
+	transform: translateY(4px) translateX(-20px) scale(2.2);
 }
