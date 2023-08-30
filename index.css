@@ -264,7 +264,7 @@ a:hover {
 	margin: 10px;
 	transition: transform 0.2s;
 	@media (pointer: coarse) {
-		margin: 20px;
+		margin-right: 75px;
 	}
 }
 
