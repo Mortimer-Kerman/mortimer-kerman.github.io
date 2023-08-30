@@ -96,27 +96,29 @@ h1 {
 	}
 }
 
-.image-container img:not(.videoThumb):hover {
-	@media (pointer: fine) {
-		transform: scale(1.03);
-	}
-	@media (pointer: coarse) {
-		transform: scale(0.72);
-	}
+.image-container img:not(.videoThumb):not(.playIcon):hover {
+	transform: scale(1.03);
 }
 
 .playIcon {
 	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	opacity: 0.7;
-	@media (pointer: fine) {
-		left: 22%;
-	}
 	@media (pointer: coarse) {
-		transform: scale(0.7);
-		left: 15%;
-		vertical-align:middle;
+		transform: translate(-50%, -50%) scale(0.7);
 	}
 	
+}
+
+.playIcon:hover {
+	@media (pointer: fine) {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+	@media (pointer: coarse) {
+		transform: translate(-50%, -50%) scale(0.75);
+	}
 }
 
 #modal {
@@ -145,33 +147,39 @@ h1 {
 	width: auto;
 }
 
-.close {
+.close, .prev, .next {
 	position: absolute;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+	transition: transform 0.2s;
+	@media (pointer: coarse) {
+    	transform: scale(2);
+  	}
+}
+
+.close:hover, .prev:hover, .next:hover  {
+	@media (pointer: fine) {
+    	transform: scale(1.1);
+  	}
+	@media (pointer: coarse) {
+    	transform: scale(2.2);
+  	}
+}
+
+.close {
 	top: 20px;
 	right: 30px;
 }
 
 .prev {
-	position: absolute;
 	left: 30px;
 	top: 50%;
 }
 
 .next {
-	position: absolute;
 	right: 30px;
 	top: 50%;
-}
-
-.close, .prev, .next {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-	transition: transform 0.2s;
-}
-
-.close:hover, .prev:hover, .next:hover  {
-    transform: scale(1.1);
 }
 
 #caption {
