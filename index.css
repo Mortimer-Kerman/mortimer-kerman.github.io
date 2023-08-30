@@ -281,25 +281,25 @@ a:hover {
 }
 
 [isMobile="false"] .discord-logo {
-	transform: translateY(4px);
+	transform: translate(0px, 4px);
 }
 
 [isMobile="false"] .discord-logo:hover  {
-	transform: scale(1.1) translateY(4px);
+	transform: translate(0px, 4px) scale(1.1);
 }
 
 [isMobile="true"] .github-logo {
-	transform: translateX(-100px) scale(2);
+	transform: translate(-100px) scale(2);
 }
 
 [isMobile="true"] .github-logo:hover {
-	transform: translateX(-100px) scale(2.2);
+	transform: translate(-100px) scale(2.2);
 }
 
 [isMobile="true"] .discord-logo {
-	transform: translateY(4px) translateX(-20px) scale(2);
+	transform: translate(-20px, 4px) scale(2);
 }
 
 [isMobile="true"] .discord-logo:hover  {
-	transform: translateY(4px) translateX(-20px) scale(2.2);
+	transform: translate(-20px, 4px) scale(2.2);
 }
