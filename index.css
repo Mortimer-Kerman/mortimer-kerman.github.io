@@ -78,8 +78,11 @@ h1 {
     margin: 10px;
     cursor: pointer;
 	text-align: center;
-	position: relative;
 	display: inline-block;
+}
+
+.image-container div {
+	position: relative;
 }
 
 .image-container img {
