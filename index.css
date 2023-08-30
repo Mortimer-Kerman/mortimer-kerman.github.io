@@ -20,7 +20,7 @@ body {
 	padding: 20px;
 	width: 100%;
 	margin-top: 30vh;
-	@media (hover: hover) and (pointer: fine) {
+	@media (pointer: fine) {
 		border-radius: 10px;
 		margin-left: 5vh;
 		margin-right: 5vh;
@@ -191,7 +191,7 @@ p {
 .alignedBlocksContainer {
 	width: 100%;
 	border-collapse: collapse;
-	@media (hover: hover) and (pointer: fine) {
+	@media (pointer: fine) {
 		display: flex;
 		justify-content: center;
 	}
@@ -202,7 +202,7 @@ p {
 	text-align: left;
 	padding: 10px;
   	display: inline-block;
-  	@media only screen and (hover: none) and (pointer: coarse) {
+  	@media (pointer: coarse) {
     	display: block;
   	}
 }
