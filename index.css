@@ -261,10 +261,9 @@ a:hover {
 }
 
 .networks-container a svg {
-	padding: 10px;
 	transition: transform 0.2s;
-	@media (pointer: coarse) {
-		padding-right: 75px;
+	@media (pointer: fine) {
+		padding: 10px;
 	}
 }
 
@@ -283,18 +282,18 @@ a:hover {
 }
 @media (pointer: coarse) {
 	.github-logo {
-		transform: scale(2);
+		transform: translateX(-100px) scale(2);
 	}
 
 	.github-logo:hover {
-		transform: scale(2.2);
+		transform: translateX(-100px) scale(2.2);
 	}
 	
 	.discord-logo {
-		transform: scale(2) translateY(4px);
+		transform: translateY(4px) translateX(-20px) scale(2);
 	}
 
 	.discord-logo:hover  {
-		transform: scale(2.2) translateY(4px);
+		transform: translateY(4px) translateX(-20px) scale(2.2);
 	}
 }
