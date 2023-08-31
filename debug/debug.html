@@ -1,0 +1,11 @@
+<html>
+    <body>
+    </body>
+    <script>
+        const text = document.createElement('h1');
+        text.textContent = "";
+        if (typeof window.orientation !== "undefined") text.textContent += "undefined orientation ";
+        if (navigator.userAgent.indexOf('IEMobile') !== -1) text.textContent += " iemobile";
+        document.body.appendChild(text);
+    </script>
+</html>

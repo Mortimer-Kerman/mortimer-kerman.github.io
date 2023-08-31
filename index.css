@@ -289,11 +289,11 @@ a:hover {
 }
 
 [isMobile="true"] .github-logo {
-	transform: translate(-100px) scale(2);
+	transform: translate(-100px, 0px) scale(2);
 }
 
 [isMobile="true"] .github-logo:hover {
-	transform: translate(-100px) scale(2.2);
+	transform: translate(-100px, 0px) scale(2.2);
 }
 
 [isMobile="true"] .discord-logo {
