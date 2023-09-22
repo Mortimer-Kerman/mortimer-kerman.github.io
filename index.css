@@ -22,11 +22,14 @@ body {
 	margin-top: 30vh;
 }
 
-[isMobile="false"] .content {
-	border-radius: 10px;
-	margin-left: 5vh;
-	margin-right: 5vh;
-	margin-bottom: 10vh;
+@media only screen and (min-width: 1001px)
+{
+	.content {
+		border-radius: 10px;
+		margin-left: 5vh;
+		margin-right: 5vh;
+		margin-bottom: 10vh;
+	}
 }
 
 .pp_container {
@@ -92,14 +95,20 @@ h1 {
 	transition: transform 0.2s;
 }
 
-[isMobile="false"] .image-container img {
-	height: 225px;
-	width: auto;
+@media only screen and (min-width: 1001px)
+{
+	.image-container img {
+		height: 225px;
+		width: auto;
+	}
 }
 
-[isMobile="true"] .image-container img {
-	width: 70%;
-	height: auto;
+@media only screen and (max-width: 1000px)
+{
+	.image-container img {
+		width: 70%;
+		height: auto;
+	}
 }
 
 .image-container img:not(.videoThumb):not(.playIcon):hover {
@@ -114,16 +123,25 @@ h1 {
 	opacity: 0.7;
 }
 
-[isMobile="true"] .playIcon {
-	transform: translate(-50%, -50%) scale(0.7);
+@media only screen and (max-width: 1000px)
+{
+	.playIcon {
+		transform: translate(-50%, -50%) scale(0.7);
+	}
 }
 
-[isMobile="false"] .playIcon:hover {
-	transform: translate(-50%, -50%) scale(1.1);
+@media only screen and (min-width: 1001px)
+{
+	.playIcon:hover {
+		transform: translate(-50%, -50%) scale(1.1);
+	}
 }
 
-[isMobile="true"] .playIcon:hover {
-	transform: translate(-50%, -50%) scale(0.75);
+@media only screen and (max-width: 1000px)
+{
+	.playIcon:hover {
+		transform: translate(-50%, -50%) scale(0.75);
+	}
 }
 
 #modal {
@@ -160,16 +178,25 @@ h1 {
 	transition: transform 0.2s;
 }
 
-[isMobile="true"] .close, [isMobile="true"] .prev, [isMobile="true"] .next {
-	transform: scale(2);
+@media only screen and (max-width: 1000px)
+{
+	.close, .prev, .next {
+		transform: scale(2);
+	}
 }
 
-[isMobile="false"] .close:hover, [isMobile="false"] .prev:hover, [isMobile="false"] .next:hover {
-	transform: scale(1.1);
+@media only screen and (min-width: 1001px)
+{
+	.close:hover, .prev:hover, .next:hover {
+		transform: scale(1.1);
+	}
 }
 
-[isMobile="true"] .close:hover, [isMobile="true"] .prev:hover, [isMobile="true"] .next:hover {
-	transform: scale(2.2);
+@media only screen and (max-width: 1000px)
+{
+	.close:hover, .prev:hover, .next:hover {
+		transform: scale(2.2);
+	}
 }
 
 .close {
@@ -210,13 +237,19 @@ p {
 	text-align: center;
 }
 
-[isMobile="false"] .buddiesPP {
-	padding: 10px;
+@media only screen and (min-width: 1001px)
+{
+	.buddiesPP {
+		padding: 10px;
+	}
 }
 
-[isMobile="true"] .buddiesPP {
-	padding: 30px;
-	min-width: 200px;
+@media only screen and (max-width: 1000px)
+{
+	.buddiesPP {
+		padding: 30px;
+		min-width: 200px;
+	}
 }
 
 .buddiesPP img {
@@ -233,9 +266,12 @@ p {
 	border-collapse: collapse;
 }
 
-[isMobile="false"] .alignedBlocksContainer {
-	display: flex;
-	justify-content: center;
+@media only screen and (min-width: 1001px)
+{
+	.alignedBlocksContainer {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .alignedBlock {
@@ -245,22 +281,29 @@ p {
   	display: inline-block;
 }
 
-[isMobile="true"] .alignedBlock {
-	display: block;
+@media only screen and (max-width: 1000px)
+{
+	.alignedBlock {
+		display: block;
+	}
+}
+
+a {
+  	text-decoration: none;
+  	transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 a:link {
-	color: #007bff;
-	text-decoration: none;
+  	color: #007bff;
 }
 
 a:visited {
-	color: #8a2be2;
+  	color: #8a2be2;
 }
-  
+
 a:hover {
-	color: #ff4500; 
-	text-decoration: underline; 
+  	color: #ff4500;
+  	text-decoration: underline;
 }
 
 .networks-container {
@@ -272,34 +315,40 @@ a:hover {
 	transition: transform 0.2s;
 }
 
-[isMobile="false"] .networks-container a svg {
-	padding: 10px;
+@media only screen and (min-width: 1001px)
+{
+	.networks-container a svg {
+		padding: 10px;
+	}
+	
+	.github-logo:hover {
+		transform: scale(1.1);
+	}
+	
+	.discord-logo {
+		transform: translate(0px, 4px);
+	}
+	
+	.discord-logo:hover  {
+		transform: translate(0px, 4px) scale(1.1);
+	}
 }
 
-[isMobile="false"] .github-logo:hover {
-	transform: scale(1.1);
-}
-
-[isMobile="false"] .discord-logo {
-	transform: translate(0px, 4px);
-}
-
-[isMobile="false"] .discord-logo:hover  {
-	transform: translate(0px, 4px) scale(1.1);
-}
-
-[isMobile="true"] .github-logo {
-	transform: translate(-100px, 0px) scale(2);
-}
-
-[isMobile="true"] .github-logo:hover {
-	transform: translate(-100px, 0px) scale(2.2);
-}
-
-[isMobile="true"] .discord-logo {
-	transform: translate(-20px, 4px) scale(2);
-}
-
-[isMobile="true"] .discord-logo:hover  {
-	transform: translate(-20px, 4px) scale(2.2);
+@media only screen and (max-width: 1000px)
+{
+	.github-logo {
+		transform: translate(-100px, 0px) scale(2);
+	}
+	
+	.github-logo:hover {
+		transform: translate(-100px, 0px) scale(2.2);
+	}
+	
+	.discord-logo {
+		transform: translate(-20px, 4px) scale(2);
+	}
+	
+	.discord-logo:hover  {
+		transform: translate(-20px, 4px) scale(2.2);
+	}
 }
