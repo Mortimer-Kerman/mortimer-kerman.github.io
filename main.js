@@ -31,7 +31,7 @@ function displayImage(index) {
     {
         modalImage.style.display = ''
         modalVideo.style.display = 'none';
-        modalImage.src = image.src.replace("thumbs/","");
+        modalImage.src = image.src;
         modalVideo.src = '';
     }
 
