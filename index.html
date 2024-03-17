@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html isMobile="false">
+<html>
 	<head>
 		<meta charset="utf-8"/>
 		<title>Mortimer Kerman's webpage</title>
-		<meta name="author" content="Mortmer Kerman"/>
+		<meta name="author" content="Mortimer Kerman"/>
 		<meta name="description" content="A showcase web page for my developer projects"/>
 		<meta property="og:url" content="https://mortimer-kerman.github.io/"/>
 		<meta property="og:title" content="Mortimer Kerman's webpage"/>
@@ -21,15 +21,19 @@
 					<img class="pp" src="mortimerK.jpg" alt="mk" width="200px"/>
 				</div>
 
-				<h1>
+				<h1 loc="me">
 					Me
-					<div class="networks-container">
+					<div class="navbuttons-container">
+						<select id="language" onselect="">
+							<option value="en">🇬🇧</option>
+							<option value="fr">🇫🇷</option>
+						</select>
 						<a href="https://github.com/Mortimer-Kerman"><div class="github-logo" width="30px" height="30px"></div></a>
 						<a href="https://discord.com/users/653635837006708756"><div class="discord-logo" width="30px" height="30px"></div></a>
 					</div>
 				</h1>
 				<div class="title-bar"></div>
-				<p>
+				<p loc="maindesc">
 					Hi, I'm Mortimer Kerman.<br/>
 					French student, dev on my free time, I am currently trying to survive in my prep class.<br/>
 					Mostly backend, I spend my time on multiple projects.<br/>
@@ -39,22 +43,22 @@
 				</p>
 				<div class="alignedBlocksContainer">
 					<div class="alignedBlock">
-						<h3>Languages that my brain can process:</h3>
+						<h3 loc="languages.process">Languages that my brain can process:</h3>
 						<ul>
 							<li>C</li>
 							<li>C#</li>
 							<li>Java</li>
 							<li>Python</li>
-							<li>HTML/CSS (yes not really languages)</li>
+							<li loc="languages.html">HTML/CSS (yes not really languages)</li>
 							<li>JavaScript</li>
-							<li>Markdown (No this page isn't in markdown)</li>
+							<li loc="languages.markdown">Markdown (No this page isn't in markdown)</li>
 						</ul>
 					</div>
 					<div class="alignedBlock">
-						<h3>Tools that I bothered myself to use:</h3>
+						<h3 loc="languages.toolsused">Tools that I bothered myself to use:</h3>
 						<ul>
 							<li>Visual Studio</li>
-							<li>VSCode (its uncanny brother)</li>
+							<li loc="languages.vscode">VSCode (its uncanny brother)</li>
 							<li>IntelliJ</li>
 							<li>Spyder</li>
 							<li>Pygame</li>
@@ -62,23 +66,23 @@
 							<li>Minecraft Forge</li>
 							<li>.NET</li>
 							<li>Winforms</li>
-							<li>Github (wow so surprising)</li>
-							<li>Too many libraries I guess</li>
-							<li>A lot of documentation</li>
+							<li loc="languages.github">Github (wow so surprising)</li>
+							<li loc="languages.libs">Too many libraries I guess</li>
+							<li loc="languages.doc">A lot of documentation</li>
 						</ul>
 					</div>
 					<div class="alignedBlock">
-						<h3>Languages where I know how to print hello world:</h3>
+						<h3 loc="languages.helloworld">Languages where I know how to print hello world:</h3>
 						<ul>
 							<li>OCaml</li>
 							<li>C++</li>
 							<li>PHP</li>
-							<li>HLSL (yes there is no console in HLSL)</li>
+							<li loc="languages.hlsl">HLSL (yes there is no console in HLSL)</li>
 						</ul>
 					</div>
 				</div>
 
-				<h1>My projects</h1>
+				<h1 loc="projects">My projects</h1>
 				<div class="title-bar"></div>
 
 				<h2>Cosmos Wanderer</h2>
@@ -86,152 +90,152 @@
 					<img src="projects/cosmoswanderer.jpg" alt="Cosmos Wanderer" loading="lazy">
 					<div class="caption">Cosmos Wanderer</div>
 				</div>
-				<p>
+				<p loc="cosmoswanderer.desc">
 					Cosmos Wanderer is a mobile space shooter game under developpement.<br/>
 					You can take the control of a space ship and travel through asteroids, and many other obstacles, such as enemy ships, debris, homing missiles...
 				</p>
 				<div class="image-container">
 					<img src="projects/lowaction.jpg" alt="low action" loading="lazy">
-					<div class="caption">Low action</div>
+					<div class="caption" loc="cosmoswanderer.lowaction">Low action</div>
 				</div>
 				<div class="image-container">
 					<img src="projects/highaction.jpg" alt="high action" loading="lazy">
-					<div class="caption">High action</div>
+					<div class="caption" loc="cosmoswanderer.highaction">High action</div>
 				</div>
-				<p>
+				<p loc="cosmoswanderer.desc2">
 					You can also upgrade your ship, get new skins, meet achievements...<br/>
-					It will be disponible on the Google Play Store for free.
+					It will be available on the Google Play Store for free.
 				</p>
 				<div class="image-container">
 					<img src="projects/maxaction.jpg" alt="max action" loading="lazy">
-					<div class="caption">MAX ACTION !</div>
+					<div class="caption" loc="cosmoswanderer.maxaction">MAX ACTION !</div>
 				</div>
-				<p>
+				<p loc="cosmoswanderer.carlcasey">
 					Musics by <a href="https://youtube.com/@WhiteBatAudio">Carl Casey @White Bat Audio</a>
 				</p>
 				<div class="small-title-bar"></div>
 				<h2>SpaceFactory</h2>
-				<p>
+				<p loc="spacefactory">
 					SpaceFactory was a group project made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.<br/>
 					Made in python with Pygame, it's a factory game in space, where you can build your own factory to extract and refine resources.<br/>
 				</p>
 				<div class="image-container">
 					<img src="projects/spacefactory.jpg" alt="SpaceFactory" loading="lazy">
-					<div class="caption">A normal day in SpaceFactory</div>
+					<div class="caption" loc="spacefactory.normalday">A normal day in SpaceFactory</div>
 				</div>
 				<div class="image-container">
 					<img src="projects/buildmenu.jpg" alt="build menu" loading="lazy">
-					<div class="caption">The build menu</div>
+					<div class="caption" loc="spacefactory.buildmenu">The build menu</div>
 				</div>
 				<div class="image-container">
 					<img src="projects/opportunities.jpg" alt="opportunities" loading="lazy">
-					<div class="caption">Opportunities menu</div>
+					<div class="caption" loc="spacefactory.opportunities">Opportunities menu</div>
 				</div>
-				<p>
+				<p loc="spacefactory.bestproject">
 					SpaceFactory was elected as the best <i>Terminale</i> project of the Brittany region.<br/>
 				</p>
-				<p><a href="https://github.com/Mortimer-Kerman/SpaceFactory">Github repo</a></p>
-				<p><a href="https://trophees-nsi.fr/">Trophées NSI official website</a></p>
+				<p><a href="https://github.com/Mortimer-Kerman/SpaceFactory" loc="spacefactory.repo">Github repo</a></p>
+				<p><a href="https://trophees-nsi.fr/" loc="spacefactory.website">Trophées NSI official website</a></p>
 
 				<div class="small-title-bar"></div>
 				<h2>Planetar</h2>
-				<p>
+				<p loc="planetar.desc">
 					Planetar is a small WIP planet map generation tool.<br/>
 					Made for Windows with the .NET framework, it allows you to generate planet maps in real time.
 				</p>
 				<div class="image-container">
 					<img src="projects/planetar.jpg" alt="Planetar" loading="lazy">
-					<div class="caption">Planetar, the screenshot</div>
+					<div class="caption" loc="planetar.screenshot">Planetar, the screenshot</div>
 				</div>
 				<div class="image-container">
 					<img src="projects/planetarmaps.jpg" alt="Planetar" loading="lazy">
-					<div class="caption">Height and humidity maps</div>
+					<div class="caption" loc="planetar.maps">Height and humidity maps</div>
 				</div>
-				<p>
+				<p loc="planetar.desc2">
 					You can parameter a lot of aspects, like sea level, vegetation color, mountains amount...
 					<br/><br/>
 					Comes with a 3D view of the planet.
 				</p>
 				<div class="image-container">
 					<img src="projects/exportedmap.jpg" alt="Exported map" loading="lazy">
-					<div class="caption">An example of exported map</div>
+					<div class="caption" loc="planetar.exported">An example of exported map</div>
 				</div>
-				<h1>Random stuff gallery</h1>
+				<h1 loc="gallery">Random stuff gallery</h1>
 				<div class="title-bar"></div>
 				<section class="gallery">
 					<div class="image-container">
 						<img src="randomScreens/pcwlp.jpg" alt="PC wallpaper" loading="lazy">
-						<div class="caption">My PC wallpaper (I love SpaceEngine)</div>
+						<div class="caption" loc="gallery.wallpaper">My PC wallpaper (I love SpaceEngine)</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/reason.jpg" alt="Reason why" loading="lazy">
-						<div class="caption">The reason why my UI has flaws</div>
+						<div class="caption" loc="gallery.reason">The reason why my UI has flaws</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/stellarsystem.jpg" alt="Stellar system" loading="lazy">
-						<div class="caption">That one time I played with stellar system generation</div>
+						<div class="caption" loc="gallery.stellarsystem">That one time I played with stellar system generation</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/mountainsgenration.jpg" alt="Mountains generation" loading="lazy">
-						<div class="caption">Once, I generated procedural mountains</div>
+						<div class="caption" loc="gallery.mountains">Once, I generated procedural mountains</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/bobbythebot.jpg" alt="Bobby the robot" loading="lazy">
-						<div class="caption">One day I made a cute lil robot for a 3D puzzle game</div>
+						<div class="caption" loc="gallery.robot">One day I made a cute lil robot for a 3D puzzle game</div>
 					</div>
 					<div class="image-container">
 						<div>
 							<img class="videoThumb" src="randomScreens/videothumbs/tootempting.webm.jpg" loading="lazy">
 							<img class="playIcon" src="playIcon.png">
 						</div>
-						<div class="caption">That was too tempting</div>
+						<div class="caption" loc="gallery.tootempting">That was too tempting</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/humanproof.jpg" alt="Proof of humanity" loading="lazy">
-						<div class="caption">Proof that I'm still a human</div>
+						<div class="caption" loc="gallery.human">Proof that I'm still a human</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/lods.jpg" alt="LODs" loading="lazy">
-						<div class="caption">Mountainous LODs</div>
+						<div class="caption" loc="gallery.lod">Mountainous LODs</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/globama.jpg" alt="Globama" loading="lazy">
-						<div class="caption">Globama in OpenGL</div>
+						<div class="caption" loc="gallery.globama">Globama in OpenGL</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/generatedcrystals.jpg" alt="Generated crystals" loading="lazy">
-						<div class="caption">Crystal generation in Minecraft</div>
+						<div class="caption" loc="gallery.crystals">Crystal generation in Minecraft</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/platform.gif" alt="Flying platform" loading="lazy">
-						<div class="caption">A tiny flying platform for my robot</div>
+						<div class="caption" loc="gallery.platform">A tiny flying platform for my robot</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/minecraftblackhole.jpg" alt="Minecraft black hole" loading="lazy">
-						<div class="caption">A black hole, modded into Minecraft</div>
+						<div class="caption" loc="gallery.blackhole">A black hole, modded into Minecraft</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/totally2d.jpg" alt="Totally 2D" loading="lazy">
-						<div class="caption">This is a 2D planet. YES.</div>
+						<div class="caption" loc="gallery.totally2d">This is a 2D planet. YES.</div>
 					</div>
 					<div class="image-container">
 						<img src="randomScreens/mars.jpg" alt="MARS website" loading="lazy">
-						<div class="caption">Once I made a mars colonization future website for school</div>
+						<div class="caption" loc="gallery.mars">Once I made a mars colonization future website for school</div>
 					</div>
 				</section>
 				
-				<h1>My dev buddies</h1>
+				<h1 loc="buddies">My dev buddies</h1>
 				<div class="title-bar"></div>
 				<section class="gallery">
 					<div class="buddiesPP">
 						<p>Frablock</p>
 						<a href="https://github.com/Frablock"><img src="buddies/frablock.jpg" width="150px"></a>
-						<div>Communist</div>
+						<div loc="buddies.frablock">Communist</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Ertalite</p>
 						<a href="https://github.com/ertalite"><img src="buddies/ertalite.jpg" width="150px"></a>
-						<div>Pushing rocks</div>
+						<div loc="buddies.ertalite">Pushing rocks</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Jordi</p>
@@ -246,12 +250,12 @@
 					<div class="buddiesPP">
 						<p>Crafto</p>
 						<a href="https://instagram.com/malidevgames/"><img src="buddies/crafto.jpg" width="150px"></a>
-						<div>Box stacker</div>
+						<div loc="buddies.crafto">Box stacker</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Titanodelta</p>
 						<a href="https://instagram.com/h.p.t.d.entertainment/"><img src="buddies/titanodelta.jpg" width="150px"></a>
-						<div>Warlord</div>
+						<div loc="buddies.titanodelta">Warlord</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Anatom</p>
@@ -261,7 +265,7 @@
 					<div class="buddiesPP">
 						<p>Enigma</p>
 						<a href="https://github.com/Checkmate6659"><img src="buddies/enigma.jpg" width="150px"></a>
-						<div>Thinking in 5D</div>
+						<div loc="buddies.enigma">Thinking in 5D</div>
 					</div>
 				</section>
 			</div>
@@ -276,4 +280,5 @@
 		</div>
 	</body>
 	<script src="main.js"></script>
+	<script src="loc.js"></script>
 </html>

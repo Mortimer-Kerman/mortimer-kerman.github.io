@@ -99,10 +99,3 @@ document.querySelectorAll('a').forEach(link => {
     link.setAttribute('target', '_blank');
     link.setAttribute('rel', 'noopener noreferrer');
 });
-
-/*
-function isMobile() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-}
-
-document.querySelector('html').setAttribute('isMobile', isMobile());*/

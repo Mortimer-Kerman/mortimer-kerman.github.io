@@ -306,18 +306,31 @@ a:hover {
   	text-decoration: underline;
 }
 
-.networks-container {
+.navbuttons-container {
     display: block;
 	float: right;
 }
 
-.networks-container a svg {
+.navbuttons-container a svg {
 	transition: transform 0.2s;
+}
+
+select {
+    width: 60px;
+    height: 40px;
+	border-radius: 10px;
+    border: solid #363636;
+    background-color: #1e1e1e;
+    font-size: 20px;
+    color: white;
+}
+select:hover {
+    background-color: #575757;
 }
 
 @media only screen and (min-width: 1001px)
 {
-	.networks-container a svg {
+	.navbuttons-container a svg {
 		padding: 10px;
 	}
 	
@@ -331,6 +344,10 @@ a:hover {
 	
 	.discord-logo:hover  {
 		transform: translate(0px, 4px) scale(1.1);
+	}
+
+	select {
+		transform: translate(-5px, -17px);
 	}
 }
 
@@ -350,5 +367,9 @@ a:hover {
 	
 	.discord-logo:hover  {
 		transform: translate(-20px, 4px) scale(2.2);
+	}
+
+	select {
+		transform: translate(-175px, -7px) scale(1.3);
 	}
 }
