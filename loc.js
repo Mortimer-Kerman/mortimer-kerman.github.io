@@ -141,7 +141,7 @@ Fait en python avec Pygame, c'est un factory game dans l'espace, où vous pouvez
 "spacefactory.normalday": `Un jour ordinaire sur SpaceFactory`,
 "spacefactory.buildmenu": `Le menu de construction`,
 "spacefactory.opportunities": `Le menu d'opportunités`,
-"spacefactory.bestproject": `SpaceFactory a été élu meilleur projet Terminale de la région Bretagne`,
+"spacefactory.bestproject": `SpaceFactory a été élu meilleur projet Terminale de la région Bretagne.`,
 "spacefactory.repo": `Dépôt Github`,
 "spacefactory.website": `Site officiel des Trophées NSI`,
 
@@ -156,7 +156,7 @@ Fait pour Windows avec le framework .NET, il vous permet de générer des cartes
 Livré avec une vue 3D de la planète.`,
 "planetar.exported": `Un exemple de carte exportée`,
 
-"gallery": `Galerie de trucs aléatoire`,
+"gallery": `Galerie de trucs aléatoires`,
 "gallery.wallpaper": `Mon fond d'écran de PC (J'adore SpaceEngine)`,
 "gallery.reason": `La raison pour laquelle mon UI fait n'importe quoi`,
 "gallery.stellarsystem": `La fois où j'ai joué avec de la génération de systèmes stellaires`,
