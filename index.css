@@ -309,6 +309,7 @@ a:hover {
 .navbuttons-container {
     display: block;
 	float: right;
+	transform: translate(0px, -40px);
 }
 
 .navbuttons-container a svg {
