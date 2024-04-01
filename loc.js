@@ -1,11 +1,12 @@
 
-const languageSelector = document.getElementById('language');
+const languageSelector = document.getElementById("language");
+const languageDisplay = document.getElementById("language-display");
 
 var language = (navigator.language || navigator.userLanguage).toLowerCase();
 
 if(language.startsWith("fr")) languageSelector.value = "fr";
 
-languageSelector.addEventListener('change', function()
+languageSelector.addEventListener("change", function()
 {
     language = languageSelector.value;
     UpdateLanguage();
@@ -13,10 +14,13 @@ languageSelector.addEventListener('change', function()
 
 function UpdateLanguage()
 {
-    document.querySelectorAll('[loc]').forEach(function(element)
+    if (language.startsWith("fr")) languageDisplay.textContent = "🇫🇷";
+    else languageDisplay.textContent = "🇬🇧";
+    
+    document.querySelectorAll("[loc]").forEach(function(element)
     {
-        if (language.startsWith("fr")) element.innerHTML = frDict[element.getAttribute('loc')];
-        else element.innerHTML = enDict[element.getAttribute('loc')];
+        if (language.startsWith("fr")) element.innerHTML = frDict[element.getAttribute("loc")];
+        else element.innerHTML = enDict[element.getAttribute("loc")];
     });
 }
 

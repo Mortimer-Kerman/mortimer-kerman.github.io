@@ -316,17 +316,38 @@ a:hover {
 	transition: transform 0.2s;
 }
 
+.language-select {
+	position: fixed;
+}
+
 select {
     width: 60px;
     height: 40px;
 	border-radius: 10px;
     border: solid #363636;
     background-color: #1e1e1e;
-    font-size: 20px;
-    color: white;
+	font-size: 20px;
+	text-indent: -1000px;
+
+	appearance: none;
+	background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat: no-repeat;
+	background-position: right 0.5rem top 50%;
+	background-size: 0.65rem auto;
 }
+
 select:hover {
     background-color: #575757;
+}
+
+option {
+	color: #ffffff;
+}
+
+.language-select span {
+	font-weight: normal;
+	font-size: 20px;
+	user-select: none;
+	pointer-events: none;
 }
 
 @media only screen and (min-width: 1001px)
@@ -347,8 +368,13 @@ select:hover {
 		transform: translate(0px, 4px) scale(1.1);
 	}
 
-	select {
-		transform: translate(-5px, -17px);
+	.language-select {
+		transform: translate(-70px, 3px);
+	}
+
+	.language-select span {
+		position: relative;
+		left: -62px;
 	}
 }
 
@@ -370,7 +396,13 @@ select:hover {
 		transform: translate(-20px, 4px) scale(2.2);
 	}
 
-	select {
-		transform: translate(-175px, -7px) scale(1.3);
+	.language-select {
+		transform: translate(-250px, -5px) scale(1.3);
+	}
+
+	.language-select span {
+		position: relative;
+		left: 7px;
+		top: -42px;
 	}
 }
