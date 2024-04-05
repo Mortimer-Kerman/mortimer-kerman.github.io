@@ -4,6 +4,7 @@ body {
 }
 
 .fixed-background {
+	background-color: black;
 	background-image: url('background-image.webp');
 	background-size: cover;
 	background-attachment: fixed;
