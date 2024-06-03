@@ -102,6 +102,7 @@ Comes with a 3D view of the planet.`,
 "buddies.crafto": `Box stacker`,
 "buddies.titanodelta": `Warlord`,
 "buddies.enigma": `Thinking in 5D`,
+"buddies.nyanmaths": `Hippie in flip flops`,
 
 "videoplayer": `Your navigator does not support video playing`
 }
@@ -184,6 +185,7 @@ Livré avec une vue 3D de la planète.`,
 "buddies.crafto": `Empile des caisses`,
 "buddies.titanodelta": `Seigneur de guerre`,
 "buddies.enigma": `Pense en 5D`,
+"buddies.nyanmaths": `Hippie en claquettes`,
 
 "videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`
 }
