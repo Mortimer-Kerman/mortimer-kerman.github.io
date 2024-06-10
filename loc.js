@@ -19,9 +19,15 @@ function UpdateLanguage()
     
     document.querySelectorAll("[loc]").forEach(function(element)
     {
-        if (language.startsWith("fr")) element.innerHTML = frDict[element.getAttribute("loc")];
-        else element.innerHTML = enDict[element.getAttribute("loc")];
+        element.innerHTML = getLoc(element.getAttribute("loc"), element.innerHTML);
     });
+}
+
+function getLoc(locKey, defaultLoc)
+{
+    if (language.startsWith("fr") && frDict[locKey] != undefined) return frDict[locKey];
+    else if (enDict[locKey] != undefined) return enDict[locKey];
+    return defaultLoc;
 }
 
 var enDict = {
@@ -33,6 +39,7 @@ Mostly backend, I spend my time on multiple projects.<br/>
 I'm interested in tech, space, and terrain generation.
 <br/><br/>
 Perlin noise addict.`,
+"copiedUsername": `Copied Discord username to clipboard: mortimer_kerman`,
 
 "languages.process": `Languages that my brain can process:`,
 "languages.html": `HTML/CSS (yes not really languages)`,
@@ -116,6 +123,7 @@ Principalement backend, je passe mon temps sur plusieurs projets.<br/>
 Je m'intéresse à la technologie, à l'espace et à la génération de terrain.
 <br/><br/>
 Addict au bruit de Perlin.`,
+"copiedUsername": `Nom d'utilisateur Discord copié dans le presse-papier: mortimer_kerman`,
 
 "languages.process": `Langages que mon cerveau peut gérer:`,
 "languages.html": `HTML/CSS (oui c'est pas vraiment des langages)`,

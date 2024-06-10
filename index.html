@@ -29,8 +29,9 @@
 							</select>
 							<span id="language-display">🇬🇧</span>
 						</div>
-						<a href="https://github.com/Mortimer-Kerman"><div class="github-logo" width="30px" height="30px"></div></a>
-						<a href="https://discord.com/users/653635837006708756"><div class="discord-logo" width="30px" height="30px"></div></a>
+						<a href="https://github.com/Mortimer-Kerman" title="Mortimer-Kerman"><div class="github-logo" width="30px" height="30px"></div></a>
+						<a title="mortimer_kerman" onclick="copyDiscordID()"><div class="discord-logo" width="30px" height="30px"></div></a>
+						<a href="https://reddit.com/u/Mortimer_Kerman" title="Mortimer_Kerman"><div class="reddit-logo" width="30px" height="30px"></div></a>
 					</div>
 				</h1>
 				<div class="title-bar"></div>
@@ -198,7 +199,9 @@
 					<div class="image-container">
 						<div>
 							<img class="videoThumb" src="randomScreens/videothumbs/tootempting.webm.jpg" loading="lazy">
-							<img class="playIcon" src="playIcon.png">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459" width="100px" height="100px" class="playIcon">
+								<path d="M229.5,0C102.751,0,0,102.751,0,229.5S102.751,459,229.5,459S459,356.249,459,229.5S356.249,0,229.5,0z M310.292,239.651 l-111.764,76.084c-3.761,2.56-8.63,2.831-12.652,0.704c-4.022-2.128-6.538-6.305-6.538-10.855V153.416 c0-4.55,2.516-8.727,6.538-10.855c4.022-2.127,8.891-1.857,12.652,0.704l111.764,76.084c3.359,2.287,5.37,6.087,5.37,10.151 C315.662,233.564,313.652,237.364,310.292,239.651z"/>
+							</svg>
 						</div>
 						<div class="caption" loc="gallery.tootempting">That was too tempting</div>
 					</div>
@@ -291,13 +294,14 @@
 			</div>
 		</div>
 		<div id="modal">
-			<span class="close">&times;</span>
-			<span class="prev">&#10094;</span>
+			<span class="close"></span>
+			<span class="prev"></span>
 			<img id="modal-image">
 			<video class="media" id="modal-video" preload="auto" autoplay controls>Your navigator does not support video playing</video>
-			<span class="next">&#10095;</span>
+			<span class="next"></span>
 			<div id="caption"></div>
 		</div>
+		<div id="snackbar">Snacks!</div>
 	</body>
 	<script src="main.js"></script>
 	<script src="loc.js"></script>
