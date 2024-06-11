@@ -1,4 +1,3 @@
-
 const languageSelector = document.getElementById("language");
 const languageDisplay = document.getElementById("language-display");
 const urlParams = new URLSearchParams(window.location.search);
@@ -8,6 +7,8 @@ if(language.startsWith("fr")) language = "fr";
 else language = "en";
 
 if (urlParams.has("lang") && ["en","fr"].includes(urlParams.get("lang"))) language = urlParams.get("lang");
+
+languageSelector.value = language;
 
 languageSelector.addEventListener("change", UpdateLanguage);
 
