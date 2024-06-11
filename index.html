@@ -29,9 +29,9 @@
 							</select>
 							<span id="language-display">🇬🇧</span>
 						</div>
-						<a href="https://github.com/Mortimer-Kerman" title="Mortimer-Kerman"><div class="github-logo" width="30px" height="30px"></div></a>
-						<a title="mortimer_kerman" onclick="copyDiscordID()"><div class="discord-logo" width="30px" height="30px"></div></a>
-						<a href="https://reddit.com/u/Mortimer_Kerman" title="Mortimer_Kerman"><div class="reddit-logo" width="30px" height="30px"></div></a>
+						<a href="https://github.com/Mortimer-Kerman" title="Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><div class="github-logo" width="30px" height="30px"></div></a>
+						<a title="mortimer_kerman" onclick="copyDiscordID()" style="cursor: pointer;" target="_blank" rel="noopener noreferrer"><div class="discord-logo" width="30px" height="30px"></div></a>
+						<a href="https://reddit.com/u/Mortimer_Kerman" title="Mortimer_Kerman" target="_blank" rel="noopener noreferrer"><div class="reddit-logo" width="30px" height="30px"></div></a>
 					</div>
 				</h1>
 				<div class="title-bar"></div>
@@ -92,7 +92,7 @@
 				<h1 loc="projects">My projects</h1>
 				<div class="title-bar"></div>
 				<section>
-					<h2>Cosmos Wanderer</h2>
+					<h2 id="cosmoswanderer">Cosmos Wanderer</h2>
 					<section>
 						<div class="image-container">
 							<img src="projects/cosmoswanderer.jpg" alt="Cosmos Wanderer" loading="lazy">
@@ -119,11 +119,11 @@
 							<div class="caption" loc="cosmoswanderer.maxaction">MAX ACTION !</div>
 						</div>
 						<p loc="cosmoswanderer.carlcasey">
-							Musics by <a href="https://youtube.com/@WhiteBatAudio">Carl Casey @White Bat Audio</a>
+							Musics by <a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>
 						</p>
 					</section>
 					<div class="small-title-bar"></div>
-					<h2>SpaceFactory</h2>
+					<h2 id="spacefactory">SpaceFactory</h2>
 					<section>
 						<p loc="spacefactory">
 							SpaceFactory was a group project made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.<br/>
@@ -144,11 +144,11 @@
 						<p loc="spacefactory.bestproject">
 							SpaceFactory was elected as the best <i>Terminale</i> project of the Brittany region.<br/>
 						</p>
-						<p><a href="https://github.com/Mortimer-Kerman/SpaceFactory" loc="spacefactory.repo">Github repo</a></p>
-						<p><a href="https://trophees-nsi.fr/" loc="spacefactory.website">Trophées NSI official website</a></p>
+						<p><a href="https://github.com/Mortimer-Kerman/SpaceFactory" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a></p>
+						<p><a href="https://trophees-nsi.fr/" target="_blank" rel="noopener noreferrer" loc="spacefactory.website">Trophées NSI official website</a></p>
 					</section>
 					<div class="small-title-bar"></div>
-					<h2>Planetar</h2>
+					<h2 id="planetar">Planetar</h2>
 					<section>
 						<p loc="planetar.desc">
 							Planetar is a small WIP planet map generation tool.<br/>
@@ -171,6 +171,42 @@
 							<img src="projects/exportedmap.jpg" alt="Exported map" loading="lazy">
 							<div class="caption" loc="planetar.exported">An example of exported map</div>
 						</div>
+					</section>
+					<div class="small-title-bar"></div>
+					<h2 id="clouserhollowknightphysicsmod">Clouser's Hollow Knight physics mod</h2>
+					<section>
+						<p loc="hollowknight.desc">
+							Clouser's Hollow Knight physics mod is a Minecraft mod made for Clouser's Hollow Knight Minecraft map.<br/>
+							Made for Minecraft Fabric 1.20.4, it adds multiple commands and gamerules to edit player's physics in order to replicate Hollow Knight's physics.<br/>
+							The map is available for download on <a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>.
+						</p>
+						<div class="image-container">
+							<img src="projects/hollowknight.jpg" alt="Hollow Knight" loading="lazy">
+						</div>
+						<p loc="hollowknight.desc2">
+							In Hollow Knight, as soon as the player releases movement keys, they stops mid-air, and can immediately start to move in another direction.<br/>
+							Also, the jump is pressure sensitive. It means that the longer you press it, the higher you go.<br/>
+							In some circumstances, the player also has a double jump ability, which allows them to repeat the pressure sensitive jump mid-air.<br/>
+							<br/>
+							This mod recreates these effects and some more.
+						</p>
+						<div class="image-container">
+							<img src="projects/instantstop.gif" alt="Hollow Knight" loading="lazy">
+							<div class="caption" loc="hollowknight.instantstop">Instant stop physics</div>
+						</div>
+						<div class="image-container">
+							<img src="projects/pressurejump.gif" alt="Hollow Knight" loading="lazy">
+							<div class="caption" loc="hollowknight.pressurejump">Pressure sensitive jump</div>
+						</div>
+						<div class="image-container">
+							<img src="projects/doublejump.gif" alt="Hollow Knight" loading="lazy">
+							<div class="caption" loc="hollowknight.doublejump">Double jump</div>
+						</div>
+						<p>
+							<a href="https://github.com/Mortimer-Kerman/ClouserHollowKnightPhysicsMod" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a><br/>
+							<a href="https://youtu.be/SB0jRHjh9kk" target="_blank" rel="noopener noreferrer">Clouser's original video</a><br/>
+							<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Official map download</a>
+						</p>
 					</section>
 				</section>
 				<h1 loc="gallery">Random stuff gallery</h1>
@@ -247,47 +283,47 @@
 				<section class="gallery">
 					<div class="buddiesPP">
 						<p>Frablock</p>
-						<a href="https://github.com/Frablock"><img src="buddies/frablock.jpg" width="150px"></a>
+						<a href="https://github.com/Frablock" target="_blank" rel="noopener noreferrer"><img src="buddies/frablock.jpg" width="150px"></a>
 						<div loc="buddies.frablock">Communist</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Ertalite</p>
-						<a href="https://github.com/ertalite"><img src="buddies/ertalite.jpg" width="150px"></a>
+						<a href="https://github.com/ertalite" target="_blank" rel="noopener noreferrer"><img src="buddies/ertalite.jpg" width="150px"></a>
 						<div loc="buddies.ertalite">Pushing rocks</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Jordi</p>
-						<a href="https://github.com/Jordi-R66"><img src="buddies/jordi.jpg" width="150px"></a>
+						<a href="https://github.com/Jordi-R66" target="_blank" rel="noopener noreferrer"><img src="buddies/jordi.jpg" width="150px"></a>
 						<div>Catalan</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Vexmea</p>
-						<a href="https://vexmae.github.io"><img src="buddies/vexmea.jpg" width="150px"></a>
+						<a href="https://vexmae.github.io" target="_blank" rel="noopener noreferrer"><img src="buddies/vexmea.jpg" width="150px"></a>
 						<div>Femboy</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Crafto</p>
-						<a href="https://instagram.com/malidevgames/"><img src="buddies/crafto.jpg" width="150px"></a>
+						<a href="https://instagram.com/malidevgames/" target="_blank" rel="noopener noreferrer"><img src="buddies/crafto.jpg" width="150px"></a>
 						<div loc="buddies.crafto">Box stacker</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Titanodelta</p>
-						<a href="https://instagram.com/h.p.t.d.entertainment/"><img src="buddies/titanodelta.jpg" width="150px"></a>
+						<a href="https://instagram.com/h.p.t.d.entertainment/" target="_blank" rel="noopener noreferrer"><img src="buddies/titanodelta.jpg" width="150px"></a>
 						<div loc="buddies.titanodelta">Warlord</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Anatom</p>
-						<a href="https://github.com/anatom3000"><img src="https://avatars.githubusercontent.com/u/49984698?v=4" width="150px"></a>
+						<a href="https://github.com/anatom3000" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/49984698?v=4" width="150px"></a>
 						<div>Furry</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Enigma</p>
-						<a href="https://github.com/Checkmate6659"><img src="buddies/enigma.jpg" width="150px"></a>
+						<a href="https://github.com/Checkmate6659" target="_blank" rel="noopener noreferrer"><img src="buddies/enigma.jpg" width="150px"></a>
 						<div loc="buddies.enigma">Thinking in 5D</div>
 					</div>
 					<div class="buddiesPP">
 						<p>NyanMaths</p>
-						<a href="https://github.com/NyanMaths"><img src="buddies/nyanmaths.jpg" width="150px"></a>
+						<a href="https://github.com/NyanMaths" target="_blank" rel="noopener noreferrer"><img src="buddies/nyanmaths.jpg" width="150px"></a>
 						<div loc="buddies.nyanmaths">Hippie in flip flops</div>
 					</div>
 				</section>

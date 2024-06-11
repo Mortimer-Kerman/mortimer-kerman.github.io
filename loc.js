@@ -1,31 +1,36 @@
 
 const languageSelector = document.getElementById("language");
 const languageDisplay = document.getElementById("language-display");
+const urlParams = new URLSearchParams(window.location.search);
 
 var language = (navigator.language || navigator.userLanguage).toLowerCase();
+if(language.startsWith("fr")) language = "fr";
+else language = "en";
 
-if(language.startsWith("fr")) languageSelector.value = "fr";
+if (urlParams.has("lang") && ["en","fr"].includes(urlParams.get("lang"))) language = urlParams.get("lang");
 
-languageSelector.addEventListener("change", function()
-{
-    language = languageSelector.value;
-    UpdateLanguage();
-});
+languageSelector.addEventListener("change", UpdateLanguage);
 
 function UpdateLanguage()
 {
-    if (language.startsWith("fr")) languageDisplay.textContent = "🇫🇷";
+    language = languageSelector.value;
+
+    if (language == "fr") languageDisplay.textContent = "🇫🇷";
     else languageDisplay.textContent = "🇬🇧";
     
     document.querySelectorAll("[loc]").forEach(function(element)
     {
         element.innerHTML = getLoc(element.getAttribute("loc"), element.innerHTML);
     });
+
+    urlParams.set("lang", language);
+    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+    window.history.replaceState({}, '', newUrl);
 }
 
 function getLoc(locKey, defaultLoc)
 {
-    if (language.startsWith("fr") && frDict[locKey] != undefined) return frDict[locKey];
+    if (language == "fr" && frDict[locKey] != undefined) return frDict[locKey];
     else if (enDict[locKey] != undefined) return enDict[locKey];
     return defaultLoc;
 }
@@ -53,6 +58,8 @@ Perlin noise addict.`,
 "languages.hlsl": `HLSL (yes there is no console in HLSL)`,
 
 "projects": `My projects`,
+"projects.repo": `Github repo`,
+
 "cosmoswanderer.desc":
 `Cosmos Wanderer is a mobile space shooter game under developpement.<br/>
 You can take the control of a space ship and travel through asteroids, and many other obstacles, such as enemy ships, debris, homing missiles...`,
@@ -62,17 +69,15 @@ You can take the control of a space ship and travel through asteroids, and many 
 `You can also upgrade your ship, get new skins, meet achievements...<br/>
 It will be available on the Google Play Store for free.`,
 "cosmoswanderer.maxaction": `MAX ACTION !`,
-"cosmoswanderer.carlcasey": `Musics by <a href="https://youtube.com/@WhiteBatAudio">Carl Casey @White Bat Audio</a>`,
+"cosmoswanderer.carlcasey": `Musics by <a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`,
 
 "spacefactory":
 `SpaceFactory was a group project made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.<br/>
-Made in python with Pygame, it's a factory game in space, where you can build your own factory to extract and refine resources.<br/>
-`,
+Made in python with Pygame, it's a factory game in space, where you can build your own factory to extract and refine resources.`,
 "spacefactory.normalday": `A normal day in SpaceFactory`,
 "spacefactory.buildmenu": `The build menu`,
 "spacefactory.opportunities": `Opportunities menu`,
 "spacefactory.bestproject": `SpaceFactory was elected as the best <i>Terminale</i> project of the Brittany region.<br/>`,
-"spacefactory.repo": `Github repo`,
 "spacefactory.website": `Trophées NSI official website`,
 
 "planetar.desc":
@@ -85,6 +90,20 @@ Made for Windows with the .NET framework, it allows you to generate planet maps 
 <br/><br/>
 Comes with a 3D view of the planet.`,
 "planetar.exported": `An example of exported map`,
+
+"hollowknight.desc":
+`Clouser's Hollow Knight physics mod is a Minecraft mod made for Clouser's Hollow Knight Minecraft map.<br/>
+Made for Minecraft Fabric 1.20.4, it adds multiple commands and gamerules to edit player's physics in order to replicate Hollow Knight's physics.<br/>
+The map is available for download on <a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>.`,
+"hollowknight.desc2":
+`In Hollow Knight, as soon as the player releases movement keys, they stops mid-air, and can immediately start to move in another direction.<br/>
+Also, the jump is pressure sensitive. It means that the longer you press it, the higher you go.<br/>
+In some circumstances, the player also has a double jump ability, which allows them to repeat the pressure sensitive jump mid-air.<br/>
+<br/>
+This mod recreates these effects and some more.`,
+"hollowknight.instantstop": `Instant stop physics`,
+"hollowknight.pressurejump": `Pressure sensitive jump`,
+"hollowknight.doublejump": `Double jump`,
 
 "gallery": `Random stuff gallery`,
 "gallery.wallpaper": `My PC wallpaper (I love SpaceEngine)`,
@@ -137,6 +156,8 @@ Addict au bruit de Perlin.`,
 "languages.hlsl": `HLSL (oui il n'y a pas de console en HLSL)`,
 
 "projects": `Mes projets`,
+"projects.repo": `Dépôt Github`,
+
 "cosmoswanderer.desc":
 `Cosmos Wanderer est un jeu mobile de shooter spatial en développement.<br/>
 Vous pouvez prendre le contrôle d'un vaisseau spatial et naviguer entre des astéroïdes et d'autres obstacles, comme des vaisseaux ennemis, des débris, des missiles à tête chercheuse...`,
@@ -146,7 +167,7 @@ Vous pouvez prendre le contrôle d'un vaisseau spatial et naviguer entre des ast
 `Vous pouvez aussi améliorer votre vaisseau, obtenir des nouveaux skins, réaliser des succès...<br/>
 Il sera disponique gratuitement sur le Google Play Store.`,
 "cosmoswanderer.maxaction": `ACTION MAXIMALE !`,
-"cosmoswanderer.carlcasey": `Musiques par <a href="https://youtube.com/@WhiteBatAudio">Carl Casey @White Bat Audio</a>`,
+"cosmoswanderer.carlcasey": `Musiques par <a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`,
 
 "spacefactory":
 `SpaceFactory était un projet de groupe fait pour l'édition 2023 des Trophées NSI, une compétition entre les classes de NSI de première et de teminale sur toute la France.<br/>
@@ -156,7 +177,6 @@ Fait en python avec Pygame, c'est un factory game dans l'espace, où vous pouvez
 "spacefactory.buildmenu": `Le menu de construction`,
 "spacefactory.opportunities": `Le menu d'opportunités`,
 "spacefactory.bestproject": `SpaceFactory a été élu meilleur projet Terminale de la région Bretagne.`,
-"spacefactory.repo": `Dépôt Github`,
 "spacefactory.website": `Site officiel des Trophées NSI`,
 
 "planetar.desc":
@@ -169,6 +189,20 @@ Fait pour Windows avec le framework .NET, il vous permet de générer des cartes
 <br/><br/>
 Livré avec une vue 3D de la planète.`,
 "planetar.exported": `Un exemple de carte exportée`,
+
+"hollowknight.desc":
+`Clouser's Hollow Knight physics mod est un mod Minecraft créé pour la map Minecraft Hollow Knight de Clouser.<br/>
+Fait pour Minecraft Fabric 1.20.4, il ajoute plusieurs commandes et gamerules pour modifier la physique du joueur de manière à répliquer la physique de Hollow Knight.<br/>
+La map est disponible au téléchargement sur <a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>.`,
+"hollowknight.desc2":
+`Dans Hollow Knight, dès que le joueur relâche les touches de déplacement, il s'arrête dans les airs et peut immédiatement commencer à aller dans une autre direction.<br/>
+Le saut est également sensible à la pression. Ça veut dire que plus vous appuyez, plus vous sautez haut.<br/>
+Dans certaines circonstances, le joueur a également accès à un double saut, qui lui permet de répéter le saut sensible à la pression dans les airs.<br/>
+<br/>
+Ce mod recrée ces effects et quelques autres.`,
+"hollowknight.instantstop": `Physique d'arrêt immédiat`,
+"hollowknight.pressurejump": `Saut sensible à la pression`,
+"hollowknight.doublejump": `Double saut`,
 
 "gallery": `Galerie de trucs aléatoires`,
 "gallery.wallpaper": `Mon fond d'écran de PC (J'adore SpaceEngine)`,

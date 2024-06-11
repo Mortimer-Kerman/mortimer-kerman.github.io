@@ -83,6 +83,7 @@ h1 {
     margin: 10px;
     cursor: pointer;
 	text-align: center;
+	justify-content: center;
 	display: inline-block;
 }
 
@@ -252,6 +253,19 @@ p {
 	text-align: center;
 }
 
+.buddiesPP img {
+	border-radius: 50%;
+	transition: transform 0.2s, filter 0.2s;
+}
+
+.buddiesPP img:hover:not(:active) {
+    transform: scale(1.03);
+}
+
+.buddiesPP img:active {
+	filter: brightness(50%);
+}
+
 @media only screen and (min-width: 1001px)
 {
 	.buddiesPP {
@@ -265,19 +279,6 @@ p {
 		padding: 30px;
 		min-width: 200px;
 	}
-}
-
-.buddiesPP img {
-	border-radius: 50%;
-	transition: transform 0.2s;
-}
-
-.buddiesPP img:hover:not(:active) {
-    transform: scale(1.03);
-}
-
-.buddiesPP img:active {
-	filter: brightness(50%);
 }
 
 .alignedBlocksContainer {
@@ -443,7 +444,6 @@ option {
 	filter: brightness(50%);
 }
 
-
 .discord-logo:hover {
 	fill: #5865F2;
 }
@@ -466,10 +466,6 @@ option {
 	filter: brightness(50%);
 }
 
-/*.reddit-logo:hover {
-	fill: #FF5700;
-}*/
-
 path {
 	user-select: none;
 	pointer-events: none;
@@ -488,6 +484,7 @@ path {
 	left: 30px;
 	bottom: 30px;
 	font-size: 20px;
+	justify-content: center;
 }
 
 #snackbar.show {
