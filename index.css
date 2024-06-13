@@ -126,13 +126,6 @@ h1 {
 	transition: transform 0.2s;
 }
 
-@media only screen and (max-width: 1000px)
-{
-	.playIcon {
-		transform: translate(-50%, -50%) scale(0.7);
-	}
-}
-
 @media only screen and (min-width: 1001px)
 {
 	.playIcon:hover {
@@ -142,10 +135,24 @@ h1 {
 
 @media only screen and (max-width: 1000px)
 {
+	.playIcon {
+		transform: translate(-50%, -50%) scale(0.7);
+	}
+
 	.playIcon:hover {
 		transform: translate(-50%, -50%) scale(0.75);
 	}
 }
+
+@media only screen and (max-width: 1000px)
+{
+	.project {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/*---------------IMAGE/VIDEO VIEWER---------------*/
 
 #modal {
     display: none;
@@ -160,19 +167,6 @@ h1 {
     align-items: center;
 }
 
-#modal-image {
-    max-width: 90%;
-    max-height: 80%;
-}
-
-#modal-video {
-    max-width: 90%;
-    max-height: 80%;
-	
-	height: 90%;
-	width: auto;
-}
-
 .close, .prev, .next {
 	position: absolute;
     font-size: 30px;
@@ -181,24 +175,26 @@ h1 {
 	transition: transform 0.2s;
 }
 
+.close:hover, .prev:hover, .next:hover {
+	transform: scale(1.1);
+}
+
 @media only screen and (max-width: 1000px)
 {
-	.close, .prev, .next {
+	#modal {
+		background-color: rgba(0, 0, 0, 1);
+	}
+
+	.close {
 		transform: scale(2);
 	}
-}
 
-@media only screen and (min-width: 1001px)
-{
-	.close:hover, .prev:hover, .next:hover {
-		transform: scale(1.1);
-	}
-}
-
-@media only screen and (max-width: 1000px)
-{
-	.close:hover, .prev:hover, .next:hover {
+	.close:hover {
 		transform: scale(2.2);
+	}
+
+	.prev, .next {
+		visibility: hidden;
 	}
 }
 
@@ -235,6 +231,8 @@ h1 {
     color: white;
     font-size: 18px;
 }
+
+/*---------------MISCELLANEOUS---------------*/
 
 h3 {
 	font-size: 23px;
@@ -325,6 +323,8 @@ a:hover {
   	color: #ff4500;
   	text-decoration: underline;
 }
+
+/*---------------NETWORKS AND LANGUAGE---------------*/
 
 .navbuttons-container {
     display: block;
@@ -470,6 +470,8 @@ path {
 	user-select: none;
 	pointer-events: none;
 }
+
+/*---------------SNACKBAR---------------*/
 
 #snackbar {
 	visibility: hidden;

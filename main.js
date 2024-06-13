@@ -8,9 +8,12 @@ const nextButton = document.querySelector('.next');
 const caption = document.getElementById('caption');
 const snackbar = document.getElementById("snackbar");
 
-var snackTimeout;
+var snackTimeout = null;
 
 let currentIndex = 0;
+
+let touchstartX = 0;
+let touchendX = 0;
 
 imageContainers.forEach((container, index) => {
     container.addEventListener('click', () => {
@@ -42,6 +45,8 @@ function displayImage(index) {
     else caption.textContent = "";
     modal.style.display = 'flex';
     document.body.style.overflow = "hidden";
+
+    updateMediaSize();
 }
 
 function closeDisplay() {
@@ -76,9 +81,68 @@ document.addEventListener('keydown', (event) => {
     }
 }, false);
 
+document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    if(modal.style.display === 'flex') {
+        if (touchendX > touchstartX) prevImage();
+        if (touchendX < touchstartX) nextImage();
+    }
+});
+
+window.addEventListener('resize', e => {
+    if (modal.style.display === 'flex') updateMediaSize();
+});
+
+function updateMediaSize() {
+
+    var modalMedia;
+    var windowRatio;
+    var mediaRatio;
+    var isMobile = window.matchMedia("(max-width: 1000px)").matches;
+
+    if (modalImage.style.display == '') {
+        modalMedia = modalImage;
+        mediaRatio = modalImage.naturalWidth / modalImage.naturalHeight;
+    }
+    else {
+        modalMedia = modalVideo;
+        mediaRatio = modalVideo.videoWidth / modalVideo.videoHeight;
+    }
+
+    if (isMobile) {
+        windowRatio = window.innerWidth / (window.innerHeight * 0.9);
+        modalMedia.style.maxWidth = "100%";
+		modalMedia.style.maxHeight = "90%";
+        if (mediaRatio > windowRatio) {
+            modalMedia.style.width = "100%";
+            modalMedia.style.height = "auto";
+        }
+        else {
+            modalMedia.style.width = "auto";
+            modalMedia.style.height = "90%";
+        }
+    }
+    else {
+        windowRatio = (window.innerWidth * 0.9) / (window.innerHeight * 0.8);
+        modalMedia.style.maxWidth = "90%";
+		modalMedia.style.maxHeight = "80%";
+        if (mediaRatio > windowRatio) {
+            modalMedia.style.width = "90%";
+            modalMedia.style.height = "auto";
+        }
+        else {
+            modalMedia.style.width = "auto";
+            modalMedia.style.height = "80%";
+        }
+    }
+}
+
 document.querySelectorAll('div.github-logo').forEach((logo) => {
     const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgElement.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     svgElement.setAttribute('viewBox', '0 0 24 24');
     svgElement.setAttribute('width', logo.getAttribute('width'));
     svgElement.setAttribute('height', logo.getAttribute('height'));
@@ -90,7 +154,6 @@ document.querySelectorAll('div.github-logo').forEach((logo) => {
 
 document.querySelectorAll('div.discord-logo').forEach((logo) => {
     const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgElement.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     svgElement.setAttribute('viewBox', '0 0 256 256');
     svgElement.setAttribute('width', logo.getAttribute('width'));
     svgElement.setAttribute('height', logo.getAttribute('height'));
@@ -102,7 +165,6 @@ document.querySelectorAll('div.discord-logo').forEach((logo) => {
 
 document.querySelectorAll('div.reddit-logo').forEach((logo) => {
     const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svgElement.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     svgElement.setAttribute('viewBox', '0 0 90 90');
     svgElement.setAttribute('width', logo.getAttribute('width'));
     svgElement.setAttribute('height', logo.getAttribute('height'));
@@ -110,8 +172,17 @@ document.querySelectorAll('div.reddit-logo').forEach((logo) => {
     svgElement.setAttribute('style', 'padding: 0px;');
     svgElement.setAttribute('fill', '#FFFFFF');
     svgElement.innerHTML = `<circle cx="45" cy="45" r="45"/><path d="M 75.011 45 c -0.134 -3.624 -3.177 -6.454 -6.812 -6.331 c -1.611 0.056 -3.143 0.716 -4.306 1.823 c -5.123 -3.49 -11.141 -5.403 -17.327 -5.537 l 2.919 -14.038 l 9.631 2.025 c 0.268 2.472 2.483 4.262 4.955 3.993 c 2.472 -0.268 4.262 -2.483 3.993 -4.955 s -2.483 -4.262 -4.955 -3.993 c -1.421 0.145 -2.696 0.973 -3.4 2.204 L 48.68 17.987 c -0.749 -0.168 -1.499 0.302 -1.667 1.063 c 0 0.011 0 0.011 0 0.022 l -3.322 15.615 c -6.264 0.101 -12.36 2.025 -17.55 5.537 c -2.64 -2.483 -6.801 -2.36 -9.284 0.291 c -2.483 2.64 -2.36 6.801 0.291 9.284 c 0.515 0.481 1.107 0.895 1.767 1.186 c -0.045 0.66 -0.045 1.32 0 1.98 c 0 10.078 11.745 18.277 26.23 18.277 c 14.485 0 26.23 -8.188 26.23 -18.277 c 0.045 -0.66 0.045 -1.32 0 -1.98 C 73.635 49.855 75.056 47.528 75.011 45 z M 30.011 49.508 c 0 -2.483 2.025 -4.508 4.508 -4.508 c 2.483 0 4.508 2.025 4.508 4.508 s -2.025 4.508 -4.508 4.508 C 32.025 53.993 30.011 51.991 30.011 49.508 z M 56.152 62.058 v -0.179 c -3.199 2.405 -7.114 3.635 -11.119 3.468 c -4.005 0.168 -7.919 -1.063 -11.119 -3.468 c -0.425 -0.515 -0.347 -1.286 0.168 -1.711 c 0.447 -0.369 1.085 -0.369 1.544 0 c 2.707 1.98 6.007 2.987 9.362 2.83 c 3.356 0.179 6.667 -0.783 9.407 -2.74 c 0.492 -0.481 1.297 -0.47 1.779 0.022 C 56.655 60.772 56.644 61.577 56.152 62.058 z M 55.537 54.34 c -0.078 0 -0.145 0 -0.224 0 l 0.034 -0.168 c -2.483 0 -4.508 -2.025 -4.508 -4.508 s 2.025 -4.508 4.508 -4.508 s 4.508 2.025 4.508 4.508 C 59.955 52.148 58.02 54.239 55.537 54.34 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />`;
-    //svgElement.innerHTML = `<path d="M 75.011 45 c -0.134 -3.624 -3.177 -6.454 -6.812 -6.331 c -1.611 0.056 -3.143 0.716 -4.306 1.823 c -5.123 -3.49 -11.141 -5.403 -17.327 -5.537 l 2.919 -14.038 l 9.631 2.025 c 0.268 2.472 2.483 4.262 4.955 3.993 c 2.472 -0.268 4.262 -2.483 3.993 -4.955 s -2.483 -4.262 -4.955 -3.993 c -1.421 0.145 -2.696 0.973 -3.4 2.204 L 48.68 17.987 c -0.749 -0.168 -1.499 0.302 -1.667 1.063 c 0 0.011 0 0.011 0 0.022 l -3.322 15.615 c -6.264 0.101 -12.36 2.025 -17.55 5.537 c -2.64 -2.483 -6.801 -2.36 -9.284 0.291 c -2.483 2.64 -2.36 6.801 0.291 9.284 c 0.515 0.481 1.107 0.895 1.767 1.186 c -0.045 0.66 -0.045 1.32 0 1.98 c 0 10.078 11.745 18.277 26.23 18.277 c 14.485 0 26.23 -8.188 26.23 -18.277 c 0.045 -0.66 0.045 -1.32 0 -1.98 C 73.635 49.855 75.056 47.528 75.011 45 z M 30.011 49.508 c 0 -2.483 2.025 -4.508 4.508 -4.508 c 2.483 0 4.508 2.025 4.508 4.508 s -2.025 4.508 -4.508 4.508 C 32.025 53.993 30.011 51.991 30.011 49.508 z M 56.152 62.058 v -0.179 c -3.199 2.405 -7.114 3.635 -11.119 3.468 c -4.005 0.168 -7.919 -1.063 -11.119 -3.468 c -0.425 -0.515 -0.347 -1.286 0.168 -1.711 c 0.447 -0.369 1.085 -0.369 1.544 0 c 2.707 1.98 6.007 2.987 9.362 2.83 c 3.356 0.179 6.667 -0.783 9.407 -2.74 c 0.492 -0.481 1.297 -0.47 1.779 0.022 C 56.655 60.772 56.644 61.577 56.152 62.058 z M 55.537 54.34 c -0.078 0 -0.145 0 -0.224 0 l 0.034 -0.168 c -2.483 0 -4.508 -2.025 -4.508 -4.508 s 2.025 -4.508 4.508 -4.508 s 4.508 2.025 4.508 4.508 C 59.955 52.148 58.02 54.239 55.537 54.34 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />`;
     logo.parentNode.replaceChild(svgElement, logo);
+});
+
+document.querySelectorAll('div.playIcon').forEach((icon) => {
+    const svgElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgElement.setAttribute('viewBox', '0 0 459 459');
+    svgElement.setAttribute('width', icon.getAttribute('width'));
+    svgElement.setAttribute('height', icon.getAttribute('height'));
+    svgElement.setAttribute('class', icon.getAttribute('class'));
+    svgElement.innerHTML = `<path d="M229.5,0C102.751,0,0,102.751,0,229.5S102.751,459,229.5,459S459,356.249,459,229.5S356.249,0,229.5,0z M310.292,239.651 l-111.764,76.084c-3.761,2.56-8.63,2.831-12.652,0.704c-4.022-2.128-6.538-6.305-6.538-10.855V153.416 c0-4.55,2.516-8.727,6.538-10.855c4.022-2.127,8.891-1.857,12.652,0.704l111.764,76.084c3.359,2.287,5.37,6.087,5.37,10.151 C315.662,233.564,313.652,237.364,310.292,239.651z"/>`;
+    icon.parentNode.replaceChild(svgElement, icon);
 });
 
 function showSnack(message) {
