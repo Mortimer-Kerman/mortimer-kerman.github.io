@@ -213,7 +213,7 @@ function copyDiscordID() {
 }
 
 function copyLink(link) {
-    url = window.location.pathname + "#" + link;
+    url = `${window.location.protocol}//${window.location.hostname}${window.location.pathname}#${link}`;
     navigator.clipboard.writeText(url);
     showSnack(getLoc("copiedLink", `Copied link to clipboard`));
 }
