@@ -22,6 +22,12 @@ imageContainers.forEach((container, index) => {
     });
 });
 
+document.querySelectorAll('.linkcopy').forEach(element => {
+    element.addEventListener('click', () => {
+        copyLink(element.id);
+    });
+});
+
 function displayImage(index) {
     const image = imageContainers[index].querySelector('img');
     const imageCaption = imageContainers[index].querySelector('.caption');
@@ -204,4 +210,10 @@ function hideSnack() {
 function copyDiscordID() {
     navigator.clipboard.writeText("mortimer_kerman");
     showSnack(getLoc("copiedUsername", `Copied Discord username to clipboard: mortimer_kerman`));
+}
+
+function copyLink(link) {
+    url = window.location.pathname + "#" + link;
+    navigator.clipboard.writeText(url);
+    showSnack(getLoc("copiedLink", `Copied link to clipboard`));
 }

@@ -25,27 +25,34 @@ function UpdateLanguage()
     });
 
     urlParams.set("lang", language);
-    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+    const newUrl = `${window.location.pathname}?${urlParams.toString()}${window.location.hash}`;
     window.history.replaceState({}, '', newUrl);
 }
 
 function getLoc(locKey, defaultLoc)
 {
-    if (language == "fr" && frDict[locKey] != undefined) return frDict[locKey];
-    else if (enDict[locKey] != undefined) return enDict[locKey];
+    if (language == "fr" && frDict[locKey] != undefined) return parseLoc(frDict[locKey]);
+    else if (enDict[locKey] != undefined) return parseLoc(enDict[locKey]);
     return defaultLoc;
+}
+
+function parseLoc(loc) {
+    return loc.replaceAll("\n","<br/>")
+    .replaceAll("CARLCASEY_LINK",`<a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`)
+    .replaceAll("MODRINTH_HOLLOWKNIGHT",`<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`);
 }
 
 var enDict = {
 "me": `Me`,
 "maindesc":
-`Hi, I'm Mortimer Kerman.<br/>
-French student, dev on my free time, I am currently trying to survive in my prep class.<br/>
-Mostly backend, I spend my time on multiple projects.<br/>
+`Hi, I'm Mortimer Kerman.
+French student, dev on my free time, I am currently trying to survive in my prep class.
+Mostly backend, I spend my time on multiple projects.
 I'm interested in tech, space, and terrain generation.
-<br/><br/>
+
 Perlin noise addict.`,
 "copiedUsername": `Copied Discord username to clipboard: mortimer_kerman`,
+"copiedLink": `Copied link to clipboard`,
 
 "languages.process": `Languages that my brain can process:`,
 "languages.html": `HTML/CSS (yes not really languages)`,
@@ -62,45 +69,45 @@ Perlin noise addict.`,
 "projects.repo": `Github repo`,
 
 "cosmoswanderer.desc":
-`Cosmos Wanderer is a mobile space shooter game under developpement.<br/>
+`Cosmos Wanderer is a mobile space shooter game under developpement.
 You can take the control of a space ship and travel through asteroids, and many other obstacles, such as enemy ships, debris, homing missiles...`,
 "cosmoswanderer.lowaction": `Low action`,
 "cosmoswanderer.highaction": `High action`,
 "cosmoswanderer.desc2":
-`You can also upgrade your ship, get new skins, meet achievements...<br/>
+`You can also upgrade your ship, get new skins, meet achievements...
 It will be available on the Google Play Store for free.`,
 "cosmoswanderer.maxaction": `MAX ACTION !`,
-"cosmoswanderer.carlcasey": `Musics by <a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`,
+"cosmoswanderer.carlcasey": `Musics by CARLCASEY_LINK`,
 
 "spacefactory":
-`SpaceFactory was a group project made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.<br/>
+`SpaceFactory was a group project made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.
 Made in python with Pygame, it's a factory game in space, where you can build your own factory to extract and refine resources.`,
 "spacefactory.normalday": `A normal day in SpaceFactory`,
 "spacefactory.buildmenu": `The build menu`,
 "spacefactory.opportunities": `Opportunities menu`,
-"spacefactory.bestproject": `SpaceFactory was elected as the best <i>Terminale</i> project of the Brittany region.<br/>`,
+"spacefactory.bestproject": `SpaceFactory was elected as the best <i>Terminale</i> project of the Brittany region.`,
 "spacefactory.website": `Trophées NSI official website`,
 
 "planetar.desc":
-`Planetar is a small WIP planet map generation tool.<br/>
+`Planetar is a small WIP planet map generation tool.
 Made for Windows with the .NET framework, it allows you to generate planet maps in real time.`,
 "planetar.screenshot": `Planetar, the screenshot`,
 "planetar.maps": `Height and humidity maps`,
 "planetar.desc2":
 `You can parameter a lot of aspects, like sea level, vegetation color, mountains amount...
-<br/><br/>
+
 Comes with a 3D view of the planet.`,
 "planetar.exported": `An example of exported map`,
 
 "hollowknight.desc":
-`Clouser's Hollow Knight physics mod is a Minecraft mod made for Clouser's Hollow Knight Minecraft map.<br/>
-Made for Minecraft Fabric 1.20.4, it adds multiple commands and gamerules to edit player's physics in order to replicate Hollow Knight's physics.<br/>
-The map is available for download on <a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>.`,
+`Clouser's Hollow Knight physics mod is a Minecraft mod made for Clouser's Hollow Knight Minecraft map.
+Made for Minecraft Fabric 1.20.4, it adds multiple commands and gamerules to edit player's physics in order to replicate Hollow Knight's physics.
+The map is available for download on MODRINTH_HOLLOWKNIGHT.`,
 "hollowknight.desc2":
-`In Hollow Knight, as soon as the player releases movement keys, they stops mid-air, and can immediately start to move in another direction.<br/>
-Also, the jump is pressure sensitive. It means that the longer you press it, the higher you go.<br/>
-In some circumstances, the player also has a double jump ability, which allows them to repeat the pressure sensitive jump mid-air.<br/>
-<br/>
+`In Hollow Knight, as soon as the player releases movement keys, they stops mid-air, and can immediately start to move in another direction.
+Also, the jump is pressure sensitive. It means that the longer you press it, the higher you go.
+In some circumstances, the player also has a double jump ability, which allows them to repeat the pressure sensitive jump mid-air.
+
 This mod recreates these effects and some more.`,
 "hollowknight.instantstop": `Instant stop physics`,
 "hollowknight.pressurejump": `Pressure sensitive jump`,
@@ -139,13 +146,14 @@ This mod recreates these effects and some more.`,
 var frDict = {
 "me": `Moi`,
 "maindesc":
-`Bonjour, je suis Mortimer Kerman.<br/>
-Étudiant français, développeur sur mon temps libre, j'essaie actuellement de survivre en prépa.<br/>
-Principalement backend, je passe mon temps sur plusieurs projets.<br/>
+`Bonjour, je suis Mortimer Kerman.
+Étudiant français, développeur sur mon temps libre, j'essaie actuellement de survivre en prépa.
+Principalement backend, je passe mon temps sur plusieurs projets.
 Je m'intéresse à la technologie, à l'espace et à la génération de terrain.
-<br/><br/>
+
 Addict au bruit de Perlin.`,
 "copiedUsername": `Nom d'utilisateur Discord copié dans le presse-papier: mortimer_kerman`,
+"copiedLink": `Lien copié dans le presse-papier`,
 
 "languages.process": `Langages que mon cerveau peut gérer:`,
 "languages.html": `HTML/CSS (oui c'est pas vraiment des langages)`,
@@ -162,19 +170,19 @@ Addict au bruit de Perlin.`,
 "projects.repo": `Dépôt Github`,
 
 "cosmoswanderer.desc":
-`Cosmos Wanderer est un jeu mobile de shooter spatial en développement.<br/>
+`Cosmos Wanderer est un jeu mobile de shooter spatial en développement.
 Vous pouvez prendre le contrôle d'un vaisseau spatial et naviguer entre des astéroïdes et d'autres obstacles, comme des vaisseaux ennemis, des débris, des missiles à tête chercheuse...`,
 "cosmoswanderer.lowaction": `Faible action`,
 "cosmoswanderer.highaction": `Haute action`,
 "cosmoswanderer.desc2":
-`Vous pouvez aussi améliorer votre vaisseau, obtenir des nouveaux skins, réaliser des succès...<br/>
+`Vous pouvez aussi améliorer votre vaisseau, obtenir des nouveaux skins, réaliser des succès...
 Il sera disponique gratuitement sur le Google Play Store.`,
 "cosmoswanderer.maxaction": `ACTION MAXIMALE !`,
-"cosmoswanderer.carlcasey": `Musiques par <a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`,
+"cosmoswanderer.carlcasey": `Musiques par CARLCASEY_LINK`,
 
 "spacefactory":
-`SpaceFactory était un projet de groupe fait pour l'édition 2023 des Trophées NSI, une compétition entre les classes de NSI de première et de teminale sur toute la France.<br/>
-Fait en python avec Pygame, c'est un factory game dans l'espace, où vous pouvez bâtir votre propre usine pour extraire et raffiner des ressources.<br/>
+`SpaceFactory était un projet de groupe fait pour l'édition 2023 des Trophées NSI, une compétition entre les classes de NSI de première et de teminale sur toute la France.
+Fait en python avec Pygame, c'est un factory game dans l'espace, où vous pouvez bâtir votre propre usine pour extraire et raffiner des ressources.
 `,
 "spacefactory.normalday": `Un jour ordinaire sur SpaceFactory`,
 "spacefactory.buildmenu": `Le menu de construction`,
@@ -183,25 +191,25 @@ Fait en python avec Pygame, c'est un factory game dans l'espace, où vous pouvez
 "spacefactory.website": `Site officiel des Trophées NSI`,
 
 "planetar.desc":
-`Planetar est un petit outil de génération de cartes de planètes en cours de développement.<br/>
+`Planetar est un petit outil de génération de cartes de planètes en cours de développement.
 Fait pour Windows avec le framework .NET, il vous permet de générer des cartes de planètes en temps réel.`,
 "planetar.screenshot": `Planetar, la capture d'écran`,
 "planetar.maps": `Cartes d'altitude et d'humidité`,
 "planetar.desc2":
 `Vous pouvez paramétrer beaucoup d'aspects, comme le niveau de la mer, la couleur de la végétation, la quantité de montagnes...
-<br/><br/>
+
 Livré avec une vue 3D de la planète.`,
 "planetar.exported": `Un exemple de carte exportée`,
 
 "hollowknight.desc":
-`Clouser's Hollow Knight physics mod est un mod Minecraft créé pour la map Minecraft Hollow Knight de Clouser.<br/>
-Fait pour Minecraft Fabric 1.20.4, il ajoute plusieurs commandes et gamerules pour modifier la physique du joueur de manière à répliquer la physique de Hollow Knight.<br/>
-La map est disponible au téléchargement sur <a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>.`,
+`Clouser's Hollow Knight physics mod est un mod Minecraft créé pour la map Minecraft Hollow Knight de Clouser.
+Fait pour Minecraft Fabric 1.20.4, il ajoute plusieurs commandes et gamerules pour modifier la physique du joueur de manière à répliquer la physique de Hollow Knight.
+La map est disponible au téléchargement sur MODRINTH_HOLLOWKNIGHT.`,
 "hollowknight.desc2":
-`Dans Hollow Knight, dès que le joueur relâche les touches de déplacement, il s'arrête dans les airs et peut immédiatement commencer à aller dans une autre direction.<br/>
-Le saut est également sensible à la pression. Ça veut dire que plus vous appuyez, plus vous sautez haut.<br/>
-Dans certaines circonstances, le joueur a également accès à un double saut, qui lui permet de répéter le saut sensible à la pression dans les airs.<br/>
-<br/>
+`Dans Hollow Knight, dès que le joueur relâche les touches de déplacement, il s'arrête dans les airs et peut immédiatement commencer à aller dans une autre direction.
+Le saut est également sensible à la pression. Ça veut dire que plus vous appuyez, plus vous sautez haut.
+Dans certaines circonstances, le joueur a également accès à un double saut, qui lui permet de répéter le saut sensible à la pression dans les airs.
+
 Ce mod recrée ces effects et quelques autres.`,
 "hollowknight.instantstop": `Physique d'arrêt immédiat`,
 "hollowknight.pressurejump": `Saut sensible à la pression`,
