@@ -1,7 +1,6 @@
 const imageContainers = document.querySelectorAll('.image-container');
 const modal = document.getElementById('modal');
-const modalImage = document.getElementById('modal-image');
-const modalVideo = document.getElementById('modal-video');
+const modalMedia = document.getElementById('modal-media'); modalMedia.displayed = 0;
 const closeModal = document.querySelector('.close');
 const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
@@ -10,15 +9,14 @@ const snackbar = document.getElementById("snackbar");
 
 var snackTimeout = null;
 
-let currentIndex = 0;
-
 let touchstartX = 0;
 let touchendX = 0;
+let touchlastX = 0;
+let touchspeedX = 0;
 
 imageContainers.forEach((container, index) => {
     container.addEventListener('click', () => {
-        currentIndex = index;
-        displayImage(currentIndex);
+        displayImage(index, modalMedia, true);
     });
 });
 
@@ -28,7 +26,18 @@ document.querySelectorAll('.linkcopy').forEach(element => {
     });
 });
 
-function displayImage(index) {
+function isMobile() {
+    return window.matchMedia("(max-width: 1000px)").matches;
+}
+
+function modalOpen() {
+    return modal.style.display === 'flex';
+}
+
+function displayImage(index, media, displayCaption) {
+    const modalImage = media.querySelector('.modal-image');
+    const modalVideo = media.querySelector('.modal-video');
+
     const image = imageContainers[index].querySelector('img');
     const imageCaption = imageContainers[index].querySelector('.caption');
 
@@ -47,40 +56,38 @@ function displayImage(index) {
         modalVideo.src = '';
     }
 
-    if (imageCaption != null) caption.textContent = imageCaption.textContent;
+    if (imageCaption != null)
+    {
+        if (displayCaption) caption.textContent = imageCaption.textContent;
+    }
     else caption.textContent = "";
     modal.style.display = 'flex';
     document.body.style.overflow = "hidden";
 
-    updateMediaSize();
+    media.displayed = index;
+
+    updateMediaSize(media);
 }
 
 function closeDisplay() {
-    modalVideo.pause();
+    modalMedia.querySelector('.modal-video').pause();
     modal.style.display = 'none';
     document.body.style.overflow = "auto";
 }
-
-function prevImage() {
-    if (currentIndex > 0) currentIndex--;
-    else currentIndex = imageContainers.length - 1;
-    displayImage(currentIndex);
-}
-
-function nextImage() {
-    if (currentIndex < imageContainers.length - 1) currentIndex++;
-    else currentIndex = 0;
-    displayImage(currentIndex);
-}
-
 closeModal.addEventListener('click', closeDisplay);
 
+function prevImage() {
+    displayImage(mod(modalMedia.displayed - 1, imageContainers.length), modalMedia, true);
+}
 prevButton.addEventListener('click', prevImage);
 
+function nextImage() {
+    displayImage(mod(modalMedia.displayed + 1, imageContainers.length), modalMedia, true);
+}
 nextButton.addEventListener('click', nextImage);
 
 document.addEventListener('keydown', (event) => {
-    if (modal.style.display === 'flex') {
+    if (modalOpen()) {
         if (event.key === 'ArrowLeft') prevImage();
         else if (event.key === 'ArrowRight') nextImage();
         else if (event.key === 'Escape') closeDisplay();
@@ -89,80 +96,67 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('touchstart', e => {
     touchstartX = e.changedTouches[0].screenX;
-    modalImage.style.transition = "";
-    modalVideo.style.transition = "";
+    touchlastX = touchstartX;
+    modalMedia.style.transition = "";
 });
 
 document.addEventListener('touchmove', e => {
-    modalImage.style.transform = `translateX(${e.changedTouches[0].screenX - touchstartX}px)`;
-    modalVideo.style.transform = `translateX(${e.changedTouches[0].screenX - touchstartX}px)`;
+    let currentTouchPos = e.changedTouches[0].screenX;
+    touchspeedX = touchlastX - currentTouchPos;
+    modalMedia.style.transform = `translateX(${currentTouchPos - touchstartX}px)`;
+    touchlastX = currentTouchPos;
 });
 
 document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX;
-    if(modal.style.display === 'flex' && Math.abs(touchendX-touchstartX)>(window.screen.width/2))
+    if(modalOpen())
     {
-        if (touchendX > touchstartX) {
-            modalImage.style.transform = `translateX(${-window.screen.width}px)`;
-            modalVideo.style.transform = `translateX(${-window.screen.width}px)`;
-            prevImage();
+        if(Math.abs(touchendX-touchstartX)>(window.screen.width/2) || touchspeedX>(window.screen.width/30) ) {
+            if (touchendX > touchstartX) {
+                modalMedia.style.transform = `translateX(${-window.screen.width*2}px)`;
+                prevImage();
+            }
+            if (touchendX < touchstartX) {
+                modalMedia.style.transform = `translateX(${window.screen.width*2}px)`;
+                nextImage();
+            }
         }
-        if (touchendX < touchstartX) {
-            modalImage.style.transform = `translateX(${window.screen.width}px)`;
-            modalVideo.style.transform = `translateX(${window.screen.width}px)`;
-            nextImage();
-        }
+        modalMedia.style.transition = "transform 0.2s";
+        modalMedia.style.transform = "";
     }
-    modalImage.style.transition = "transform 0.2s";
-    modalVideo.style.transition = "transform 0.2s";
-    modalImage.style.transform = "";
-    modalVideo.style.transform = "";
 });
 
-window.addEventListener('resize', e => {
-    if (modal.style.display === 'flex') updateMediaSize();
+window.addEventListener('resize', () => {
+    if (modalOpen()) updateMediaSize(modalMedia);
 });
 
-function updateMediaSize() {
-    var modalMedia;
-    var windowRatio;
-    var mediaRatio;
-    var isMobile = window.matchMedia("(max-width: 1000px)").matches;
+function updateMediaSize(media) {
+    const modalImage = media.querySelector('.modal-image');
+    const modalVideo = media.querySelector('.modal-video');
+    let windowRatio;
+    let mediaRatio;
 
-    if (modalImage.style.display == '') {
-        modalMedia = modalImage;
-        mediaRatio = modalImage.naturalWidth / modalImage.naturalHeight;
-    }
-    else {
-        modalMedia = modalVideo;
-        mediaRatio = modalVideo.videoWidth / modalVideo.videoHeight;
-    }
+    if (modalImage.style.display == '') mediaRatio = modalImage.naturalWidth / modalImage.naturalHeight;
+    else mediaRatio = modalVideo.videoWidth / modalVideo.videoHeight;
 
-    if (isMobile) {
+    if (isMobile()) {
         windowRatio = window.innerWidth / (window.innerHeight * 0.9);
-        modalMedia.style.maxWidth = "100%";
-		modalMedia.style.maxHeight = "90%";
-        if (mediaRatio > windowRatio) {
-            modalMedia.style.width = "100%";
-            modalMedia.style.height = "auto";
-        }
-        else {
-            modalMedia.style.width = "auto";
-            modalMedia.style.height = "90%";
-        }
+        media.style.maxWidth = "100%";
+        media.style.maxHeight = "90%";
     }
     else {
         windowRatio = (window.innerWidth * 0.9) / (window.innerHeight * 0.8);
-        modalMedia.style.maxWidth = "90%";
-		modalMedia.style.maxHeight = "80%";
-        if (mediaRatio > windowRatio) {
-            modalMedia.style.width = "90%";
-            modalMedia.style.height = "auto";
-        }
-        else {
-            modalMedia.style.width = "auto";
-            modalMedia.style.height = "80%";
-        }
+        media.style.maxWidth = "90%";
+        media.style.maxHeight = "80%";
+    }
+
+    if (mediaRatio > windowRatio) {
+        media.style.width = media.style.maxWidth;
+        media.style.height = "auto";
+    }
+    else {
+        media.style.width = "auto";
+        media.style.height = media.style.maxHeight;
     }
 }
 
@@ -235,4 +229,8 @@ function copyLink(link) {
     url = `${window.location.protocol}//${window.location.hostname}${window.location.pathname}#${link}`;
     navigator.clipboard.writeText(url);
     showSnack(getLoc("copiedLink", `Copied link to clipboard`));
+}
+
+function mod(n, m) {
+    return ((n % m) + m) % m;
 }
