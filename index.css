@@ -334,7 +334,7 @@ a:hover {
 #caption {
     margin-top: 20px;
     color: white;
-    font-size: 18px;
+    font-size: 2vh;
 }
 
 @media only screen and (max-width: 1000px)

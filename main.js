@@ -89,14 +89,34 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('touchstart', e => {
     touchstartX = e.changedTouches[0].screenX;
+    modalImage.style.transition = "";
+    modalVideo.style.transition = "";
+});
+
+document.addEventListener('touchmove', e => {
+    modalImage.style.transform = `translateX(${e.changedTouches[0].screenX - touchstartX}px)`;
+    modalVideo.style.transform = `translateX(${e.changedTouches[0].screenX - touchstartX}px)`;
 });
 
 document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX;
-    if(modal.style.display === 'flex') {
-        if (touchendX > touchstartX) prevImage();
-        if (touchendX < touchstartX) nextImage();
+    if(modal.style.display === 'flex' && Math.abs(touchendX-touchstartX)>(window.screen.width/2))
+    {
+        if (touchendX > touchstartX) {
+            modalImage.style.transform = `translateX(${-window.screen.width}px)`;
+            modalVideo.style.transform = `translateX(${-window.screen.width}px)`;
+            prevImage();
+        }
+        if (touchendX < touchstartX) {
+            modalImage.style.transform = `translateX(${window.screen.width}px)`;
+            modalVideo.style.transform = `translateX(${window.screen.width}px)`;
+            nextImage();
+        }
     }
+    modalImage.style.transition = "transform 0.2s";
+    modalVideo.style.transition = "transform 0.2s";
+    modalImage.style.transform = "";
+    modalVideo.style.transform = "";
 });
 
 window.addEventListener('resize', e => {
@@ -104,7 +124,6 @@ window.addEventListener('resize', e => {
 });
 
 function updateMediaSize() {
-
     var modalMedia;
     var windowRatio;
     var mediaRatio;
