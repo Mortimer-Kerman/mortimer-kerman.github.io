@@ -392,7 +392,7 @@ select:hover {
 }
 
 option {
-	color: #ffffff;
+	color: white;
 }
 
 .language-select span {
@@ -404,67 +404,62 @@ option {
 	left: -62px;
 }
 
-@media only screen and (min-width: 1001px)
-{
-	.navbuttons-container a svg {
-		padding: 10px;
-	}
-	
-	.github-logo:hover:not(:active) {
-		transform: scale(1.1);
-	}
-	
-	.discord-logo {
-		transform: translate(0px, 4px);
-	}
-	
-	.discord-logo:hover:not(:active)  {
-		transform: translate(0px, 4px) scale(1.1);
-	}
-	
-	.reddit-logo {
-		transform: translate(0px, -2px) scale(1.5);
-		margin: 10px;
-	}
+.github-logo, .discord-logo, .reddit-logo {
+	position: relative;
+}
 
-	.reddit-logo:hover:not(:active) {
-		transform: translate(0px, -2px) scale(1.65);
-	}
+.navbuttons-container a svg {
+	padding: 10px;
+}
 
-	.language-select {
-		transform: translate(-70px, 3px);
-	}
+.github-logo:hover:not(:active) {
+	transform: scale(1.1);
+}
+
+.discord-logo {
+	transform: translate(0px, 4px);
+}
+
+.discord-logo:hover:not(:active)  {
+	transform: translate(0px, 4px) scale(1.1);
+}
+
+.reddit-logo {
+	transform: translate(0px, -2px) scale(1.5);
+	margin: 10px;
+}
+
+.reddit-logo:hover:not(:active) {
+	transform: translate(0px, -2px) scale(1.65);
+}
+
+.language-select {
+	transform: translate(-70px, 3px);
 }
 
 @media only screen and (max-width: 1000px)
 {
-	.github-logo {
-		transform: translate(-180px, 0px) scale(2);
-	}
-	
-	.github-logo:hover:not(:active) {
-		transform: translate(-180px, 0px) scale(2.2);
-	}
-	
-	.discord-logo {
-		transform: translate(-110px, 4px) scale(2);
-	}
-	
-	.discord-logo:hover:not(:active) {
-		transform: translate(-110px, 4px) scale(2.2);
+	.navbuttons-container {
+		transform: translate(-90px, -50px) scale(2);
 	}
 
-	.reddit-logo {
-		transform: translate(-40px, -6px) scale(3);
-		padding: 10px;
+	a:has(.github-logo) {
+		display:inline-block;
+		transform: translate(9.5px, 2px);
 	}
-	
-	.reddit-logo:hover:not(:active) {
-		transform: translate(-40px, -6px) scale(3.3);
+
+	a:has(.discord-logo) {
+		display:inline-block;
+		transform: translate(5px, 0px);
+	}
+
+	a:has(.reddit-logo) {
+		display:inline-block;
+		transform: translate(0.5px, 1px);
 	}
 
 	.language-select {
-		transform: translate(-300px, -5px) scale(1.3);
+		transform: translate(-54.6px, 6.5px) scale(0.65);
 	}
 }
 
@@ -501,6 +496,34 @@ option {
 path {
 	user-select: none;
 	pointer-events: none;
+}
+
+
+[desc]::after {
+	content: attr(desc);
+	white-space: nowrap;
+	color: white;
+	font-size: 15px;
+	font-weight: normal;
+	background-color: #363636;
+	border-radius: 5px;
+	padding: 5px;
+	position: absolute;
+	top: 90%;
+	transform: translateX(-70%);
+	opacity: 0%;
+	transition: opacity 0.2s;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	[desc]::after {
+		transform: translateX(-100%);
+	}
+}
+
+[desc]:hover::after {
+	opacity: 100%;
 }
 
 /*---------------SNACKBAR---------------*/
