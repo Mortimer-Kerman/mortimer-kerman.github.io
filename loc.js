@@ -40,6 +40,7 @@ function parseLoc(loc) {
     return loc.replaceAll("\n","<br/>")
     .replaceAll("CARLCASEY_LINK",`<a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`)
     .replaceAll("MODRINTH_HOLLOWKNIGHT",`<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`)
+    .replaceAll("BUDDY_FRABLOCK",`<a onclick="mentionBuddy('Frablock')">Frablock</a>`)
     .replaceAll("BUDDY_ENIGMA",`<a onclick="mentionBuddy('Enigma')">Enigma</a>`);
 }
 
@@ -81,7 +82,7 @@ It will be available on the Google Play Store for free.`,
 "cosmoswanderer.carlcasey": `Musics by CARLCASEY_LINK`,
 
 "spacefactory":
-`SpaceFactory was a group project made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.
+`SpaceFactory was a group project with BUDDY_FRABLOCK made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.
 Made in python with Pygame, it's a factory game in space, where you can build your own factory to extract and refine resources.`,
 "spacefactory.normalday": `A normal day in SpaceFactory`,
 "spacefactory.buildmenu": `The build menu`,
@@ -184,7 +185,7 @@ Il sera disponique gratuitement sur le Google Play Store.`,
 "cosmoswanderer.carlcasey": `Musiques par CARLCASEY_LINK`,
 
 "spacefactory":
-`SpaceFactory était un projet de groupe fait pour l'édition 2023 des Trophées NSI, une compétition entre les classes de NSI de première et de teminale sur toute la France.
+`SpaceFactory était un projet de groupe avec BUDDY_FRABLOCK fait pour l'édition 2023 des Trophées NSI, une compétition entre les classes de NSI de première et de teminale sur toute la France.
 Fait en python avec Pygame, c'est un factory game dans l'espace, où vous pouvez bâtir votre propre usine pour extraire et raffiner des ressources.
 `,
 "spacefactory.normalday": `Un jour ordinaire sur SpaceFactory`,
