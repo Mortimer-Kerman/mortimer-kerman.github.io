@@ -15,7 +15,7 @@ let touchlastX = 0;
 let touchspeedX = 0;
 
 imageContainers.forEach((container, index) => {
-    container.addEventListener('click', () => {
+    container.querySelector('img').addEventListener('click', () => {
         displayImage(index, modalMedia, true);
     });
 });
@@ -233,4 +233,11 @@ function copyLink(link) {
 
 function mod(n, m) {
     return ((n % m) + m) % m;
+}
+
+function rotateBuddy(buddy) {
+    const buddyPP = document.getElementById(buddy);
+    if(buddyPP.classList.contains("rotate")) buddyPP.classList.remove("rotate");
+    buddyPP.classList.add("rotate");
+    setTimeout(function () { buddyPP.classList.remove("rotate"); }, 1000);
 }

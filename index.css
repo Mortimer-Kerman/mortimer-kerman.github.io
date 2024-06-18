@@ -186,6 +186,7 @@ p {
 .buddiesPP img {
 	border-radius: 50%;
 	transition: transform 0.2s, filter 0.2s;
+	transform-style: preserve-3d;
 }
 
 .buddiesPP img:hover:not(:active) {
@@ -208,6 +209,31 @@ p {
 	.buddiesPP {
 		padding: 30px;
 		min-width: 200px;
+	}
+}
+
+.buddiesPP img.rotate {
+	animation: rotateBuddy 1s ease-in-out forwards;
+}
+  
+@keyframes rotateBuddy {
+	0% {
+		transform: rotateY(0deg);
+	}
+	32% {
+		filter: brightness(1);
+	}
+	33% {
+		filter: brightness(0.8);
+	}
+	66% {
+		filter: brightness(0.8);
+	}
+	67% {
+		filter: brightness(1);
+	}
+	100% {
+		transform: rotateY(360deg);
 	}
 }
 
@@ -241,9 +267,6 @@ p {
 a {
 	text-decoration: none;
 	transition: color 0.2s ease, text-decoration 0.2s ease;
-}
-
-a:link {
 	color: #007bff;
 }
 

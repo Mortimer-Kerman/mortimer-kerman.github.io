@@ -39,7 +39,8 @@ function getLoc(locKey, defaultLoc)
 function parseLoc(loc) {
     return loc.replaceAll("\n","<br/>")
     .replaceAll("CARLCASEY_LINK",`<a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`)
-    .replaceAll("MODRINTH_HOLLOWKNIGHT",`<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`);
+    .replaceAll("MODRINTH_HOLLOWKNIGHT",`<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`)
+    .replaceAll("BUDDY_ENIGMA",`<a onclick="rotateBuddy('Enigma')">Enigma</a>`);
 }
 
 var enDict = {
@@ -132,6 +133,7 @@ This mod recreates these effects and some more.`,
 "gallery.mars": `Once I made a mars colonization future website for school`,
 "gallery.jug": `I sadly didn't made this`,
 "gallery.atmosphere": `Experimentations with procedural 2D atmospheric rendering`,
+"gallery.scattering": `I simulated with BUDDY_ENIGMA an atmosphere in Godot for my prep class final project`,
 
 "buddies": `My dev buddies`,
 "buddies.frablock": `Communist`,
@@ -235,6 +237,7 @@ Ce mod recrée ces effects et quelques autres.`,
 "gallery.mars": `Une fois j'ai fait un site du futur sur la colonisation martienne pour l'école`,
 "gallery.jug": `Je n'ai pas créé cette merveille`,
 "gallery.atmosphere": `Expérimentations de rendu d'atmosphère procédurale en 2D`,
+"gallery.scattering": `J'ai simulé avec BUDDY_ENIGMA une atmosphère dans Godot pour mon TIPE`,
 
 "buddies": `Mes potes développeurs`,
 "buddies.frablock": `Communiste`,
