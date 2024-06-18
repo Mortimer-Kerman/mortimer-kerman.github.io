@@ -15,7 +15,7 @@ let touchlastX = 0;
 let touchspeedX = 0;
 
 imageContainers.forEach((container, index) => {
-    container.querySelector('img').addEventListener('click', () => {
+    container.querySelectorAll('img,video')[0].addEventListener('click', () => {
         displayImage(index, modalMedia, true);
     });
 });
@@ -235,7 +235,10 @@ function mod(n, m) {
     return ((n % m) + m) % m;
 }
 
-function rotateBuddy(buddy) {
+function mentionBuddy(buddy) {
+    document.getElementById(buddy).scrollIntoView({behavior:"smooth"});
+    location.hash = `#${buddy}`;
+
     const buddyPP = document.getElementById(buddy);
     if(buddyPP.classList.contains("rotate")) buddyPP.classList.remove("rotate");
     buddyPP.classList.add("rotate");

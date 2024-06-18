@@ -40,7 +40,7 @@ function parseLoc(loc) {
     return loc.replaceAll("\n","<br/>")
     .replaceAll("CARLCASEY_LINK",`<a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`)
     .replaceAll("MODRINTH_HOLLOWKNIGHT",`<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`)
-    .replaceAll("BUDDY_ENIGMA",`<a onclick="rotateBuddy('Enigma')">Enigma</a>`);
+    .replaceAll("BUDDY_ENIGMA",`<a onclick="mentionBuddy('Enigma')">Enigma</a>`);
 }
 
 var enDict = {

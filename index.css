@@ -190,7 +190,7 @@ p {
 }
 
 .buddiesPP img:hover:not(:active) {
-    transform: scale(1.03);
+	transform: scale(1.03);
 }
 
 .buddiesPP img:active {
@@ -316,23 +316,23 @@ a:hover {
 /*---------------IMAGE/VIDEO VIEWER---------------*/
 
 #modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    flex-direction: column;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	flex-direction: column;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 }
 
 .close, .prev, .next {
 	position: absolute;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
 	transition: transform 0.2s;
 }
 
@@ -369,9 +369,10 @@ a:hover {
 }
 
 #caption {
-    margin-top: 20px;
-    color: white;
-    font-size: 2vh;
+	margin-top: 20px;
+	color: white;
+	font-size: 2vh;
+	text-align: center;
 }
 
 .modal-image, .modal-video {
@@ -412,7 +413,7 @@ a:hover {
 /*---------------NETWORKS AND LANGUAGE---------------*/
 
 .navbuttons-container {
-    display: block;
+	display: block;
 	float: right;
 	transform: translate(0px, -40px);
 }
@@ -426,11 +427,11 @@ a:hover {
 }
 
 select {
-    width: 60px;
-    height: 40px;
+	width: 60px;
+	height: 40px;
 	border-radius: 10px;
-    border: solid #363636;
-    background-color: #1e1e1e;
+	border: solid #363636;
+	background-color: #1e1e1e;
 	font-size: 20px;
 	text-indent: -1000px;
 
@@ -441,7 +442,7 @@ select {
 }
 
 select:hover {
-    background-color: #575757;
+	background-color: #575757;
 }
 
 option {
