@@ -34,8 +34,6 @@ function modalOpen() {
     return modal.style.display === 'flex';
 }
 
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
 function displayImage(index, media, displayCaption) {
     const modalImage = media.querySelector('.modal-image');
     const modalVideo = media.querySelector('.modal-video');
@@ -237,28 +235,10 @@ function mod(n, m) {
     return ((n % m) + m) % m;
 }
 
-const mentionnedBuddies = [];
-
 function mentionBuddy(buddy) {
-    if (isSafari || window.scrollY == document.body.scrollHeight)
-    {
-        window.scrollTo({top:document.body.scrollHeight});
-        rotateBuddy(buddy);
-        return;
-    }
-
-    window.scrollTo({top:document.body.scrollHeight, behavior:"smooth"});
-
-    var mention = () => {rotateBuddy(buddy);};
-
-    addEventListener("scrollend", mention);
-    mentionnedBuddies.push(mention);
-}
-
-function rotateBuddy(buddy) {
+    window.scrollTo({top:document.body.scrollHeight});
     const buddyPP = document.getElementById(buddy);
-    if(buddyPP.classList.contains("rotate")) buddyPP.classList.remove("rotate");
+    if (buddyPP.classList.contains("rotate")) buddyPP.classList.remove("rotate");
     buddyPP.classList.add("rotate");
     setTimeout(function () { buddyPP.classList.remove("rotate"); }, 1000);
-    while (mentionnedBuddies.length != 0) removeEventListener("scrollend", mentionnedBuddies.pop());
 }
