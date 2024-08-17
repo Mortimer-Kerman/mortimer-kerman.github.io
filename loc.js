@@ -48,7 +48,7 @@ var enDict = {
 "me": `Me`,
 "maindesc":
 `Hi, I'm Mortimer Kerman.
-French student, dev on my free time, I am currently trying to survive in my prep class.
+French student, dev on my free time, survivor of prep class, I am currently sailing in IT IUT.
 Mostly backend, I spend my time on multiple projects.
 I'm interested in tech, space, and terrain generation.
 
@@ -140,7 +140,10 @@ This mod recreates these effects and some more.`,
 "buddies.frablock": `Communist`,
 "buddies.ertalite": `Pushing rocks`,
 "buddies.awkaze": `Copy/paste god`,
+"buddies.jordi": `Catalan`,
+"buddies.vexmea": `Femboy`,
 "buddies.crafto": `Box stacker`,
+"buddies.anatom": `Furry`,
 "buddies.enigma": `Thinking in 5D`,
 "buddies.nyanmaths": `Hippie in flip flops`,
 
@@ -151,7 +154,7 @@ var frDict = {
 "me": `Moi`,
 "maindesc":
 `Bonjour, je suis Mortimer Kerman.
-Étudiant français, développeur sur mon temps libre, j'essaie actuellement de survivre en prépa.
+Étudiant français, développeur sur mon temps libre, rescapé de la prépa, je navigue actuellement en IUT informatique.
 Principalement backend, je passe mon temps sur plusieurs projets.
 Je m'intéresse à la technologie, à l'espace et à la génération de terrain.
 
@@ -244,7 +247,10 @@ Ce mod recrée ces effects et quelques autres.`,
 "buddies.frablock": `Communiste`,
 "buddies.ertalite": `Pousse des cailloux`,
 "buddies.awkaze": `Dieu du copier-coller`,
+"buddies.jordi": `Catalan`,
+"buddies.vexmea": `Femboy`,
 "buddies.crafto": `Empile des caisses`,
+"buddies.anatom": `Furry`,
 "buddies.enigma": `Pense en 5D`,
 "buddies.nyanmaths": `Hippie en claquettes`,
 

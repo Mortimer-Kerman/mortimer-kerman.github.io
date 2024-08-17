@@ -21,6 +21,7 @@
 				</div>
 				<h1>
 					<div loc="me">Me</div>
+					<div class="navbar-open" onclick="openNavBar()">&#9776;</div>
 					<div class="navbuttons-container">
 						<div class="language-select">
 							<select id="language" onselect="">
@@ -29,16 +30,20 @@
 							</select>
 							<span id="language-display">🇬🇧</span>
 						</div>
+						<span class="navbar-close" onclick="closeNavBar()"></span>
 						<a desc="Mortimer-Kerman" href="https://github.com/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><div class="github-logo" width="30px" height="30px"></div></a>
 						<a desc="mortimer_kerman" onclick="copyDiscordID()" style="cursor: pointer;"><div class="discord-logo" width="30px" height="30px"></div></a>
 						<a desc="Mortimer_Kerman" href="https://reddit.com/u/Mortimer_Kerman" target="_blank" rel="noopener noreferrer"><div class="reddit-logo" width="30px" height="30px"></div></a>
+						<a desc="Mortimer-Kerman" href="https://modrinth.com/user/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><div class="modrinth-logo" width="30px" height="30px"></div></a>
+						<a desc="mortimer_kerman" href="https://www.curseforge.com/members/mortimer_kerman/projects" target="_blank" rel="noopener noreferrer"><div class="curseforge-logo" width="30px" height="30px"></div></a>
+						<a desc="kerman.mortimer@gmail.com" href="mailto:kerman.mortimer@gmail.com" target="_blank" rel="noopener noreferrer"><div class="mail-logo" width="30px" height="30px"></div></a>
 					</div>
 				</h1>
 				<div class="title-bar"></div>
 				<section>
 					<p loc="maindesc">
 						Hi, I'm Mortimer Kerman.<br/>
-						French student, dev on my free time, I am currently trying to survive in my prep class.<br/>
+						French student, dev on my free time, survivor of prep class, I am currently sailing in IT IUT.<br/>
 						Mostly backend, I spend my time on multiple projects.<br/>
 						I'm interested in tech, space, and terrain generation.
 						<br/><br/>
@@ -305,12 +310,12 @@
 					<div class="buddiesPP">
 						<p>Jordi</p>
 						<a href="https://github.com/Jordi-R66" target="_blank" rel="noopener noreferrer"><img src="buddies/jordi.jpg" width="150px" id="Jordi"></a>
-						<div>Catalan</div>
+						<div loc="buddies.jordi">Catalan</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Vexmea</p>
 						<a href="https://vexmae.github.io" target="_blank" rel="noopener noreferrer"><img src="buddies/vexmea.jpg" width="150px" id="Vexmea"></a>
-						<div>Femboy</div>
+						<div loc="buddies.vexmea">Femboy</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Crafto</p>
@@ -320,7 +325,7 @@
 					<div class="buddiesPP">
 						<p>Anatom</p>
 						<a href="https://github.com/anatom3000" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/49984698?v=4" width="150px" id="Anatom"></a>
-						<div>Furry</div>
+						<div loc="buddies.anatom">Furry</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Enigma</p>

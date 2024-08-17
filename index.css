@@ -458,7 +458,7 @@ option {
 	left: -62px;
 }
 
-.github-logo, .discord-logo, .reddit-logo {
+.github-logo, .discord-logo, .reddit-logo, .modrinth-logo, .curseforge-logo, .mail-logo {
 	position: relative;
 }
 
@@ -487,50 +487,141 @@ option {
 	transform: translate(0px, -2px) scale(1.65);
 }
 
+.modrinth-logo:hover:not(:active) {
+	transform: scale(1.1);
+}
+
+.curseforge-logo:hover:not(:active) {
+	transform: scale(1.1);
+}
+
+.mail-logo:hover:not(:active) {
+	transform: scale(1.1);
+}
+
 .language-select {
 	transform: translate(-70px, 3px);
+}
+
+.navbar-open, .navbar-close {
+	visibility: hidden;
+	position: fixed;
+	display: block;
+	float: right;
+	transform: scale(0);
 }
 
 @media only screen and (max-width: 1000px)
 {
 	.navbuttons-container {
-		transform: translate(-90px, -50px) scale(2);
+		height: 50%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		background-color: #151515;
+		transition: 0.5s;
+		padding-top: 60px;
+		transform: translateY(50%) scale(2);
+		overflow-x: hidden;
 	}
 
-	a:has(.github-logo) {
-		display:inline-block;
-		transform: translate(9.5px, 2px);
+	.navbar-open {
+		visibility: visible;
+		position: relative;
+		transform: translate(-10px, -40px) scale(1);
+		transition: 0.2s;
 	}
 
-	a:has(.discord-logo) {
-		display:inline-block;
-		transform: translate(5px, 0px);
+	.navbar-open:hover:not(:active) {
+		transform: translate(-10px, -40px) scale(1.1);
 	}
 
-	a:has(.reddit-logo) {
-		display:inline-block;
-		transform: translate(0.5px, 1px);
+	.navbar-close {
+		visibility: visible;
+		display: inline-block;
+		position: absolute;
+		transform: translate(17px, -50px);
+		transition: 0.2s;
+		z-index: 6;
+	}
+
+	.navbar-close::before {
+		content: "×";
+	}
+
+	.navbar-close:hover:not(:active) {
+		transform: translate(17px, -50px) scale(1.1);
+	}
+
+	.navbar-open:active, .navbar-close:active {
+		filter: brightness(50%);
 	}
 
 	.language-select {
-		transform: translate(-54.6px, 6.5px) scale(0.65);
+		display: inline-block;
+		position: absolute;
+		transform: translate(-5px, -10px) scale(0.65);
 	}
+
+	.language-select span {
+		left: 7px;
+		top: -42px;
+	}
+
+	a:has(.github-logo) {
+		display: inline-block;
+		position: absolute;
+		transform: translate(2px, 50px);
+		z-index: 5;
+	}
+
+	a:has(.discord-logo) {
+		display: inline-block;
+		position: absolute;
+		transform: translate(2px, 110px);
+		z-index: 4;
+	}
+
+	a:has(.reddit-logo) {
+		display: inline-block;
+		position: absolute;
+		transform: translate(2px, 170px);
+		z-index: 3;
+	}
+
+	a:has(.modrinth-logo) {
+		display: inline-block;
+		position: absolute;
+		transform: translate(2px, 230px);
+		z-index: 2;
+	}
+
+	a:has(.curseforge-logo) {
+		display: inline-block;
+		position: absolute;
+		transform: translate(2px, 290px);
+		z-index: 1;
+	}
+
+	a:has(.mail-logo) {
+		display: inline-block;
+		position: absolute;
+		transform: translate(2px, 350px);
+	}
+}
+
+.github-logo:active, .discord-logo:active, .reddit-logo:active, .modrinth-logo:active, .curseforge-logo:active {
+	filter: brightness(50%);
 }
 
 .github-logo:hover {
 	fill: #8957E5;
 }
 
-.github-logo:active {
-	filter: brightness(50%);
-}
-
 .discord-logo:hover {
 	fill: #5865F2;
-}
-
-.discord-logo:active {
-	filter: brightness(50%);
 }
 
 .reddit-logo circle {
@@ -543,15 +634,22 @@ option {
 	opacity: 1;
 }
 
-.reddit-logo:active {
-	filter: brightness(50%);
+.modrinth-logo:hover {
+	fill: #1BD96A;
+}
+
+.curseforge-logo:hover {
+	fill: #F16436;
+}
+
+.mail-logo:hover {
+	fill: #EA4335;
 }
 
 path {
 	user-select: none;
 	pointer-events: none;
 }
-
 
 [desc]::after {
 	content: attr(desc);
