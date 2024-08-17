@@ -23,7 +23,7 @@
 					<div loc="me">Me</div>
 					<div class="navbar-open" onclick="openNavBar()">&#9776;</div>
 					<div class="navbuttons-container">
-						<div class="language-select">
+						<div class="language-select" style="visibility: hidden;">
 							<select id="language" onselect="">
 								<option value="en">🇬🇧 English</option>
 								<option value="fr">🇫🇷 Français</option>
@@ -31,12 +31,12 @@
 							<span id="language-display">🇬🇧</span>
 						</div>
 						<span class="navbar-close" onclick="closeNavBar()"></span>
-						<a desc="Mortimer-Kerman" href="https://github.com/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><div class="github-logo" width="30px" height="30px"></div></a>
-						<a desc="mortimer_kerman" onclick="copyDiscordID()" style="cursor: pointer;"><div class="discord-logo" width="30px" height="30px"></div></a>
-						<a desc="Mortimer_Kerman" href="https://reddit.com/u/Mortimer_Kerman" target="_blank" rel="noopener noreferrer"><div class="reddit-logo" width="30px" height="30px"></div></a>
-						<a desc="Mortimer-Kerman" href="https://modrinth.com/user/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><div class="modrinth-logo" width="30px" height="30px"></div></a>
-						<a desc="mortimer_kerman" href="https://www.curseforge.com/members/mortimer_kerman/projects" target="_blank" rel="noopener noreferrer"><div class="curseforge-logo" width="30px" height="30px"></div></a>
-						<a desc="kerman.mortimer@gmail.com" href="mailto:kerman.mortimer@gmail.com" target="_blank" rel="noopener noreferrer"><div class="mail-logo" width="30px" height="30px"></div></a>
+						<a desc="Mortimer-Kerman" href="https://github.com/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><svg class="github-logo" width="30px" height="30px"><use href="sprites.svg#github"/></svg></a>
+						<a desc="mortimer_kerman" href="javascript:void(0)" onclick="copyDiscordID()" style="cursor: pointer;"><svg class="discord-logo" width="30px" height="30px"><use href="sprites.svg#discord"/></svg></a>
+						<a desc="Mortimer_Kerman" href="https://reddit.com/u/Mortimer_Kerman" target="_blank" rel="noopener noreferrer"><svg class="reddit-logo" width="30px" height="30px"><use class="circle" href="sprites.svg#reddit-circle"/><use href="sprites.svg#reddit-icon"/></svg></a>
+						<a desc="Mortimer-Kerman" href="https://modrinth.com/user/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><svg class="modrinth-logo" width="30px" height="30px"><use href="sprites.svg#modrinth"/></svg></a>
+						<a desc="mortimer_kerman" href="https://www.curseforge.com/members/mortimer_kerman/projects" target="_blank" rel="noopener noreferrer"><svg class="curseforge-logo" width="30px" height="30px"><use href="sprites.svg#curseforge"/></svg></a>
+						<a desc="kerman.mortimer@gmail.com" href="mailto:kerman.mortimer@gmail.com" target="_blank" rel="noopener noreferrer"><svg class="mail-logo" width="30px" height="30px"><use href="sprites.svg#mail"/></svg></a>
 					</div>
 				</h1>
 				<div class="title-bar"></div>
@@ -240,7 +240,7 @@
 					<div class="image-container">
 						<div>
 							<img class="videoThumb" src="randomScreens/videothumbs/tootempting.webm.jpg" alt="Too tempting" loading="lazy">
-							<div class="playIcon" width="100%" height="45%"></div>
+							<svg class="playIcon" width="100%" height="45%"><use href="sprites.svg#playicon"/></svg>
 						</div>
 						<div class="caption" loc="gallery.tootempting">That was too tempting</div>
 					</div>
@@ -353,6 +353,7 @@
 			<div id="caption"></div>
 		</div>
 		<div id="snackbar">Snacks!</div>
+		<noscript id="no-js"></noscript>
 	</body>
 	<script src="main.js"></script>
 	<script src="loc.js"></script>

@@ -313,6 +313,12 @@ a:hover {
 	}
 }
 
+@media (scripting: none) {
+	.linkcopy:hover::after {
+		opacity: 0%;
+	}
+}
+
 /*---------------IMAGE/VIDEO VIEWER---------------*/
 
 #modal {
@@ -434,7 +440,6 @@ select {
 	background-color: #1e1e1e;
 	font-size: 20px;
 	text-indent: -1000px;
-
 	appearance: none;
 	background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat: no-repeat;
 	background-position: right 0.5rem top 50%;
@@ -454,15 +459,21 @@ option {
 	font-size: 20px;
 	user-select: none;
 	pointer-events: none;
-	position: relative;
-	left: -62px;
+	position: absolute;
+	left: 7px;
+	top: 7px;
+}
+
+.language-select {
+	transform: translate(-70px, 3px);
 }
 
 .github-logo, .discord-logo, .reddit-logo, .modrinth-logo, .curseforge-logo, .mail-logo {
 	position: relative;
+	fill: #FFFFFF;
 }
 
-.navbuttons-container a svg {
+.navbuttons-container a svg:not(.reddit-logo) {
 	padding: 10px;
 }
 
@@ -480,6 +491,7 @@ option {
 
 .reddit-logo {
 	transform: translate(0px, -2px) scale(1.5);
+	padding: 0px;
 	margin: 10px;
 }
 
@@ -497,10 +509,6 @@ option {
 
 .mail-logo:hover:not(:active) {
 	transform: scale(1.1);
-}
-
-.language-select {
-	transform: translate(-70px, 3px);
 }
 
 .navbar-open, .navbar-close {
@@ -530,19 +538,25 @@ option {
 	.navbar-open {
 		visibility: visible;
 		position: relative;
-		transform: translate(-10px, -40px) scale(1);
+		transform: translate(-10px, -40px) scale(1.5);
 		transition: 0.2s;
 	}
 
 	.navbar-open:hover:not(:active) {
-		transform: translate(-10px, -40px) scale(1.1);
+		transform: translate(-10px, -40px) scale(1.65);
+	}
+
+	@media (scripting: none) {
+		.navbar-open {
+			visibility: hidden;
+		}
 	}
 
 	.navbar-close {
 		visibility: visible;
 		display: inline-block;
 		position: absolute;
-		transform: translate(17px, -50px);
+		transform: translate(27px, -50px);
 		transition: 0.2s;
 		z-index: 6;
 	}
@@ -552,7 +566,7 @@ option {
 	}
 
 	.navbar-close:hover:not(:active) {
-		transform: translate(17px, -50px) scale(1.1);
+		transform: translate(27px, -50px) scale(1.1);
 	}
 
 	.navbar-open:active, .navbar-close:active {
@@ -562,53 +576,48 @@ option {
 	.language-select {
 		display: inline-block;
 		position: absolute;
-		transform: translate(-5px, -10px) scale(0.65);
-	}
-
-	.language-select span {
-		left: 7px;
-		top: -42px;
+		transform: translate(5px, -10px) scale(0.65);
 	}
 
 	a:has(.github-logo) {
 		display: inline-block;
 		position: absolute;
-		transform: translate(2px, 50px);
+		transform: translate(12px, 50px);
 		z-index: 5;
 	}
 
 	a:has(.discord-logo) {
 		display: inline-block;
 		position: absolute;
-		transform: translate(2px, 110px);
+		transform: translate(12px, 110px);
 		z-index: 4;
 	}
 
 	a:has(.reddit-logo) {
 		display: inline-block;
 		position: absolute;
-		transform: translate(2px, 170px);
+		transform: translate(12px, 170px);
 		z-index: 3;
 	}
 
 	a:has(.modrinth-logo) {
 		display: inline-block;
 		position: absolute;
-		transform: translate(2px, 230px);
+		transform: translate(12px, 230px);
 		z-index: 2;
 	}
 
 	a:has(.curseforge-logo) {
 		display: inline-block;
 		position: absolute;
-		transform: translate(2px, 290px);
+		transform: translate(12px, 290px);
 		z-index: 1;
 	}
 
 	a:has(.mail-logo) {
 		display: inline-block;
 		position: absolute;
-		transform: translate(2px, 350px);
+		transform: translate(12px, 350px);
 	}
 }
 
@@ -624,13 +633,13 @@ option {
 	fill: #5865F2;
 }
 
-.reddit-logo circle {
+.reddit-logo .circle {
 	fill: #FF5700;
 	opacity: 0;
 	transition: opacity 0.2s;
 }
 
-.reddit-logo:hover circle {
+.reddit-logo:hover .circle {
 	opacity: 1;
 }
 
@@ -646,7 +655,7 @@ option {
 	fill: #EA4335;
 }
 
-path {
+use {
 	user-select: none;
 	pointer-events: none;
 }
@@ -729,4 +738,50 @@ path {
 @keyframes fadeout {
 	from {bottom: 30px; opacity: 1;}
 	to {bottom: 0; opacity: 0;}
+}
+
+/*---------------NO JAVASCRIPT WARNING---------------*/
+
+#no-js {
+	min-width: 250px;
+	background-color: #363636;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px;
+	position: fixed;
+	z-index: 1;
+	left: 30px;
+	bottom: 30px;
+	font-size: 2vh;
+	justify-content: center;
+	display: flex;
+
+	-webkit-animation: fadeout 0.5s;
+	-webkit-animation-delay: 5s;
+	-webkit-animation-fill-mode: forwards;
+
+	animation: fadeout 0.5s;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	#no-js {
+		width: 90%;
+		left: 5%;
+	}
+}
+
+#no-js::after {
+	content: "JavaScript is disabled!\AThis means you can't change page language, copy sections URLs\Aor open images/videos.";
+	white-space: pre;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	#no-js::after {
+		content: "JavaScript is disabled!\AThis means you can't change page language, copy sections URLs,\Aopen the lateral menu or open images/videos.";
+	}
 }

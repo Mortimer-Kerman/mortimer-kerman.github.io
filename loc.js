@@ -2,6 +2,8 @@ const languageSelector = document.getElementById("language");
 const languageDisplay = document.getElementById("language-display");
 const urlParams = new URLSearchParams(window.location.search);
 
+languageSelector.parentElement.style.visibility = "unset";
+
 var language = (navigator.language || navigator.userLanguage).toLowerCase();
 if(language.startsWith("fr")) language = "fr";
 else language = "en";
