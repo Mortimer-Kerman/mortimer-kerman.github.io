@@ -205,21 +205,21 @@ function mentionBuddy(buddy) {
 
 function openNavBar()
 {
-    navcontainer.style.width = "90px";
+    navcontainer.style.right = "0px";
     navcontainer.style.overflowX = "visible";
     navBarOpen = true;
 }
   
 function closeNavBar()
 {
-    navcontainer.style.width = "0";
+    navcontainer.style.right = "-180px";
     navcontainer.style.overflowX = "hidden";
     navBarOpen = false;
 }
 
 function resetNavBar()
 {
-    navcontainer.style.width = "unset";
+    navcontainer.style.right = "unset";
     navcontainer.style.overflowX = "unset";
     navBarOpen = false;
 }

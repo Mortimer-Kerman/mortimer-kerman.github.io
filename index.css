@@ -512,38 +512,44 @@ option {
 }
 
 .navbar-open, .navbar-close {
+	transform: scale(0);
 	visibility: hidden;
 	position: fixed;
-	display: block;
 	float: right;
-	transform: scale(0);
+	fill: #FFFFFF;
 }
 
 @media only screen and (max-width: 1000px)
 {
 	.navbuttons-container {
-		height: 50%;
-		width: 0;
+		height: 200%;
+		width: 135px;
 		position: fixed;
 		z-index: 1;
 		top: 0;
-		right: 0;
+		right: -180px;
 		background-color: #151515;
-		transition: 0.5s;
 		padding-top: 60px;
-		transform: translateY(50%) scale(2);
 		overflow-x: hidden;
+		transition: 0.5s;
+
+		margin: 0;
+		display: grid;
+		place-items: center;
 	}
 
-	.navbar-open {
+	.navbar-open, .navbar-close {
 		visibility: visible;
 		position: relative;
-		transform: translate(-10px, -40px) scale(1.5);
 		transition: 0.2s;
 	}
 
+	.navbar-open {
+		transform: translate(-10px, -40px) scale(2);
+	}
+
 	.navbar-open:hover:not(:active) {
-		transform: translate(-10px, -40px) scale(1.65);
+		transform: translate(-10px, -40px) scale(2.2);
 	}
 
 	@media (scripting: none) {
@@ -553,75 +559,67 @@ option {
 	}
 
 	.navbar-close {
-		visibility: visible;
-		display: inline-block;
-		position: absolute;
-		transform: translate(27px, -50px);
-		transition: 0.2s;
-		z-index: 6;
-	}
-
-	.navbar-close::before {
-		content: "×";
+		transform: scale(1);
 	}
 
 	.navbar-close:hover:not(:active) {
-		transform: translate(27px, -50px) scale(1.1);
+		transform: scale(1.1);
 	}
 
-	.navbar-open:active, .navbar-close:active {
-		filter: brightness(50%);
+	a:has(.navbar-close),
+	.language-select,
+	a:has(.github-logo),
+	a:has(.discord-logo),
+	a:has(.reddit-logo),
+	a:has(.modrinth-logo),
+	a:has(.curseforge-logo),
+	a:has(.mail-logo) {
+		transform: scale(2);
+		position: fixed;
+	}
+
+	a:has(.navbar-close) {
+		top: 70px;
+		z-index: 6;
 	}
 
 	.language-select {
-		display: inline-block;
-		position: absolute;
-		transform: translate(5px, -10px) scale(0.65);
+		top: 170px;
+		transform: scale(1.3);
 	}
 
 	a:has(.github-logo) {
-		display: inline-block;
-		position: absolute;
-		transform: translate(12px, 50px);
+		top: 290px;
 		z-index: 5;
 	}
 
 	a:has(.discord-logo) {
-		display: inline-block;
-		position: absolute;
-		transform: translate(12px, 110px);
+		top: 410px;
 		z-index: 4;
 	}
 
 	a:has(.reddit-logo) {
-		display: inline-block;
-		position: absolute;
-		transform: translate(12px, 170px);
+		top: 530px;
 		z-index: 3;
 	}
 
 	a:has(.modrinth-logo) {
-		display: inline-block;
-		position: absolute;
-		transform: translate(12px, 230px);
+		top: 650px;
 		z-index: 2;
 	}
 
 	a:has(.curseforge-logo) {
-		display: inline-block;
-		position: absolute;
-		transform: translate(12px, 290px);
+		top: 770px;
 		z-index: 1;
 	}
 
 	a:has(.mail-logo) {
-		display: inline-block;
-		position: absolute;
-		transform: translate(12px, 350px);
+		top: 890px;
+		z-index: 0;
 	}
 }
 
-.github-logo:active, .discord-logo:active, .reddit-logo:active, .modrinth-logo:active, .curseforge-logo:active {
+.navbar-open:active, .navbar-close:active .github-logo:active, .discord-logo:active, .reddit-logo:active, .modrinth-logo:active, .curseforge-logo:active {
 	filter: brightness(50%);
 }
 

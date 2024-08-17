@@ -23,6 +23,7 @@
 					<div loc="me">Me</div>
 					<div class="navbar-open" onclick="openNavBar()">&#9776;</div>
 					<div class="navbuttons-container">
+						<a onclick="closeNavBar()"><svg class="navbar-close" width="30px" height="30px"><use href="sprites.svg#close"/></svg></a>
 						<div class="language-select" style="visibility: hidden;">
 							<select id="language" onselect="">
 								<option value="en">🇬🇧 English</option>
@@ -30,7 +31,6 @@
 							</select>
 							<span id="language-display">🇬🇧</span>
 						</div>
-						<span class="navbar-close" onclick="closeNavBar()"></span>
 						<a desc="Mortimer-Kerman" href="https://github.com/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><svg class="github-logo" width="30px" height="30px"><use href="sprites.svg#github"/></svg></a>
 						<a desc="mortimer_kerman" href="javascript:void(0)" onclick="copyDiscordID()" style="cursor: pointer;"><svg class="discord-logo" width="30px" height="30px"><use href="sprites.svg#discord"/></svg></a>
 						<a desc="Mortimer_Kerman" href="https://reddit.com/u/Mortimer_Kerman" target="_blank" rel="noopener noreferrer"><svg class="reddit-logo" width="30px" height="30px"><use class="circle" href="sprites.svg#reddit-circle"/><use href="sprites.svg#reddit-icon"/></svg></a>
