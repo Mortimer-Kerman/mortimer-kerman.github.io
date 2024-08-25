@@ -1,10 +1,10 @@
-const imageContainers = document.querySelectorAll('.image-container');
-const modal = document.getElementById('modal');
-const modalMedia = document.getElementById('modal-media'); modalMedia.displayed = 0;
-const closeModal = document.querySelector('.close');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const caption = document.getElementById('caption');
+const imageContainers = document.querySelectorAll(".image-container");
+const modal = document.getElementById("modal");
+const modalMedia = document.getElementById("modal-media"); modalMedia.displayed = 0;
+const closeModal = document.querySelector(".close");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+const caption = document.getElementById("caption");
 const snackbar = document.getElementById("snackbar");
 
 var snackTimeout = null;
@@ -18,13 +18,21 @@ const navcontainer = document.querySelector(".navbuttons-container");
 navBarOpen = false;
 
 imageContainers.forEach((container, index) => {
-    container.querySelectorAll('img,.playIcon').forEach((elt) => elt.addEventListener('click', () => {
+    container.querySelectorAll("img,.playIcon").forEach((elt) => elt.addEventListener("click", () => {
         displayImage(index, modalMedia, true);
+        if(elt.className == "playIcon") {
+            elt.parentElement.style.visibility = "visible";
+            elt.parentElement.style.position = "relative";
+        }
     }));
 });
 
-document.querySelectorAll('.linkcopy').forEach(element => {
-    element.addEventListener('click', () => {
+document.querySelectorAll(".scriptonly").forEach(element => {
+    element.classList.remove("scriptonly");
+});
+
+document.querySelectorAll(".linkcopy").forEach(element => {
+    element.addEventListener("click", () => {
         copyLink(element.id);
     });
 });
@@ -34,29 +42,29 @@ function isMobile() {
 }
 
 function modalOpen() {
-    return modal.style.display === 'flex';
+    return modal.style.display === "flex";
 }
 
 function displayImage(index, media, displayCaption) {
-    const modalImage = media.querySelector('.modal-image');
-    const modalVideo = media.querySelector('.modal-video');
+    const modalImage = media.querySelector(".modal-image");
+    const modalVideo = media.querySelector(".modal-video");
 
-    const image = imageContainers[index].querySelector('img');
-    const imageCaption = imageContainers[index].querySelector('.caption');
+    const image = imageContainers[index].querySelector("img");
+    const imageCaption = imageContainers[index].querySelector(".caption");
 
     if (image.src.includes("videothumbs/"))
     {
-        modalImage.style.display = 'none';
-        modalVideo.style.display = '';
-        modalImage.src = '';
+        modalImage.style.display = "none";
+        modalVideo.style.display = "";
+        modalImage.src = "";
         modalVideo.src = image.src.replace("videothumbs/","").slice(0,-4);
     }
     else
     {
-        modalImage.style.display = ''
-        modalVideo.style.display = 'none';
+        modalImage.style.display = ""
+        modalVideo.style.display = "none";
         modalImage.src = image.src;
-        modalVideo.src = '';
+        modalVideo.src = "";
     }
 
     if (imageCaption != null)
@@ -64,7 +72,7 @@ function displayImage(index, media, displayCaption) {
         if (displayCaption) caption.textContent = imageCaption.textContent;
     }
     else caption.textContent = "";
-    modal.style.display = 'flex';
+    modal.style.display = "flex";
     document.body.style.overflow = "hidden";
 
     media.displayed = index;
@@ -73,44 +81,44 @@ function displayImage(index, media, displayCaption) {
 }
 
 function closeDisplay() {
-    modalMedia.querySelector('.modal-video').pause();
-    modal.style.display = 'none';
+    modalMedia.querySelector(".modal-video").pause();
+    modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
-closeModal.addEventListener('click', closeDisplay);
+closeModal.addEventListener("click", closeDisplay);
 
 function prevImage() {
     displayImage(mod(modalMedia.displayed - 1, imageContainers.length), modalMedia, true);
 }
-prevButton.addEventListener('click', prevImage);
+prevButton.addEventListener("click", prevImage);
 
 function nextImage() {
     displayImage(mod(modalMedia.displayed + 1, imageContainers.length), modalMedia, true);
 }
-nextButton.addEventListener('click', nextImage);
+nextButton.addEventListener("click", nextImage);
 
-document.addEventListener('keydown', (event) => {
+document.addEventListener("keydown", (event) => {
     if (modalOpen()) {
-        if (event.key === 'ArrowLeft') prevImage();
-        else if (event.key === 'ArrowRight') nextImage();
-        else if (event.key === 'Escape') closeDisplay();
+        if (event.key === "ArrowLeft") prevImage();
+        else if (event.key === "ArrowRight") nextImage();
+        else if (event.key === "Escape") closeDisplay();
     }
 }, false);
 
-document.addEventListener('touchstart', e => {
+document.addEventListener("touchstart", e => {
     touchstartX = e.changedTouches[0].screenX;
     touchlastX = touchstartX;
     modalMedia.style.transition = "";
 });
 
-document.addEventListener('touchmove', e => {
+document.addEventListener("touchmove", e => {
     let currentTouchPos = e.changedTouches[0].screenX;
     touchspeedX = touchlastX - currentTouchPos;
     modalMedia.style.transform = `translateX(${currentTouchPos - touchstartX}px)`;
     touchlastX = currentTouchPos;
 });
 
-document.addEventListener('touchend', e => {
+document.addEventListener("touchend", e => {
     touchendX = e.changedTouches[0].screenX;
     if(modalOpen())
     {
@@ -129,18 +137,18 @@ document.addEventListener('touchend', e => {
     }
 });
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
     if (modalOpen()) updateMediaSize(modalMedia);
     updateNavBar();
 });
 
 function updateMediaSize(media) {
-    const modalImage = media.querySelector('.modal-image');
-    const modalVideo = media.querySelector('.modal-video');
+    const modalImage = media.querySelector(".modal-image");
+    const modalVideo = media.querySelector(".modal-video");
     let windowRatio;
     let mediaRatio;
 
-    if (modalImage.style.display == '') mediaRatio = modalImage.naturalWidth / modalImage.naturalHeight;
+    if (modalImage.style.display == "") mediaRatio = modalImage.naturalWidth / modalImage.naturalHeight;
     else mediaRatio = modalVideo.videoWidth / modalVideo.videoHeight;
 
     if (isMobile()) {
@@ -232,3 +240,72 @@ function updateNavBar()
     }
     else resetNavBar();
 }
+
+const flashbang = document.getElementById("flashbang");
+const lighticon = document.querySelector(".lightmode use");
+const flashbangaudio = new Audio("flashbang.mp3"); 
+
+let flashbanged = false;
+
+flashbangaudio.load();
+
+function switchLightmode()
+{
+    if (!flashbanged)
+    {
+        flashbangaudio.play();
+        flashbanged = true;
+        flashbang.classList.add("flashbang");
+        switchLightmode();
+        return;
+    }
+
+    document.body.classList.toggle("light");
+
+    if (lighticon.getAttribute("href") == "sprites.svg#lightmode")
+    {
+        lighticon.setAttribute("href", "sprites.svg#darkmode");
+        lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
+        lighticon.parentElement.parentElement.setAttribute("desc", getLoc("darkmode", "Dark theme"));
+    }
+    else
+    {
+        lighticon.setAttribute("href", "sprites.svg#lightmode");
+        lighticon.parentElement.parentElement.setAttribute("descloc", "lightmode");
+        lighticon.parentElement.parentElement.setAttribute("desc", getLoc("lightmode", "Light theme"));
+    }
+
+    sessionStorage.setItem("lightMode", document.body.classList.contains("light"));
+}
+
+if (sessionStorage.getItem("lightMode") === "true")
+{
+    flashbanged = true;
+
+    document.body.classList.add("no-transition");
+
+    document.body.classList.toggle("light");
+    lighticon.setAttribute("href", "sprites.svg#darkmode");
+    lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
+    lighticon.parentElement.parentElement.setAttribute("desc", "Dark theme");
+
+    document.body.offsetHeight;
+
+    document.body.classList.remove("no-transition");
+}
+
+const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+let konamiIndex = 0;
+
+document.addEventListener("keydown", function(e) {
+    if (e.key == konamiCode[konamiIndex])
+    {
+        konamiIndex++;
+        if (konamiIndex == konamiCode.length)
+        {
+            window.open("https://youtu.be/dQw4w9WgXcQ", "_blank");
+            konamiIndex = 0;
+        }
+    }
+    else konamiIndex = 0;
+});

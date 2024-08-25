@@ -1,26 +1,76 @@
+:root {
+    --bg-color: #1e1e1e;
+	--imgbg-color: #000000;
+	--text-color: #ffffff;
+	--snack-color: #363636;
+	--titlebar-color: #575757;
+	--select-border-color: #363636;
+	--select-hover-color: #575757;
+	--navmenu-color: #252525;
+	--navicons-color: #ffffff;
+	--link-color: #007bff;
+	--link-visited-color: #8a2be2;
+	--link-hover-color: #ff4500;
+	--select-icon: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+	--linkcopy-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z" fill="white"></path></svg>');
+	--bg-image: url("bg-dark.webp");
+	--bg-pos: top left;
+	--outline: unset;
+	--font-weight: normal;
+}
+
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
 }
 
+body.light {
+    --bg-color: #d9d9d9;/*ffffff*/
+	--imgbg-color: #ffffff;
+	--text-color: #000000;
+	--snack-color: #ffffff;
+	--titlebar-color: #757575;
+	--select-border-color: #999999;
+	--select-hover-color: #cccccc;/*dddddd*/
+	--navmenu-color: #bbbbbb;/*cccccc*/
+	--navicons-color: #363636;
+	--link-color: #0000EE;
+	--link-visited-color: #551A8B;
+	--link-hover-color: #FF0000;
+	--select-icon: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+	--linkcopy-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z" fill="black"></path></svg>');
+	--bg-image: url("bg-light.webp");
+	--bg-pos: top right;
+	--outline: 1px solid #000000;
+	--font-weight: bold;
+}
+
+body.no-transition * {
+	transition: none !important;
+}
+
 .fixed-background {
-	background-color: black;
-	background-image: url('background-image.webp');
+	background-color: var(--imgbg-color);
+	background-image: var(--bg-image);
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: var(--bg-pos);
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items:end;
-	color: white;
+	color: var(--text-color);
 	width: 100%;
+	transition: all 0.2s;
 }
 
 .content {
-	background-color: #1e1e1e;
+	position: relative;
+	background-color: var(--bg-color);
 	padding: 20px;
 	width: 100%;
 	margin-top: 30vh;
+	transition: 0.2s;
 }
 
 @media only screen and (min-width: 1001px)
@@ -36,7 +86,7 @@ body {
 .pp_container {
 	border-radius: 10px;
 	position: relative;
-	background-color: #1e1e1e;
+	background-color: var(--bg-color);
 	top: -200px;
 	left: -20px;
 	width:250px;
@@ -45,6 +95,7 @@ body {
 	max-height:250px;
 	display: inline-block;
 	margin-bottom: -200px;
+	transition: 0.2s;
 }
 
 .pp {
@@ -60,17 +111,24 @@ body {
 .title-bar {
 	width: 100%;
 	height: 2px;
-	background-color: #575757;
+	background-color: var(--titlebar-color);
+	transition: 0.2s;
 }
 
 .small-title-bar {
 	width: 50%;
 	height: 2px;
-	background-color: #575757;
+	background-color: var(--titlebar-color);
+	transition: 0.2s;
 }
 
 h1 {
 	z-index: 1;
+}
+
+.scriptonly {
+	visibility: hidden !important;
+	position: fixed !important;
 }
 
 .gallery {
@@ -91,15 +149,18 @@ h1 {
 	position: relative;
 }
 
-.image-container img {
+.image-container img,
+.image-container video {
 	max-width: 100%;
 	border-radius: 5px;
-	transition: transform 0.2s;
+	transition: 0.2s;
+	outline: var(--outline);
 }
 
 @media only screen and (min-width: 1001px)
 {
-	.image-container img {
+	.image-container img,
+	.image-container video {
 		height: 225px;
 		width: auto;
 	}
@@ -107,7 +168,8 @@ h1 {
 
 @media only screen and (max-width: 1000px)
 {
-	.image-container img {
+	.image-container img,
+	.image-container video {
 		width: 70%;
 		height: auto;
 	}
@@ -123,7 +185,7 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	opacity: 0.7;
-	transition: transform 0.2s;
+	transition: 0.2s;
 }
 
 @media only screen and (min-width: 1001px)
@@ -185,8 +247,9 @@ p {
 
 .buddiesPP img {
 	border-radius: 50%;
-	transition: transform 0.2s, filter 0.2s;
+	transition: 0.2s;
 	transform-style: preserve-3d;
+	outline: var(--outline);
 }
 
 .buddiesPP img:hover:not(:active) {
@@ -266,16 +329,16 @@ p {
 
 a {
 	text-decoration: none;
-	transition: color 0.2s ease, text-decoration 0.2s ease;
-	color: #007bff;
+	transition: 0.2s;
+	color: var(--link-color);
 }
 
 a:visited {
-	color: #8a2be2;
+	color: var(--link-visited-color);
 }
 
 a:hover {
-	color: #ff4500;
+	color: var(--link-hover-color);
 	text-decoration: underline;
 }
 
@@ -285,13 +348,13 @@ a:hover {
 }
 
 .linkcopy::after {
-	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z" fill="white"></path></svg>');
+	content: var(--linkcopy-icon);
 	width: 1em;
 	height: 1em;
 	opacity: 0%;
 	transform: scale(0);
 	display: inline-block;
-	transition: opacity 0.2s, transform 0.2s;
+	transition: 0.2s;
 	cursor: pointer;
 	vertical-align: -0.2em;
 	margin-left: 0.2em;
@@ -337,9 +400,9 @@ a:hover {
 .close, .prev, .next {
 	position: absolute;
 	font-size: 30px;
-	color: white;
+	color: #FFFFFF;
 	cursor: pointer;
-	transition: transform 0.2s;
+	transition: 0.2s;
 }
 
 .close:hover, .prev:hover, .next:hover {
@@ -376,9 +439,10 @@ a:hover {
 
 #caption {
 	margin-top: 20px;
-	color: white;
+	color: #FFFFFF;
 	font-size: 2vh;
 	text-align: center;
+	transition: 0.2s;
 }
 
 .modal-image, .modal-video {
@@ -400,7 +464,7 @@ a:hover {
 @media only screen and (max-width: 1000px)
 {
 	#modal {
-		background-color: rgba(0, 0, 0, 1);
+		background-color: black;
 	}
 
 	.close {
@@ -425,7 +489,7 @@ a:hover {
 }
 
 .navbuttons-container a svg {
-	transition: transform 0.2s, fill 0.2s;
+	transition: 0.2s;
 }
 
 .language-select {
@@ -436,45 +500,67 @@ select {
 	width: 60px;
 	height: 40px;
 	border-radius: 10px;
-	border: solid #363636;
-	background-color: #1e1e1e;
+	border: solid var(--select-border-color);
+	background-color: var(--navmenu-color);
 	font-size: 20px;
 	text-indent: -1000px;
 	appearance: none;
-	background-image: url("data:image/svg+xml;charset=utf-8,<svg width='10' height='6' fill='none' xmlns='http:%2F%2Fwww.w3.org/2000/svg'><path d='M1 1l4 4 4-4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");background-repeat: no-repeat;
+	background-image: var(--select-icon);
+	background-repeat: no-repeat;
 	background-position: right 0.5rem top 50%;
 	background-size: 0.65rem auto;
+	transition: 0.2s;
+	cursor: pointer;
 }
 
 select:hover {
-	background-color: #575757;
+	background-color: var(--select-hover-color);
+}
+
+select:focus {
+	outline: none;
 }
 
 option {
-	color: white;
-}
-
-.language-select span {
-	font-weight: normal;
-	font-size: 20px;
-	user-select: none;
-	pointer-events: none;
-	position: absolute;
-	left: 7px;
-	top: 7px;
+	color: var(--text-color);
+	transition: 0.2s;
 }
 
 .language-select {
 	transform: translate(-70px, 3px);
+	--flagurl: url("https://flagicons.lipis.dev/flags/4x3/gb.svg");
 }
 
-.github-logo, .discord-logo, .reddit-logo, .modrinth-logo, .curseforge-logo, .mail-logo {
+.language-select::after {	
+	background-image: var(--flagurl);
+	content: "";
+	position: absolute;
+    width: 20px;
+    height: 15px;
+	left: 7px;
+	top: 15px;
+	border-radius: 2px;
+	user-select: none;
+	pointer-events: none;
+	transition: 0.2s;
+}
+
+.language-select:hover::after {	
+	transform: scale(1.1);
+}
+
+.lightmode, .github-logo, .discord-logo, .reddit-logo, .modrinth-logo, .curseforge-logo, .mail-logo {
 	position: relative;
-	fill: #FFFFFF;
+	fill: var(--navicons-color);
+	transition: 0.2s;
 }
 
 .navbuttons-container a svg:not(.reddit-logo) {
 	padding: 10px;
+}
+
+.lightmode:hover:not(:active) {
+	transform: scale(1.1);
 }
 
 .github-logo:hover:not(:active) {
@@ -512,11 +598,11 @@ option {
 }
 
 .navbar-open, .navbar-close {
-	transform: scale(0);
 	visibility: hidden;
 	position: fixed;
 	float: right;
-	fill: #FFFFFF;
+	fill: var(--text-color);
+	transition: fill 0.2s;
 }
 
 @media only screen and (max-width: 1000px)
@@ -528,10 +614,10 @@ option {
 		z-index: 1;
 		top: 0;
 		right: -180px;
-		background-color: #151515;
+		background-color: var(--navmenu-color);
 		padding-top: 60px;
 		overflow-x: hidden;
-		transition: 0.5s;
+		transition: right 0.5s, all 0.2s;
 
 		margin: 0;
 		display: grid;
@@ -552,22 +638,13 @@ option {
 		transform: translate(-10px, -40px) scale(2.2);
 	}
 
-	@media (scripting: none) {
-		.navbar-open {
-			visibility: hidden;
-		}
-	}
-
-	.navbar-close {
-		transform: scale(1);
-	}
-
 	.navbar-close:hover:not(:active) {
 		transform: scale(1.1);
 	}
 
 	a:has(.navbar-close),
 	.language-select,
+	a:has(.lightmode),
 	a:has(.github-logo),
 	a:has(.discord-logo),
 	a:has(.reddit-logo),
@@ -580,7 +657,7 @@ option {
 
 	a:has(.navbar-close) {
 		top: 70px;
-		z-index: 6;
+		z-index: 7;
 	}
 
 	.language-select {
@@ -588,38 +665,43 @@ option {
 		transform: scale(1.3);
 	}
 
-	a:has(.github-logo) {
+	a:has(.lightmode) {
 		top: 290px;
+		z-index: 6;
+	}
+
+	a:has(.github-logo) {
+		top: 410px;
 		z-index: 5;
 	}
 
 	a:has(.discord-logo) {
-		top: 410px;
+		top: 530px;
 		z-index: 4;
 	}
 
 	a:has(.reddit-logo) {
-		top: 530px;
+		top: 650px;
 		z-index: 3;
 	}
 
 	a:has(.modrinth-logo) {
-		top: 650px;
+		top: 770px;
 		z-index: 2;
 	}
 
 	a:has(.curseforge-logo) {
-		top: 770px;
+		top: 890px;
 		z-index: 1;
 	}
 
 	a:has(.mail-logo) {
-		top: 890px;
+		top: 1010px;
 		z-index: 0;
 	}
 }
 
-.navbar-open:active, .navbar-close:active .github-logo:active, .discord-logo:active, .reddit-logo:active, .modrinth-logo:active, .curseforge-logo:active {
+.navbar-open:active, .navbar-close:active, .lightmode:active, .github-logo:active, .discord-logo:active, .reddit-logo:active, .modrinth-logo:active, .curseforge-logo:active {
 	filter: brightness(50%);
 }
 
@@ -634,11 +716,15 @@ option {
 .reddit-logo .circle {
 	fill: #FF5700;
 	opacity: 0;
-	transition: opacity 0.2s;
+	transition: 0.2s;
 }
 
 .reddit-logo:hover .circle {
 	opacity: 1;
+}
+
+.reddit-logo:hover .face {
+	fill: #FFFFFF;
 }
 
 .modrinth-logo:hover {
@@ -658,30 +744,44 @@ use {
 	pointer-events: none;
 }
 
-[desc]::after {
+[desc]:not(.language-select)::after,
+.language-select[desc]::before {
 	content: attr(desc);
 	white-space: nowrap;
-	color: white;
+	color: var(--text-color);
 	font-size: 15px;
-	font-weight: normal;
-	background-color: #363636;
+	font-weight: var(--font-weight);
+	background-color: var(--snack-color);
 	border-radius: 5px;
 	padding: 5px;
 	position: absolute;
 	top: 90%;
 	transform: translateX(-70%);
 	opacity: 0%;
-	transition: opacity 0.2s;
+	transition: 0.2s;
+
+	user-select: none;
+	pointer-events: none;
+}
+
+.language-select[desc]::before {
+	transform: translate(0%, 5px);
 }
 
 @media only screen and (max-width: 1000px)
 {
-	[desc]::after {
+	[desc]:not(.language-select)::after,
+	.language-select[desc]:has(> select:not(:focus))::before {
 		transform: translateX(-100%);
+	}
+
+	.language-select[desc]::before {
+		transform: translate(-200%, 5px);
 	}
 }
 
-[desc]:hover::after {
+[desc]:not(.language-select):hover::after,
+.language-select[desc]:has(> select:not(:focus)):hover::before {
 	opacity: 100%;
 }
 
@@ -690,8 +790,8 @@ use {
 #snackbar {
 	visibility: hidden;
 	min-width: 250px;
-	background-color: #363636;
-	color: white;
+	background-color: var(--snack-color);
+	color: var(--text-color);
 	text-align: center;
 	border-radius: 10px;
 	padding: 10px;
@@ -700,8 +800,10 @@ use {
 	left: 30px;
 	bottom: 30px;
 	font-size: 2vh;
+	font-weight: var(--font-weight);
 	justify-content: center;
 	display: flex;
+	transition: 0.2s;
 }
 
 @media only screen and (max-width: 1000px)
@@ -742,8 +844,8 @@ use {
 
 #no-js {
 	min-width: 250px;
-	background-color: #363636;
-	color: white;
+	background-color: var(--snack-color);
+	color: var(--text-color);
 	text-align: center;
 	border-radius: 10px;
 	padding: 10px;
@@ -754,6 +856,7 @@ use {
 	font-size: 2vh;
 	justify-content: center;
 	display: flex;
+	transition: 0.2s;
 
 	-webkit-animation: fadeout 0.5s;
 	-webkit-animation-delay: 5s;
@@ -773,13 +876,60 @@ use {
 }
 
 #no-js::after {
-	content: "JavaScript is disabled!\AThis means you can't change page language, copy sections URLs\Aor open images/videos.";
+	content: "JavaScript is disabled!\AThis means you can't change page language, theme,\A copy sections URLs or open images/videos.";
 	white-space: pre;
 }
 
 @media only screen and (max-width: 1000px)
 {
-	#no-js::after {
-		content: "JavaScript is disabled!\AThis means you can't change page language, copy sections URLs,\Aopen the lateral menu or open images/videos.";
+	#no-js {
+		-webkit-animation-delay: 7s;
+		animation-delay: 7s;
 	}
+
+	#no-js::after {
+		content: "JavaScript is disabled!\AThis means you can't change page language, theme,\A copy sections URLs, open the lateral menu or open images/videos.";
+	}
+}
+
+/*---------------FLASHBANG---------------*/
+
+
+#flashbang {
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+	user-select: none;
+	pointer-events: none;
+}
+
+#flashbang.flashbang {
+	opacity: 1;
+
+	user-select: auto;
+	pointer-events: auto;
+
+	-webkit-animation: flashbang 3s;
+	-webkit-animation-delay: 0.5s;
+	-webkit-animation-fill-mode: forwards;
+
+	animation: flashbang 3s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes flashbang {
+	from {opacity: 1;}
+	to {opacity: 0; user-select: none; pointer-events: none;}
+}
+
+@keyframes flashbang {
+	from {opacity: 1;}
+	to {opacity: 0; user-select: none; pointer-events: none;}
 }
