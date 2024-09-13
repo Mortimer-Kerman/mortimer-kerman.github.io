@@ -105,7 +105,7 @@ Mostly backend, I spend my time on multiple projects.
 I'm interested in tech, space, and terrain generation.
 
 Perlin noise addict.`,
-"copiedUsername": `Copied Discord username to clipboard: mortimer_kerman`,
+"copiedUsername": `Copied Discord username to clipboard: `,
 "copiedLink": `Copied link to clipboard`,
 "lightmode": `Light theme`,
 "darkmode": `Dark theme`,
@@ -132,7 +132,7 @@ You can take the control of a space ship and travel through asteroids, and many 
 "cosmoswanderer.desc2":
 `You can also upgrade your ship, get new skins, meet achievements...
 It will be available on the Google Play Store for free.`,
-"cosmoswanderer.maxaction": `MAX ACTION !`,
+"cosmoswanderer.maxaction": `MAX ACTION!`,
 "cosmoswanderer.carlcasey": `Musics by CARLCASEY_LINK`,
 
 "spacefactory":
@@ -200,6 +200,9 @@ This mod recreates these effects and some more.`,
 "buddies.anatom": `Furry`,
 "buddies.enigma": `Thinking in 5D`,
 "buddies.nyanmaths": `Hippie in flip flops`,
+"buddies.yapudjus": `CAAAAAAAAATTTT`,
+"buddies.axelatlantid": `Entity`,
+"buddies.rypoint": `Entrepreneur`,
 
 "videoplayer": `Your navigator does not support video playing`,
 "translation": ``
@@ -215,7 +218,7 @@ Principalement backend, je passe mon temps sur plusieurs projets.
 Je m'intéresse à la technologie, à l'espace et à la génération de terrain.
 
 Addict au bruit de Perlin.`,
-"copiedUsername": `Nom d'utilisateur Discord copié dans le presse-papier: mortimer_kerman`,
+"copiedUsername": `Nom d'utilisateur Discord copié dans le presse-papier: `,
 "copiedLink": `Lien copié dans le presse-papier`,
 "lightmode": `Thème clair`,
 "darkmode": `Thème sombre`,
@@ -310,6 +313,9 @@ Ce mod recrée ces effects et quelques autres.`,
 "buddies.anatom": `Furry`,
 "buddies.enigma": `Pense en 5D`,
 "buddies.nyanmaths": `Hippie en claquettes`,
+"buddies.yapudjus": `CHAAAAAAAATTTT`,
+"buddies.axelatlantid": `Entité`,
+"buddies.rypoint": `Entrepreneur`,
 
 "videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`,
 "translation": ``
@@ -325,7 +331,7 @@ Principalmente backend, me paso el tiempo en varios proyectos.
 Me interesan la tecnología, el espacio y la generación de terreno.
 
 Adicto al ruido Perlin.`,
-"copiedUsername": `Nombre de usuario Discord copiado en el portapapeles: mortimer_kerman`,
+"copiedUsername": `Nombre de usuario Discord copiado en el portapapeles: `,
 "copiedLink": `Enlace copiado en el portapapeles`,
 "lightmode": `Modo claro`,
 "darkmode": `Mobo oscuro`,
@@ -352,7 +358,7 @@ Puede tomar el control de una nave espacial y navegar entre los asteroides y otr
 "cosmoswanderer.desc2":
 `Puede también mejorar su nave, conseguir nuevas skins, conseguir logros…
 Estará accesible gratuitamente en el Google Play Store.`,
-"cosmoswanderer.maxaction": `¡ Acción MAXIMA !`,
+"cosmoswanderer.maxaction": `¡ACCIÓN  MAXIMA!`,
 "cosmoswanderer.carlcasey": `Música por CARLCASEY_LINK`,
 
 "spacefactory":
@@ -420,6 +426,9 @@ Este mod reproduce estos efectos y algunos otros.`,
 "buddies.anatom": `Furry`,
 "buddies.enigma": `Piensa en 5D`,
 "buddies.nyanmaths": `Hippie con chanclas`,
+"buddies.yapudjus": `GAAAAAATOOOOOO`,
+"buddies.axelatlantid": `Entidad`,
+"buddies.rypoint": `Emprendedor`,
 
 "videoplayer": `Su navegador no soporta la lectura de vídeos`,
 "translation": `No traduje esta página, mi español es demasiado inestable por desgracia :(`//Esta página no ha sido traducida por mí, mi español está demasiado oxidado para eso :(
@@ -435,7 +444,7 @@ Hauptsächlich Backend-Entwicklung, verbringe ich meine Zeit mit verschiedenen P
 Ich interessiere mich für Technologie, Weltraum und Terrain-Generierung.
 
 Perlin-Rausch-Süchtiger.`,
-"copiedUsername": `Discord-Benutzername in die Zwischenablage kopiert: mortimer_kerman`,
+"copiedUsername": `Discord-Benutzername in die Zwischenablage kopiert: `,
 "copiedLink": `Link in die Zwischenablage kopiert`,
 "lightmode": `Helles Thema`,
 "darkmode": `Dunkles Thema`,
@@ -462,7 +471,7 @@ Du kannst die Kontrolle über ein Raumschiff übernehmen und durch Asteroiden un
 "cosmoswanderer.desc2":
 `Du kannst auch dein Schiff verbessern, neue Skins erhalten, Erfolge erzielen...
 Es wird kostenlos im Google Play Store erhältlich sein.`,
-"cosmoswanderer.maxaction": `MAXIMALE ACTION !`,
+"cosmoswanderer.maxaction": `MAXIMALE ACTION!`,
 "cosmoswanderer.carlcasey": `Musik von CARLCASEY_LINK`,
 
 "spacefactory":
@@ -530,6 +539,9 @@ Dieser Mod rekreiert diese Effekte und noch mehr.`,
 "buddies.anatom": `Furry`,
 "buddies.enigma": `Denkt in 5D`,
 "buddies.nyanmaths": `Hippie in Flip-Flops`,
+"buddies.yapudjus": `KAAAAAATZEEEEE`,
+"buddies.axelatlantid": `Objekt`,
+"buddies.rypoint": `Unternehmer`,
 
 "videoplayer": `Ihr Browser unterstützt keine Videowiedergabe`,
 "translation": `Diese Seite wurde von ChatGPT 4o übersetzt und von eine nicht professionelle Person korrigiert.`

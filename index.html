@@ -19,7 +19,7 @@
 				<div class="pp_container" width="200px">
 					<img class="pp" src="mortimerK.jpg" alt="mk" width="200px"/>
 				</div>
-				<h1>
+				<h1 class="top-content">
 					<div loc="me">Me</div>
 					<div class="navbar-open scriptonly" onclick="openNavBar()" style="cursor: pointer;">&#9776;</div>
 					<div class="navbuttons-container">
@@ -29,7 +29,7 @@
 						</div>
 						<a desc="Light mode" descloc="lightmode" class="scriptonly" onclick="switchLightmode()" style="cursor: pointer;"><svg class="lightmode" width="30px" height="30px"><use href="sprites.svg#lightmode"/></svg></a>
 						<a desc="Mortimer-Kerman" href="https://github.com/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><svg class="github-logo" width="30px" height="30px"><use href="sprites.svg#github"/></svg></a>
-						<a desc="mortimer_kerman" onclick="copyDiscordID()" style="cursor: pointer;"><svg class="discord-logo" width="30px" height="30px"><use href="sprites.svg#discord"/></svg></a>
+						<a desc="mortimer_kerman" onclick="copyDiscordID('mortimer_kerman')" style="cursor: pointer;"><svg class="discord-logo" width="30px" height="30px"><use href="sprites.svg#discord"/></svg></a>
 						<a desc="Mortimer_Kerman" href="https://reddit.com/u/Mortimer_Kerman" target="_blank" rel="noopener noreferrer"><svg class="reddit-logo" width="30px" height="30px"><use class="circle" href="sprites.svg#reddit-circle"/><use class="face" href="sprites.svg#reddit-icon"/></svg></a>
 						<a desc="Mortimer-Kerman" href="https://modrinth.com/user/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><svg class="modrinth-logo" width="30px" height="30px"><use href="sprites.svg#modrinth"/></svg></a>
 						<a desc="mortimer_kerman" href="https://www.curseforge.com/members/mortimer_kerman/projects" target="_blank" rel="noopener noreferrer"><svg class="curseforge-logo" width="30px" height="30px"><use href="sprites.svg#curseforge"/></svg></a>
@@ -146,8 +146,10 @@
 						<p loc="spacefactory.bestproject">
 							SpaceFactory was elected as the best <i>Terminale</i> project of the Brittany region.<br/>
 						</p>
-						<p><a href="https://github.com/Mortimer-Kerman/SpaceFactory" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a></p>
-						<p><a href="https://trophees-nsi.fr/" target="_blank" rel="noopener noreferrer" loc="spacefactory.website">Trophées NSI official website</a></p>
+						<p>
+							<a href="https://github.com/Mortimer-Kerman/SpaceFactory" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a><br/>
+							<a href="https://trophees-nsi.fr/" target="_blank" rel="noopener noreferrer" loc="spacefactory.website">Trophées NSI official website</a>
+						</p>
 					</section>
 					<div class="small-title-bar"></div>
 					<h2 id="projects-planetar" class="linkcopy">Planetar</h2>
@@ -240,7 +242,12 @@
 							<svg class="playIcon" width="100%" height="45%"><use href="sprites.svg#playicon"/></svg>
 						</div>
 						<noscript>
-							<video preload="auto" controls src="randomScreens/tootempting.webm">Your navigator does not support video playing</video>
+							<video preload="auto" controls src="randomScreens/tootempting.webm">
+								<track src="randomScreens/subtitles/tootempting.webm-en.vtt" kind="subtitles" srclang="en" label="English">
+								<track src="randomScreens/subtitles/tootempting.webm-fr.vtt" kind="subtitles" srclang="fr" label="Français">
+								<track src="randomScreens/subtitles/tootempting.webm-es.vtt" kind="subtitles" srclang="es" label="Español">
+								<track src="randomScreens/subtitles/tootempting.webm-de.vtt" kind="subtitles" srclang="de" label="Deutsch">
+								Your navigator does not support video playing</video>
 						</noscript>
 						<div class="caption" loc="gallery.tootempting">That was too tempting</div>
 					</div>
@@ -294,62 +301,89 @@
 				<section class="buddies-gallery">
 					<div class="buddiesPP">
 						<p>Frablock</p>
-						<a href="https://github.com/Frablock" target="_blank" rel="noopener noreferrer"><img src="buddies/frablock.jpg" width="150px" id="Frablock"></a>
+						<a href="https://github.com/Frablock" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/frablock.jpg" width="150px" id="Frablock"></a>
 						<div loc="buddies.frablock">Communist</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Ertalite</p>
-						<a href="https://github.com/ertalite" target="_blank" rel="noopener noreferrer"><img src="buddies/ertalite.jpg" width="150px" id="Ertalite"></a>
+						<a href="https://github.com/ertalite" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/ertalite.jpg" width="150px" id="Ertalite"></a>
 						<div loc="buddies.ertalite">Pushing rocks</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Awkaze</p>
-						<a href="https://github.com/awkaze" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/148548893?v=4" width="150px" id="Awkaze"></a>
+						<a href="https://github.com/awkaze" target="_blank" rel="noopener noreferrer">
+							<img src="https://avatars.githubusercontent.com/u/148548893?v=4" width="150px" id="Awkaze"></a>
 						<div loc="buddies.awkaze">Copy/paste god</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Jordi</p>
-						<a href="https://github.com/Jordi-R66" target="_blank" rel="noopener noreferrer"><img src="buddies/jordi.jpg" width="150px" id="Jordi"></a>
+						<a href="https://github.com/Jordi-R66" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/jordi.jpg" width="150px" id="Jordi"></a>
 						<div loc="buddies.jordi">Catalan</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Vexmea</p>
-						<a href="https://vexmae.github.io" target="_blank" rel="noopener noreferrer"><img src="buddies/vexmea.jpg" width="150px" id="Vexmea"></a>
+						<a href="https://vexmae.github.io" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/vexmea.jpg" width="150px" id="Vexmea"></a>
 						<div loc="buddies.vexmea">Femboy</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Crafto</p>
-						<a href="https://instagram.com/malidevgames/" target="_blank" rel="noopener noreferrer"><img src="buddies/crafto.jpg" width="150px" id="Crafto"></a>
+						<a href="https://instagram.com/malidevgames/" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/crafto.jpg" width="150px" id="Crafto"></a>
 						<div loc="buddies.crafto">Box stacker</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Anatom</p>
-						<a href="https://github.com/anatom3000" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/49984698?v=4" width="150px" id="Anatom"></a>
+						<a href="https://github.com/anatom3000" target="_blank" rel="noopener noreferrer">
+							<img src="https://avatars.githubusercontent.com/u/49984698?v=4" width="150px" id="Anatom"></a>
 						<div loc="buddies.anatom">Furry</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Enigma</p>
-						<a href="https://github.com/Checkmate6659" target="_blank" rel="noopener noreferrer"><img src="buddies/enigma.jpg" width="150px" id="Enigma"></a>
+						<a href="https://github.com/Checkmate6659" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/enigma.jpg" width="150px" id="Enigma"></a>
 						<div loc="buddies.enigma">Thinking in 5D</div>
 					</div>
 					<div class="buddiesPP">
 						<p>NyanMaths</p>
-						<a href="https://github.com/NyanMaths" target="_blank" rel="noopener noreferrer"><img src="buddies/nyanmaths.jpg" width="150px" id="NyanMaths"></a>
+						<a href="https://github.com/NyanMaths" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/nyanmaths.jpg" width="150px" id="NyanMaths"></a>
 						<div loc="buddies.nyanmaths">Hippie in flip flops</div>
 					</div>
+					<div class="buddiesPP">
+						<p>yapudjus</p>
+						<a href="https://github.com/yapudjus" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/yapudjus.jpg" width="150px" id="yapudjus"></a>
+						<div loc="buddies.yapudjus">CAAAAAAAAATTTT</div>
+					</div>
+					<div class="buddiesPP">
+						<p>Axel Atlantid</p>
+						<a onclick="copyDiscordID('axelatlantid')" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/axelatlantid.jpg" width="150px" id="AxelAtlantid"></a>
+						<div loc="buddies.axelatlantid">Entity</div>
+					</div>
+					<div class="buddiesPP">
+						<p>Rypoint</p>
+						<a href="https://github.com/Rip01nt" target="_blank" rel="noopener noreferrer">
+							<img src="buddies/rypoint.png" width="150px" id="Rypoint"></a>
+						<div loc="buddies.rypoint">Entrepreneur</div>
+					</div>
 				</section>
-				<div class="small-title-bar" style="margin:30px; margin-left: 0px;"></div>
+				<div class="small-title-bar" style="margin-top:30px; margin-bottom: 30px;"></div>
 				<a href="https://github.com/Mortimer-Kerman/mortimer-kerman.github.io" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a>
 				<p loc="translation" style="position:absolute; right: 20px; bottom: 0px; font-size: medium;"></p>
 			</div>
 		</div>
 		<div id="modal">
-			<span class="close"></span>
-			<span class="prev"></span>
 			<div id="modal-media">
 				<img class="modal-image" onload="updateMediaSize(modalMedia)">
 				<video class="modal-video" preload="auto" autoplay controls>Your navigator does not support video playing</video>
 			</div>
+			<span class="close"></span>
+			<span class="prev"></span>
 			<span class="next"></span>
 			<div id="caption"></div>
 		</div>

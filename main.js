@@ -58,6 +58,22 @@ function displayImage(index, media, displayCaption) {
         modalVideo.style.display = "";
         modalImage.src = "";
         modalVideo.src = image.src.replace("videothumbs/","").slice(0,-4);
+
+        const tracks = modalVideo.getElementsByTagName("track");
+        while (tracks.length > 0) modalVideo.removeChild(tracks[0]);
+
+        langList.forEach((lang) => {
+            const track = document.createElement("track");
+            track.src = image.src.replace("videothumbs/","subtitles/").replace(".jpg","-" + lang + ".vtt");
+            track.kind = "subtitles";
+            track.srclang = lang;
+            track.label = getLocLang("langName", "langName", lang);
+            
+            modalVideo.appendChild(track);
+        
+            if (lang == language && lang != "fr") track.default = true;
+        });
+
     }
     else
     {
@@ -188,9 +204,9 @@ function hideSnack() {
     snackTimeout = null;
 }
 
-function copyDiscordID() {
-    navigator.clipboard.writeText("mortimer_kerman");
-    showSnack(getLoc("copiedUsername", `Copied Discord username to clipboard: mortimer_kerman`));
+function copyDiscordID(discordid) {
+    navigator.clipboard.writeText(discordid);
+    showSnack(getLoc("copiedUsername", `Copied Discord username to clipboard: `) + discordid);
 }
 
 function copyLink(link) {
