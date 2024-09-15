@@ -83,18 +83,24 @@ body.no-transition * {
 	}
 }
 
-.top-content h1 {
+.top-title {
 	width: calc(100% - 500px);
 	display: inline-block;
 }
 
+.top-content {
+	display: block;
+	float: right;
+	height: 80px;
+}
+
 @media only screen and (max-width: 1000px)
 {
-	h1:not(.top-content h1), h2 {
+	h1:not(.top-title), h2 {
 		text-align: center;
 	}
 
-	.top-content h1 {
+	.top-title h1 {
 		width: calc(100% - 100px);
 	}
 }
@@ -109,7 +115,7 @@ body.no-transition * {
 	max-width:250px;
 	height:250px;
 	max-height:250px;
-	display: inline-block;
+	display: block;
 	margin-bottom: -200px;
 	transition: 0.2s;
 }
