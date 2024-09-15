@@ -84,6 +84,7 @@ body.no-transition * {
 }
 
 .top-content div[loc] {
+	font-size: 32px;
 	width: calc(100% - 500px);
 }
 
@@ -980,6 +981,7 @@ use {
 
 .article-sum img {
 	border-radius: 10px;
+	width: 500px;
 }
 
 .article-sum i {
@@ -998,6 +1000,11 @@ use {
 		margin-bottom: 10px;
 		display: block;
 	}
+
+	.article-sum img {
+		width: 100%;
+	}
+	
 }
 
 .article-sum:hover:not(:active) {
@@ -1032,9 +1039,12 @@ use {
 	}
 }
 
-
 #article-text {
 	padding: 20px;
+}
+
+#article-text img {
+	border-radius: 10px;
 }
 
 .close-article {
@@ -1072,11 +1082,55 @@ use {
 	right: 100px;
 }
 
-
 #copyArticle:hover:not(:active) {
 	transform: scale(1.1);
 }
 
 #copyArticle:active {
 	filter: brightness(50%);
+}
+
+#articles-list:empty {
+	height: 300px;
+	width: 100%;
+	text-align: center;
+}
+
+#articles-list:empty::after {
+	position:relative;
+	top:50%;
+	content: "Hmm... There's nothing here. Is JavaScript enabled?";
+}
+
+@media only screen and (max-width: 1000px)
+{
+	#article-text h1 {
+		font-size: 32px;
+	}
+
+	.close-article {
+		transform: scale(2);
+	}
+
+	.close-article:hover {
+		transform: scale(2.2);
+	}
+	
+	#copyArticle {
+		transform: scale(2);
+		top: 30px;
+		left: 30px;
+	}
+	
+	#copyArticle:hover:not(:active) {
+		transform: scale(2.2);
+	}
+
+	#article-text img {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
 }

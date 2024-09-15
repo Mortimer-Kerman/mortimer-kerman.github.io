@@ -124,6 +124,7 @@ Perlin noise addict.`,
 "projects": `My projects`,
 "projects.repo": `Github repo`,
 "back": `Back`,
+"copyarticle": `Copy article link`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer is a mobile space shooter game under developpement.
@@ -254,6 +255,7 @@ Addict au bruit de Perlin.`,
 "projects": `Mes projets`,
 "projects.repo": `Dépôt Github`,
 "back": `Retour`,
+"copyarticle": `Copier le lien de l'article`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer est un jeu mobile de shooter spatial en développement.
@@ -386,6 +388,7 @@ Adicto al ruido Perlin.`,
 "projects": `Mis proyectos`,
 "projects.repo": `Repositorio Github`,
 "back": `Atrás`,
+"copyarticle": `Copiar enlace del artículo`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer es un juego móvil de shooter espacial en vías de desarrollo.
@@ -435,22 +438,19 @@ Este mod reproduce estos efectos y algunos otros.`,
 "hollowknight.map": `Enlace de descarga del mapa`,
 
 "mineterstellar.desc":
-`Mineterstellar est un mod Minecraft recréant dans Minecraft le film Interstellar, de Christopher Nolan.
-Il ajoute les planètes, les combinaisons spatiales, TARS, la musique, et les environments du film.`,
+`Mineterstellar es un mod para Minecraft que reproduce la película Interstellar de Christopher Nolan en Minecraft.
+Añade planetas, trajes espaciales, TARS, música y entornos de la película.`,
 "mineterstellar.desc2":
-`J'ai démarré ce projet il y a plusieurs années pour Minecraft Forge 1.12.2.
-Avec les années, cette version est devenue de plus en plus obsolète, et mon mod accumulait une énorme dette technique.
-C'est pourquoi j'ai décidé en Août 2024 de le refaire entièrement depuis zéro pour Fabric 1.21.`,
-"mineterstellar.miller": `La planète de Miller`,
-"mineterstellar.edmund": `La planète d'Edmund`,
-"mineterstellar.mann1": `La planète de Mann`,
-"mineterstellar.mann2": `TARS sur la planète de Mann`,
+`Comencé este proyecto hace muchos años para Minecraft Forge 1.12.2.
+Con el tiempo, esta versión se volvió cada vez más obsoleta y mi mod acumuló una gran deuda técnica.
+Por eso, en agosto de 2024 decidí rehacerlo completamente desde cero para Fabric 1.21.`,
+"mineterstellar.miller": `Planeta de Miller`,
+"mineterstellar.edmund": `Planeta de Edmund`,
+"mineterstellar.mann1": `Planeta de Mann`,
+"mineterstellar.mann2": `TARS en el planeta de Mann`,
 "mineterstellar.mann3": `"Eres un desgraciado..."`,
-"mineterstellar.blog": `Blog de développement de Mineterstellar`,
-"mineterstellar.blog.desc":
-`En esta página publicaré artículos breves sobre el progreso del desarrollo de Mineterstellar.
-Tenga en cuenta que los artículos se publican en inglés y no están traducidos.`,
-"mineterstellar.curseforge": `Page Curseforge originale de Mineterstellar`,
+"mineterstellar.blog": `Blog de desarrollo de Mineterstellar`,
+"mineterstellar.curseforge": `Página original de Mineterstellar en Curseforge`,
 
 "gallery": `Galería de cosas casuales`,
 "gallery.wallpaper": `El fondo de pantalla de mi PC (Me encanta SpaceEngine)`,
@@ -518,6 +518,7 @@ Perlin-Rausch-Süchtiger.`,
 "projects": `Meine Projekte`,
 "projects.repo": `Github-Repository`,
 "back": `Zurück`,
+"copyarticle": `Artikellink kopieren`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer ist ein mobiles Weltraum-Shooter-Spiel in Entwicklung.

@@ -37,17 +37,11 @@
 				<div class="title-bar"></div>
                 <section>
 					<p loc="mineterstellar.blog.desc">
-						Sur cette page, je publierai des courts articles sur l'avancée du développement de Mineterstellar.<br/>
-                        Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits.
+						On this page, I'll publish short articles about Mineterstellar's development progress.
 					</p>
 				</section>
                 <div class="small-title-bar"></div>
                 <section id="articles-list"></section>
-                <noscript>
-                    <div style="height: 300px; width: 100%; display: table; text-align: center;">
-                        <i style="display: table-cell; vertical-align: middle; text-align: center;">Hmm... There's nothing here. Try enabling JavaScript on this page.</i>
-                    </div>
-                </noscript>
                 <div class="small-title-bar" style="margin-top:30px; margin-bottom: 30px;"></div>
 				<a href="https://github.com/Mortimer-Kerman/mortimer-kerman.github.io" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a>
 				<p loc="translation" style="position:absolute; right: 20px; bottom: 0px; font-size: medium;"></p>
@@ -55,10 +49,10 @@
 		</div>
         <div id="modal-article">
 			<div class="content" id="article-content">
-                <a id="copyArticle"></a>
+                <a id="copyArticle" desc="Copy article link" descloc="copyarticle"></a>
                 <span class="close-article" onclick="closeArticle()"></span>
                 <section id="article-text"></section>
-                <iframe id="comments" src="comments.html"></iframe>
+                <iframe id="comments" src="comments.html?style=light"></iframe>
 			</div>
 		</div>
         <div id="modal">

@@ -75,7 +75,6 @@ function displayArticleSum(id, title, date, thumbnail) {
     const imgElem = document.createElement('img');
     imgElem.loading = "lazy";
     imgElem.src = thumbnail;
-    imgElem.width = 500;
     
     articleSum.appendChild(titleElem);
     articleSum.appendChild(dateElem);
@@ -91,7 +90,7 @@ async function loadArticleHtml(articleId) {
         const htmlContent = marked.parse(markdownText);
         articleText.innerHTML = htmlContent;
         document.title = extractTitle(markdownText);
-        comments.src = `comments.html?s=${articleId}`;
+        comments.src = `comments.html?article=${articleId}&style=${document.body.classList.contains("light") ? "light" : "dark"}`;
     } catch (error) {
         console.error(`Error for ${articleId} :`, error);
         articleText.innerHTML = "<p>Failed to load the article.</p>";
