@@ -123,6 +123,7 @@ Perlin noise addict.`,
 
 "projects": `My projects`,
 "projects.repo": `Github repo`,
+"back": `Back`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer is a mobile space shooter game under developpement.
@@ -170,6 +171,22 @@ This mod recreates these effects and some more.`,
 "hollowknight.doublejump": `Double jump`,
 "hollowknight.video": `Clouser's original video`,
 "hollowknight.map": `Official map download`,
+
+"mineterstellar.desc":
+`Mineterstellar is a Minecraft mod reprducing the 2014 Christopher Nolan's Interstellar movie into Minecraft.
+It adds planets, space suits, TARS, music, and environments from the movie.`,
+"mineterstellar.desc2":
+`I started this project many years ago for Minecraft Forge 1.12.2.
+As the time passed, this version became more and more deprecated, and my mod was getting a huge technical debt.
+That's why I decided in August 2024 to remake it entirely from scratch for Fabric 1.21.`,
+"mineterstellar.miller": `Miller's planet`,
+"mineterstellar.edmund": `Edmund's planet`,
+"mineterstellar.mann1": `Mann's planet`,
+"mineterstellar.mann2": `TARS on Mann's planet`,
+"mineterstellar.mann3": `"You fucking coward..."`,
+"mineterstellar.blog": `Mineterstellar dev blog`,
+"mineterstellar.blog.desc": `On this page, I'll publish short articles about Mineterstellar's development progress.`,
+"mineterstellar.curseforge": `Original Mineterstellar Curseforge page`,
 
 "gallery": `Random stuff gallery`,
 "gallery.wallpaper": `My PC wallpaper (I love SpaceEngine)`,
@@ -236,6 +253,7 @@ Addict au bruit de Perlin.`,
 
 "projects": `Mes projets`,
 "projects.repo": `Dépôt Github`,
+"back": `Retour`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer est un jeu mobile de shooter spatial en développement.
@@ -283,6 +301,24 @@ Ce mod recrée ces effects et quelques autres.`,
 "hollowknight.doublejump": `Double saut`,
 "hollowknight.video": `Vidéo originale de Clouser`,
 "hollowknight.map": `Lien de téléchargement de la map`,
+
+"mineterstellar.desc":
+`Mineterstellar est un mod Minecraft recréant dans Minecraft le film Interstellar, de Christopher Nolan.
+Il ajoute les planètes, les combinaisons spatiales, TARS, la musique, et les environnements du film.`,
+"mineterstellar.desc2":
+`J'ai démarré ce projet il y a plusieurs années pour Minecraft Forge 1.12.2.
+Avec les années, cette version est devenue de plus en plus obsolète, et mon mod accumulait une énorme dette technique.
+C'est pourquoi j'ai décidé en Août 2024 de le refaire entièrement depuis zéro pour Fabric 1.21.`,
+"mineterstellar.miller": `La planète de Miller`,
+"mineterstellar.edmund": `La planète d'Edmund`,
+"mineterstellar.mann1": `La planète de Mann`,
+"mineterstellar.mann2": `TARS sur la planète de Mann`,
+"mineterstellar.mann3": `"Putain de lâche..."`,
+"mineterstellar.blog": `Blog de développement de Mineterstellar`,
+"mineterstellar.blog.desc":
+`Sur cette page, je publierai des courts articles sur l'avancée du développement de Mineterstellar.
+Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits.`,
+"mineterstellar.curseforge": `Page Curseforge originale de Mineterstellar`,
 
 "gallery": `Galerie de trucs aléatoires`,
 "gallery.wallpaper": `Mon fond d'écran de PC (J'adore SpaceEngine)`,
@@ -349,6 +385,7 @@ Adicto al ruido Perlin.`,
 
 "projects": `Mis proyectos`,
 "projects.repo": `Repositorio Github`,
+"back": `Atrás`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer es un juego móvil de shooter espacial en vías de desarrollo.
@@ -396,6 +433,24 @@ Este mod reproduce estos efectos y algunos otros.`,
 "hollowknight.doublejump": `Doble salto`,
 "hollowknight.video": `Vídeo original de Clouser`,
 "hollowknight.map": `Enlace de descarga del mapa`,
+
+"mineterstellar.desc":
+`Mineterstellar est un mod Minecraft recréant dans Minecraft le film Interstellar, de Christopher Nolan.
+Il ajoute les planètes, les combinaisons spatiales, TARS, la musique, et les environments du film.`,
+"mineterstellar.desc2":
+`J'ai démarré ce projet il y a plusieurs années pour Minecraft Forge 1.12.2.
+Avec les années, cette version est devenue de plus en plus obsolète, et mon mod accumulait une énorme dette technique.
+C'est pourquoi j'ai décidé en Août 2024 de le refaire entièrement depuis zéro pour Fabric 1.21.`,
+"mineterstellar.miller": `La planète de Miller`,
+"mineterstellar.edmund": `La planète d'Edmund`,
+"mineterstellar.mann1": `La planète de Mann`,
+"mineterstellar.mann2": `TARS sur la planète de Mann`,
+"mineterstellar.mann3": `"Eres un desgraciado..."`,
+"mineterstellar.blog": `Blog de développement de Mineterstellar`,
+"mineterstellar.blog.desc":
+`En esta página publicaré artículos breves sobre el progreso del desarrollo de Mineterstellar.
+Tenga en cuenta que los artículos se publican en inglés y no están traducidos.`,
+"mineterstellar.curseforge": `Page Curseforge originale de Mineterstellar`,
 
 "gallery": `Galería de cosas casuales`,
 "gallery.wallpaper": `El fondo de pantalla de mi PC (Me encanta SpaceEngine)`,
@@ -462,6 +517,7 @@ Perlin-Rausch-Süchtiger.`,
 
 "projects": `Meine Projekte`,
 "projects.repo": `Github-Repository`,
+"back": `Zurück`,
 
 "cosmoswanderer.desc":
 `Cosmos Wanderer ist ein mobiles Weltraum-Shooter-Spiel in Entwicklung.
@@ -509,6 +565,24 @@ Dieser Mod rekreiert diese Effekte und noch mehr.`,
 "hollowknight.doublejump": `Doppelter Sprung`,
 "hollowknight.video": `Clousers originales Video`,
 "hollowknight.map": `Offizieller Kartendownload`,
+
+"mineterstellar.desc": 
+`Mineterstellar ist eine Minecraft-Mod, die den Film Interstellar von Christopher Nolan aus dem Jahr 2014 in Minecraft nachbildet.
+Sie fügt Planeten, Raumanzüge, TARS, Musik und Umgebungen aus dem Film hinzu.`,
+"mineterstellar.desc2": 
+`Ich habe dieses Projekt vor vielen Jahren für Minecraft Forge 1.12.2 begonnen.
+Mit der Zeit wurde diese Version immer veralteter, und mein Mod hatte eine große technische Schuld angesammelt.
+Deshalb habe ich im August 2024 beschlossen, es komplett neu von Grund auf für Fabric 1.21 zu erstellen.`,
+"mineterstellar.miller": `Millers Planet`,
+"mineterstellar.edmund": `Edmunds Planet`,
+"mineterstellar.mann1": `Manns Planet`,
+"mineterstellar.mann2": `TARS auf Manns Planet`,
+"mineterstellar.mann3": `"Sie elender Feigling..."`,
+"mineterstellar.blog": `Mineterstellar-Entwicklungsblog`,
+"mineterstellar.blog.desc": 
+`Auf dieser Seite werde ich kurze Artikel über den Fortschritt der Entwicklung von Mineterstellar veröffentlichen.
+Bitte beachten Sie, dass die Artikel auf Englisch veröffentlicht werden und nicht übersetzt sind.`,
+"mineterstellar.curseforge": `Ursprüngliche Mineterstellar-Seite auf Curseforge`,
 
 "gallery": `Zufällige Galerie`,
 "gallery.wallpaper": `Mein PC-Hintergrundbild (Ich liebe SpaceEngine)`,

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Mineterstellar dev blog</title>
+		<meta name="author" content="Mortimer Kerman"/>
+		<meta name="description" content="A showcase web page for my developer projects"/>
+		<meta property="og:url" content="https://mortimer-kerman.github.io/"/>
+		<meta property="og:title" content="Mortimer Kerman's webpage"/>
+		<meta property="og:description" content="A showcase web page for my developer projects"/>
+		<meta property="og:image" content="https://raw.githubusercontent.com/Mortimer-Kerman/mortimer-kerman.github.io/main/icon.png"/>
+		<meta name="robots" content="index" />
+		<link rel="stylesheet" href="/index.css" />
+		<link rel="icon" type="image/png" sizes="583x583" href="/icon.png"/>
+	</head>
+	<body>
+		<div class="fixed-background">
+			<div class="content">
+                <a href="/#projects-mineterstellar" loc="back">Back</a>
+				<h1 class="top-content">
+					<div loc="mineterstellar.blog">Mineterstellar dev blog</div>
+					<div class="navbar-open scriptonly" onclick="openNavBar()" style="cursor: pointer;">&#9776;</div>
+					<div class="navbuttons-container">
+						<a onclick="closeNavBar()" style="cursor: pointer;"><svg class="navbar-close scriptonly" width="30px" height="30px"><use href="/sprites.svg#close"/></svg></a>
+						<div desc="English" descloc="langName" class="language-select scriptonly">
+							<select id="language" onselect=""></select>
+						</div>
+						<a desc="Light mode" descloc="lightmode" class="scriptonly" onclick="switchLightmode()" style="cursor: pointer;"><svg class="lightmode" width="30px" height="30px"><use href="/sprites.svg#lightmode"/></svg></a>
+						<a desc="Mortimer-Kerman" href="https://github.com/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><svg class="github-logo" width="30px" height="30px"><use href="/sprites.svg#github"/></svg></a>
+						<a desc="mortimer_kerman" onclick="copyDiscordID('mortimer_kerman')" style="cursor: pointer;"><svg class="discord-logo" width="30px" height="30px"><use href="/sprites.svg#discord"/></svg></a>
+						<a desc="Mortimer_Kerman" href="https://reddit.com/u/Mortimer_Kerman" target="_blank" rel="noopener noreferrer"><svg class="reddit-logo" width="30px" height="30px"><use class="circle" href="/sprites.svg#reddit-circle"/><use class="face" href="/sprites.svg#reddit-icon"/></svg></a>
+						<a desc="Mortimer-Kerman" href="https://modrinth.com/user/Mortimer-Kerman" target="_blank" rel="noopener noreferrer"><svg class="modrinth-logo" width="30px" height="30px"><use href="/sprites.svg#modrinth"/></svg></a>
+						<a desc="mortimer_kerman" href="https://www.curseforge.com/members/mortimer_kerman/projects" target="_blank" rel="noopener noreferrer"><svg class="curseforge-logo" width="30px" height="30px"><use href="/sprites.svg#curseforge"/></svg></a>
+						<a desc="kerman.mortimer@gmail.com" href="mailto:kerman.mortimer@gmail.com" target="_blank" rel="noopener noreferrer"><svg class="mail-logo" width="30px" height="30px"><use href="/sprites.svg#mail"/></svg></a>
+					</div>
+				</h1>
+				<div class="title-bar"></div>
+                <section>
+					<p loc="mineterstellar.blog.desc">
+						Sur cette page, je publierai des courts articles sur l'avancée du développement de Mineterstellar.<br/>
+                        Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits.
+					</p>
+				</section>
+                <div class="small-title-bar"></div>
+                <section id="articles-list"></section>
+                <noscript>
+                    <div style="height: 300px; width: 100%; display: table; text-align: center;">
+                        <i style="display: table-cell; vertical-align: middle; text-align: center;">Hmm... There's nothing here. Try enabling JavaScript on this page.</i>
+                    </div>
+                </noscript>
+                <div class="small-title-bar" style="margin-top:30px; margin-bottom: 30px;"></div>
+				<a href="https://github.com/Mortimer-Kerman/mortimer-kerman.github.io" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a>
+				<p loc="translation" style="position:absolute; right: 20px; bottom: 0px; font-size: medium;"></p>
+			</div>
+		</div>
+        <div id="modal-article">
+			<div class="content" id="article-content">
+                <a id="copyArticle"></a>
+                <span class="close-article" onclick="closeArticle()"></span>
+                <section id="article-text"></section>
+                <iframe id="comments" src="comments.html"></iframe>
+			</div>
+		</div>
+        <div id="modal">
+			<div id="modal-media">
+				<img class="modal-image" onload="updateMediaSize(modalMedia)">
+				<video class="modal-video" preload="auto" autoplay controls>Your navigator does not support video playing</video>
+			</div>
+			<span class="close"></span>
+			<span class="prev"></span>
+			<span class="next"></span>
+			<div id="caption"></div>
+		</div>
+		<div id="snackbar">Snacks!</div>
+		<noscript id="no-js"></noscript>
+		<div id="flashbang"></div>
+	</body>
+    <script src="/main.js"></script>
+	<script src="/loc.js"></script>
+    <script src="blog.js"></script>
+</html>

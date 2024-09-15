@@ -259,7 +259,7 @@ function updateNavBar()
 
 const flashbang = document.getElementById("flashbang");
 const lighticon = document.querySelector(".lightmode use");
-const flashbangaudio = new Audio("flashbang.mp3"); 
+const flashbangaudio = new Audio("/flashbang.mp3"); 
 
 let flashbanged = false;
 
@@ -278,15 +278,15 @@ function switchLightmode()
 
     document.body.classList.toggle("light");
 
-    if (lighticon.getAttribute("href") == "sprites.svg#lightmode")
+    if (lighticon.getAttribute("href") == "/sprites.svg#lightmode")
     {
-        lighticon.setAttribute("href", "sprites.svg#darkmode");
+        lighticon.setAttribute("href", "/sprites.svg#darkmode");
         lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
         lighticon.parentElement.parentElement.setAttribute("desc", getLoc("darkmode", "Dark theme"));
     }
     else
     {
-        lighticon.setAttribute("href", "sprites.svg#lightmode");
+        lighticon.setAttribute("href", "/sprites.svg#lightmode");
         lighticon.parentElement.parentElement.setAttribute("descloc", "lightmode");
         lighticon.parentElement.parentElement.setAttribute("desc", getLoc("lightmode", "Light theme"));
     }
@@ -301,7 +301,7 @@ if (sessionStorage.getItem("lightMode") === "true")
     document.body.classList.add("no-transition");
 
     document.body.classList.toggle("light");
-    lighticon.setAttribute("href", "sprites.svg#darkmode");
+    lighticon.setAttribute("href", "/sprites.svg#darkmode");
     lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
     lighticon.parentElement.parentElement.setAttribute("desc", "Dark theme");
 
