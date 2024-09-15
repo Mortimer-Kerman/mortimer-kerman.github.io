@@ -83,18 +83,18 @@ body.no-transition * {
 	}
 }
 
-.top-content div[loc] {
-	font-size: 32px;
+.top-content h1 {
 	width: calc(100% - 500px);
+	display: inline-block;
 }
 
 @media only screen and (max-width: 1000px)
 {
-	h1:not(.top-content), h2 {
+	h1:not(.top-content h1), h2 {
 		text-align: center;
 	}
 
-	.top-content div[loc] {
+	.top-content h1 {
 		width: calc(100% - 100px);
 	}
 }
@@ -513,7 +513,7 @@ a:hover {
 .navbuttons-container {
 	display: block;
 	float: right;
-	transform: translate(0px, -40px);
+	transform: translate(0px, 20px);
 	border-radius: 20px 0px 0px 20px;
 	user-select: none;
 }
@@ -568,7 +568,7 @@ option {
     width: 20px;
     height: 15px;
 	left: 7px;
-	top: 15px;
+	top: 14px;
 	border-radius: 2px;
 	user-select: none;
 	pointer-events: none;
@@ -645,6 +645,7 @@ option {
 		top: 40px;
 		right: -180px;
 		background-color: var(--navmenu-color);
+		transform: translate(0px, -40px);
 		overflow-x: hidden;
 		transition: right 0.5s, all 0.2s;
 
@@ -657,14 +658,15 @@ option {
 		visibility: visible;
 		position: relative;
 		transition: 0.2s;
+		font-weight: bold;
 	}
 
 	.navbar-open {
-		transform: translate(-10px, -40px) scale(2);
+		transform: translate(-20px, 30px) scale(4);
 	}
 
 	.navbar-open:hover:not(:active) {
-		transform: translate(-10px, -40px) scale(2.2);
+		transform: translate(-20px, 30px) scale(4.5);
 	}
 
 	.navbar-close:hover:not(:active) {
