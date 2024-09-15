@@ -100,7 +100,7 @@ body.no-transition * {
 		text-align: center;
 	}
 
-	.top-title h1 {
+	h1.top-title {
 		width: calc(100% - 100px);
 	}
 }

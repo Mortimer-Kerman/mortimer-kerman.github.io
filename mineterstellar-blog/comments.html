@@ -5,6 +5,11 @@
         <script>
             const urlParams = new URLSearchParams(window.location.search);
 
+            if (window.self === window.top)
+            {
+                window.location.href = "https://mortimer-kerman.github.io/mineterstellar-blog?article=" + urlParams.get("article");
+            }
+
             document.title = urlParams.get("article");
 
             const script = document.createElement('script');

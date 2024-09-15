@@ -7,7 +7,3 @@ The answer is: "Mess with the light code so that it considers that every point i
 <img width=500 src="articles/working-on-mann-s-planet-light/day.jpg"/>
 <img width=500 src="articles/working-on-mann-s-planet-light/sunset.jpg"/>
 <img width=500 src="articles/working-on-mann-s-planet-light/night.jpg"/>
-
-\
-The black hole is here btw\
-<img width=500 src="articles/working-on-mann-s-planet-light/blackhole.jpg"/>
