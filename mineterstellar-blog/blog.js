@@ -90,7 +90,7 @@ async function loadArticleHtml(articleId) {
         const htmlContent = marked.parse(markdownText);
         articleText.innerHTML = htmlContent;
         document.title = extractTitle(markdownText);
-        comments.src = `comments.html?article=${articleId}&style=${document.body.classList.contains("light") ? "light" : "dark"}`;
+        comments.src = `comments.html?article=${articleId}&style=${document.body.classList.contains("light") ? "light" : "dark"}&lang=${language}`;
     } catch (error) {
         console.error(`Error for ${articleId} :`, error);
         articleText.innerHTML = "<p>Failed to load the article.</p>";
