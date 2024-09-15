@@ -105,7 +105,7 @@ function openArticle(articleId)
     articleContent.style.overflow = "auto";
 
     copyArticle.onclick = () => {
-        url = `${window.location.protocol}//${window.location.hostname}${window.location.pathname}article=${articleId}`;
+        url = `${window.location.protocol}//${window.location.hostname}${window.location.pathname}?article=${articleId}`;
         navigator.clipboard.writeText(url);
         showSnack(getLoc("copiedLink", `Copied link to clipboard`));
     };
