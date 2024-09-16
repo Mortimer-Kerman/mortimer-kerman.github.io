@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <div class="giscus"></div>
-        <script>
-            const urlParams = new URLSearchParams(window.location.search);
+	<body>
+		<div class="giscus"></div>
+		<script>
+			const urlParams = new URLSearchParams(window.location.search);
 
-            if (window.self === window.top)
-            {
-                window.location.href = "https://mortimer-kerman.github.io/mineterstellar-blog?article=" + urlParams.get("article");
-            }
+			if (window.self === window.top)
+			{
+				window.location.href = "https://mortimer-kerman.github.io/mineterstellar-blog?article=" + urlParams.get("article");
+			}
 
-            document.title = urlParams.get("article");
+			document.title = urlParams.get("article");
 
-            const script = document.createElement("script");
-            script.src = "https://giscus.app/client.js";
-            script.dataset.repo = "Mortimer-Kerman/mortimer-kerman.github.io";
-            script.dataset.repoId = "R_kgDOKMxtiA";
-            script.dataset.category = "Mineterstellar discussions";
-            script.dataset.categoryId = "DIC_kwDOKMxtiM4CifMU";
-            script.dataset.mapping = "title";
-            script.dataset.strict = "0";
-            script.dataset.reactionsEnabled = "1";
-            script.dataset.emitMetadata = "0";
-            script.dataset.inputPosition = "top";
-            script.dataset.theme = urlParams.get("style");
-            script.dataset.lang = urlParams.get("lang");
-            script.dataset.loading = "lazy";
-            script.crossOrigin = "anonymous";
-            script.async = true;
-            document.body.appendChild(script);
-        </script>
-    </body>
+			const script = document.createElement("script");
+			script.src = "https://giscus.app/client.js";
+			script.dataset.repo = "Mortimer-Kerman/mortimer-kerman.github.io";
+			script.dataset.repoId = "R_kgDOKMxtiA";
+			script.dataset.category = "Mineterstellar discussions";
+			script.dataset.categoryId = "DIC_kwDOKMxtiM4CifMU";
+			script.dataset.mapping = "title";
+			script.dataset.strict = "0";
+			script.dataset.reactionsEnabled = "1";
+			script.dataset.emitMetadata = "0";
+			script.dataset.inputPosition = "top";
+			script.dataset.theme = urlParams.get("style");
+			script.dataset.lang = urlParams.get("lang");
+			script.dataset.loading = "lazy";
+			script.crossOrigin = "anonymous";
+			script.async = true;
+			document.body.appendChild(script);
+		</script>
+	</body>
 </html>
