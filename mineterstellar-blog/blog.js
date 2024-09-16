@@ -5,6 +5,8 @@ const articleText = document.getElementById("article-text");
 const comments = document.getElementById("comments");
 const copyArticle = document.getElementById("copyArticle");
 
+let articlesIds = [];
+
 async function loadArticles() {
     try {
         const response = await fetch("articles/articleslist.txt");
@@ -13,10 +15,10 @@ async function loadArticles() {
 
         const text = await response.text();
 
-        const lines = text.split("\n").map(line => line.trim()).filter(line => line.length > 0);
+        articlesIds = text.split("\n").map(line => line.trim()).filter(line => line.length > 0);
 
-        lines.forEach(async line => {
-            await loadArticleSum(line);
+        articlesIds.forEach(async articleId => {
+            await loadArticleSum(articleId);
         });
     }
     catch (error) {
@@ -99,6 +101,8 @@ async function loadArticleHtml(articleId) {
 
 function openArticle(articleId)
 {
+    if (!articlesIds.includes(articleId)) return;
+
     modalArticle.style.display = "flex";
     document.body.style.overflow = "hidden";
     articleContent.style.overflow = "auto";
@@ -151,5 +155,21 @@ comments.onload = function() {
     setInterval(updateCommentsHeight, 1000);
 };
 
+function articleOpen() {
+    return modalArticle.style.display == "flex";
+}
+
+document.addEventListener("keydown", (event) => {
+    if (articleOpen()) {
+        if (event.key === "Escape") closeArticle();
+    }
+}, false);
+
+window.addEventListener('popstate', function (event) {
+    if (articleOpen()) {
+        closeArticle();
+        event.preventDefault();
+    }
+});
 
 window.onload = loadArticles;

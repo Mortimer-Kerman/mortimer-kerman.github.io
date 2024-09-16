@@ -450,6 +450,9 @@ Por eso, en agosto de 2024 decidí rehacerlo completamente desde cero para Fabri
 "mineterstellar.mann2": `TARS en el planeta de Mann`,
 "mineterstellar.mann3": `"Eres un desgraciado..."`,
 "mineterstellar.blog": `Blog de desarrollo de Mineterstellar`,
+"mineterstellar.blog.desc":
+`En esta página publicaré artículos breves sobre el progreso del desarrollo de Mineterstellar.
+Tenga en cuenta que los artículos se publican en inglés y no se traducen.`,
 "mineterstellar.curseforge": `Página original de Mineterstellar en Curseforge`,
 
 "gallery": `Galería de cosas casuales`,

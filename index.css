@@ -84,7 +84,9 @@ body.no-transition * {
 }
 
 .top-title {
-	width: calc(100% - 500px);
+	margin-top: 22px;
+	margin-bottom: 22px;
+	width: calc(100% - 460px);
 	display: inline-block;
 }
 
@@ -101,7 +103,8 @@ body.no-transition * {
 	}
 
 	h1.top-title {
-		width: calc(100% - 100px);
+		font-size: 50px;
+		width: calc(100% - 60px);
 	}
 }
 
@@ -668,11 +671,11 @@ option {
 	}
 
 	.navbar-open {
-		transform: translate(-20px, 30px) scale(4);
+		transform: translate(-20px, 45px) scale(4);
 	}
 
 	.navbar-open:hover:not(:active) {
-		transform: translate(-20px, 30px) scale(4.5);
+		transform: translate(-20px, 45px) scale(4.5);
 	}
 
 	.navbar-close:hover:not(:active) {

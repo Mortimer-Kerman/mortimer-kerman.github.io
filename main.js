@@ -121,6 +121,13 @@ document.addEventListener("keydown", (event) => {
     }
 }, false);
 
+window.addEventListener('popstate', function (event) {
+    if (modalOpen()) {
+        closeDisplay();
+        event.preventDefault();
+    }
+});
+
 document.addEventListener("touchstart", e => {
     touchstartX = e.changedTouches[0].screenX;
     touchlastX = touchstartX;
