@@ -2,8 +2,8 @@ const articlesList = document.getElementById("articles-list");
 const modalArticle = document.getElementById("modal-article");
 const articleContent = document.getElementById("article-content");
 const articleText = document.getElementById("article-text");
-const comments = document.getElementById("comments");
 const copyArticle = document.getElementById("copyArticle");
+let comments = null;
 
 let articlesIds = [];
 
@@ -17,8 +17,9 @@ async function loadArticles() {
 
         articlesIds = text.split("\n").map(line => line.trim()).filter(line => line.length > 0);
 
-        articlesIds.forEach(async articleId => {
+        articlesIds.forEach(async (articleId, index) => {
             await loadArticleSum(articleId);
+            if (index === articlesIds.length -1 && urlParams.has("article")) openArticle(urlParams.get("article"));
         });
     }
     catch (error) {
@@ -74,7 +75,7 @@ function displayArticleSum(id, title, date, thumbnail) {
     const dateElem = document.createElement("i");
     dateElem.textContent = date;
 
-    const imgElem = document.createElement('img');
+    const imgElem = document.createElement("img");
     imgElem.loading = "lazy";
     imgElem.src = thumbnail;
     
@@ -92,15 +93,27 @@ async function loadArticleHtml(articleId) {
         const htmlContent = marked.parse(markdownText);
         articleText.innerHTML = htmlContent;
         document.title = extractTitle(markdownText);
+
+        if (comments) comments.remove();
+
+        comments = document.createElement("iframe");
+        comments.id = "comments";
         comments.src = `comments.html?article=${articleId}&style=${document.body.classList.contains("light") ? "light" : "dark"}&lang=${language}`;
-    } catch (error) {
+        comments.onload = function() {
+            updateCommentsHeight();
+            setInterval(updateCommentsHeight, 1000);
+        };
+        comments.style.height = "0px";
+
+        articleContent.appendChild(comments)
+    }
+    catch (error) {
         console.error(`Error for ${articleId} :`, error);
         articleText.innerHTML = "<p>Failed to load the article.</p>";
     }
 }
 
-function openArticle(articleId)
-{
+function openArticle(articleId) {
     if (!articlesIds.includes(articleId)) return;
 
     modalArticle.style.display = "flex";
@@ -131,7 +144,7 @@ function openArticle(articleId)
         script.onload = () => { loadArticleHtml(articleId); };
         document.head.appendChild(script);
     }
-    comments.style.height = "0px";
+    history.pushState(null, '', location.href);
 }
 
 function closeArticle()
@@ -144,16 +157,9 @@ function closeArticle()
     window.history.replaceState({}, "", newUrl);
 }
 
-if(urlParams.has("article")) openArticle(urlParams.get("article"));
-
 function updateCommentsHeight() {
     comments.style.height = (comments.contentWindow.document.body.scrollHeight + 20) + "px";
 }
-
-comments.onload = function() {
-    updateCommentsHeight();
-    setInterval(updateCommentsHeight, 1000);
-};
 
 function articleOpen() {
     return modalArticle.style.display == "flex";

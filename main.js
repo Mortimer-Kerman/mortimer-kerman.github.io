@@ -24,6 +24,7 @@ imageContainers.forEach((container, index) => {
             elt.parentElement.style.visibility = "visible";
             elt.parentElement.style.position = "relative";
         }
+        history.pushState(null, '', location.href);
     }));
 });
 
