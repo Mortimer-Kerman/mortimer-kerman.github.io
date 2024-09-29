@@ -1,5 +1,6 @@
 :root {
 	--bg-color: #1e1e1e;
+	--bg-color-variation: #2e2e2e;
 	--imgbg-color: #000000;
 	--text-color: #ffffff;
 	--snack-color: #363636;
@@ -27,6 +28,7 @@ body {
 
 body.light {
 	--bg-color: #d9d9d9;/*ffffff*/
+	--bg-color-variation: #e9e9e9;
 	--imgbg-color: #ffffff;
 	--text-color: #000000;
 	--snack-color: #ffffff;
@@ -342,19 +344,28 @@ p {
 	border-collapse: collapse;
 }
 
+.alignedBlock {
+	vertical-align: top;
+	text-align: left;
+	padding: 10px;
+	display: inline-block;
+}
+
 @media only screen and (min-width: 1001px)
 {
 	.alignedBlocksContainer {
 		display: flex;
 		justify-content: center;
 	}
-}
 
-.alignedBlock {
-	vertical-align: top;
-	text-align: left;
-	padding: 10px;
-	display: inline-block;
+	.alignedBlock {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.alignedBlock ul {
+		max-width: 20vw;
+	}
 }
 
 @media only screen and (max-width: 1000px)
@@ -977,13 +988,14 @@ use {
 
 .article-sum {
 	border-radius: 10px;
-	border: 2px solid var(--titlebar-color);
+	background-color: var(--bg-color-variation);
+	box-shadow: var(--select-border-color) 2px 2px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 6px;
+	margin-right: 6px;
 	padding-left: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	padding-right: 10px;
 	width: fit-content;
 	display: inline-block;
@@ -1007,8 +1019,9 @@ use {
 {
 	.article-sum {
 		margin: 0 auto;
-		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		padding-top: 1px;
 		display: block;
 	}
 
@@ -1024,6 +1037,23 @@ use {
 
 .article-sum:active {
 	filter: brightness(50%);
+}
+
+.reaction {
+	display: inline-block;
+	border: 2px solid var(--titlebar-color);
+	border-radius: 50vh;
+	padding: 3px;
+	padding-right: 6px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.reaction svg {
+	fill: var(--navicons-color);
+	display: inline;
+	margin-right: 3px;
+	transform: translateY(3px);
 }
 
 #article-content {
@@ -1117,6 +1147,10 @@ use {
 @media only screen and (max-width: 1000px)
 {
 	#article-text h1 {
+		font-size: 50px;
+	}
+
+	#article-text p {
 		font-size: 32px;
 	}
 

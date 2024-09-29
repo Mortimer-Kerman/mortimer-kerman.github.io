@@ -7,7 +7,7 @@
 
 			if (window.self === window.top)
 			{
-				window.location.href = "https://mortimer-kerman.github.io/mineterstellar-blog?article=" + urlParams.get("article");
+				window.location.href = `${window.location.protocol}//${window.location.host}/mineterstellar-blog?article=${urlParams.get("article")}`;
 			}
 
 			document.title = urlParams.get("article");

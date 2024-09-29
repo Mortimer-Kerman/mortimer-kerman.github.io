@@ -17,17 +17,18 @@ async function loadArticles() {
 
         articlesIds = text.split("\n").map(line => line.trim()).filter(line => line.length > 0);
 
-        articlesIds.forEach(async (articleId, index) => {
-            await loadArticleSum(articleId);
-            if (index === articlesIds.length -1 && urlParams.has("article")) openArticle(urlParams.get("article"));
-        });
+        await Promise.all(articlesIds.map(async (articleId, index) => { await loadArticleSum(articleId, index); }));
+
+        sortArticles();
+
+        if (urlParams.has("article")) openArticle(urlParams.get("article"));
     }
     catch (error) {
         console.error("Error :", error);
     }
 }
 
-async function loadArticleSum(id) {
+async function loadArticleSum(id, index) {
     try {
         const response = await fetch(`articles/${id}.md`);
 
@@ -40,12 +41,63 @@ async function loadArticleSum(id) {
         const title = extractTitle(text);
         const date = extractDate(text);
         const thumbnail = extractThumbnail(text);
+        const stats = await getArticleStats(id);
 
-        displayArticleSum(id, title, date, thumbnail);
+        displayArticleSum(id, title, date, thumbnail, stats, index);
     }
     catch (error) {
         console.error(`Error for ${id} :`, error);
     }
+}
+
+function sortArticles() {
+
+    const articles = Array.from(articlesList.children);
+
+    articles.sort((a, b) => {
+        return parseInt(a.getAttribute("data-index")) - parseInt(b.getAttribute("data-index"));
+    });
+
+    articles.forEach(article => articlesList.appendChild(article));
+}
+
+async function getArticleStats(id) {
+
+    let stats = {
+        comments: 0,
+        laugh: 0,
+        hooray: 0,
+        confused: 0,
+        heart: 0,
+        rocket: 0,
+        eyes: 0
+    }
+
+    try {
+        const response = await fetch(`https://discode.fr/api/git_com/get_number.php?user=Mortimer-Kerman&repo=mortimer-kerman.github.io&title=${id}`);
+
+        if (!response.ok) {
+            throw new Error(`Failed to load ${id}`);
+        }
+
+        try {
+            const json = await response.json();
+
+            stats.comments = json.comments;
+            stats.laugh = json.reactions.laugh;
+            stats.hooray = json.reactions.hooray;
+            stats.confused = json.reactions.confused;
+            stats.heart = json.reactions.heart;
+            stats.rocket = json.reactions.rocket;
+            stats.eyes = json.reactions.eyes;
+        }
+        catch (jsonError) { }
+    }
+    catch (error) {
+        console.error(`Error for ${id} :`, error);
+    }
+
+    return stats;
 }
 
 function extractTitle(text) {
@@ -63,9 +115,10 @@ function extractThumbnail(text) {
     return imgMatch ? imgMatch[1] : "";
 }
 
-function displayArticleSum(id, title, date, thumbnail) {
+function displayArticleSum(id, title, date, thumbnail, stats, index) {
 
     const articleSum = document.createElement("div");
+    articleSum.setAttribute("data-index", index);
     articleSum.classList.add("article-sum");
     articleSum.onclick = () => { openArticle(id); };
 
@@ -79,9 +132,63 @@ function displayArticleSum(id, title, date, thumbnail) {
     imgElem.loading = "lazy";
     imgElem.src = thumbnail;
     
+    const statsElem = document.createElement("div");
+
+    const comments = document.createElement("div");
+    comments.className = "reaction";
+    //<svg width="30px" height="30px"><use href="/sprites.svg#comments"/></svg>
+    const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    icon.setAttribute("width", "1em");
+    icon.setAttribute("height", "1em");
+    const svgSource = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    svgSource.setAttribute("href", "/sprites.svg#comments");
+    icon.appendChild(svgSource);
+    comments.appendChild(icon);
+
+    comments.innerHTML += stats.comments;
+    statsElem.appendChild(comments);
+
+    if(stats.laugh > 0) {
+        const reaction = document.createElement("div");
+        reaction.className = "reaction";
+        reaction.innerText += `😄 ${stats.laugh}`;
+        statsElem.appendChild(reaction);
+    }
+    if(stats.hooray > 0) {
+        const reaction = document.createElement("div");
+        reaction.className = "reaction";
+        reaction.innerText += `🎉 ${stats.hooray}`;
+        statsElem.appendChild(reaction);
+    }
+    if(stats.confused > 0) {
+        const reaction = document.createElement("div");
+        reaction.className = "reaction";
+        reaction.innerText += `😕 ${stats.confused}`;
+        statsElem.appendChild(reaction);
+    }
+    if(stats.heart > 0) {
+        const reaction = document.createElement("div");
+        reaction.className = "reaction";
+        reaction.innerText += `❤️ ${stats.heart}`;
+        statsElem.appendChild(reaction);
+    }
+    if(stats.rocket > 0) {
+        const reaction = document.createElement("div");
+        reaction.className = "reaction";
+        reaction.innerText += `🚀 ${stats.rocket}`;
+        statsElem.appendChild(reaction);
+    }
+    if(stats.eyes > 0) {
+        const reaction = document.createElement("div");
+        reaction.className = "reaction";
+        reaction.innerText += `👀 ${stats.eyes}`;
+        statsElem.appendChild(reaction);
+    }
+
     articleSum.appendChild(titleElem);
     articleSum.appendChild(dateElem);
     articleSum.appendChild(imgElem);
+    articleSum.appendChild(statsElem);
 
     articlesList.appendChild(articleSum);
 }
@@ -121,7 +228,7 @@ function openArticle(articleId) {
     articleContent.style.overflow = "auto";
 
     copyArticle.onclick = () => {
-        url = `${window.location.protocol}//${window.location.hostname}${window.location.pathname}?article=${articleId}`;
+        url = `${window.location.protocol}//${window.location.host}${window.location.pathname}?article=${articleId}`;
         navigator.clipboard.writeText(url);
         showSnack(getLoc("copiedLink", `Copied link to clipboard`));
     };
