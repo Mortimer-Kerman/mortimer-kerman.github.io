@@ -14,4 +14,3 @@ Unlike previous versions, you can turn the camera all around and it will still l
 Now I need to reprogram it with OpenGL... *\*takes an aspirin\**
 
 See ya next time!
-
