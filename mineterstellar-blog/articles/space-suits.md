@@ -19,6 +19,6 @@ Displayed player names!
 
 Open helmets!
 
-I plan to add more customization features to them, such as customising the badges on the chests and arms!
+I plan to add more customization features to them, such as customising the badges on the chestplate and the arms!
 
 Stay tuned!
