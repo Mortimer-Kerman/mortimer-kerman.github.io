@@ -1054,6 +1054,7 @@ use {
 	display: inline;
 	margin-right: 3px;
 	transform: translateY(3px);
+	transition: 0.2s;
 }
 
 #article-content {
