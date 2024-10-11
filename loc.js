@@ -437,22 +437,22 @@ Este mod reproduce estos efectos y algunos otros.`,
 "hollowknight.map": `Enlace de descarga del mapa`,
 
 "mineterstellar.desc":
-`Mineterstellar es un mod para Minecraft que reproduce la película Interstellar de Christopher Nolan en Minecraft.
-Añade planetas, trajes espaciales, TARS, música y entornos de la película.`,
+`Mineterstellar es un mod Minecraft que reproduce la peli Interstellar por Christopher Nolan en Minecraft.
+Añade planetas, trajes espaciales, TARS, la música y el entorno de la pelí.`,
 "mineterstellar.desc2":
-`Comencé este proyecto hace muchos años para Minecraft Forge 1.12.2.
-Con el tiempo, esta versión se volvió cada vez más obsoleta y mi mod acumuló una gran deuda técnica.
-Por eso, en agosto de 2024 decidí rehacerlo completamente desde cero para Fabric 1.21.`,
-"mineterstellar.miller": `Planeta de Miller`,
-"mineterstellar.edmund": `Planeta de Edmund`,
-"mineterstellar.mann1": `Planeta de Mann`,
+`Empecé este proyecto hace unos años para Minecraft Forge 1.12.2.
+Con el tiempo, esta versión volvió cada vez más anticuado y mi mod amontonó una inmensa deuda técnica.
+Por ello decidí en Agosto de 2024 hacerlo de nuevo desde cero para Fabric 1.21.`,
+"mineterstellar.miller": `El planeta de Miller`,
+"mineterstellar.edmund": `El planeta de Edmunds`,
+"mineterstellar.mann1": `El planeta de Mann`,
 "mineterstellar.mann2": `TARS en el planeta de Mann`,
 "mineterstellar.mann3": `"Eres un desgraciado..."`,
 "mineterstellar.blog": `Blog de desarrollo de Mineterstellar`,
 "mineterstellar.blog.desc":
-`En esta página publicaré artículos breves sobre el progreso del desarrollo de Mineterstellar.
+`En esta página, publicaré pequeños artículos sobre el progreso del desarrollo de Mineterstellar.
 Tenga en cuenta que los artículos se publican en inglés y no se traducen.`,
-"mineterstellar.curseforge": `Página original de Mineterstellar en Curseforge`,
+"mineterstellar.curseforge": `Página Curseforge original de Mineterstellar`,
 
 "gallery": `Galería de cosas casuales`,
 "gallery.wallpaper": `El fondo de pantalla de mi PC (Me encanta SpaceEngine)`,

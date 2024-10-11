@@ -1,7 +1,7 @@
 # Space suits!
 *October 6, 2024*
 
-These last few days, I worked on brand new space suits! to replace the old 1.12 suit texture!
+These last few days, I worked on brand new space suits to replace the old 1.12 suit texture!
 
 <img width=500 src="articles/space-suits/suit.jpg"/>
 
