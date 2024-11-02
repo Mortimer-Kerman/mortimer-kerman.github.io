@@ -255,6 +255,7 @@ h1 {
 	}
 
 	.project-icon {
+		height: 150px;
 		margin-top: 20px;
 		margin-left: auto;
 		margin-right: auto;
