@@ -212,7 +212,7 @@ async function loadArticleHtml(articleId) {
         };
         comments.style.height = "0px";
 
-        articleContent.appendChild(comments)
+        articleContent.appendChild(comments);
     }
     catch (error) {
         console.error(`Error for ${articleId} :`, error);
@@ -251,6 +251,9 @@ function openArticle(articleId) {
         script.onload = () => { loadArticleHtml(articleId); };
         document.head.appendChild(script);
     }
+
+    modalArticle.focus();
+    
     history.pushState(null, '', location.href);
 }
 
