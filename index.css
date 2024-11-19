@@ -766,14 +766,14 @@ option {
 		z-index: 2;
 	}
 
-	a:has(.gitlab-logo) {
+	/*a:has(.gitlab-logo) {
 		top: 970px;
 		z-index: 1;
-	}
+	}*/
 
 	a:has(.mail-logo) {
-		top: 1090px;
-		z-index: 0;
+		top: 970px;
+		z-index: 0;/*gitlab: 1090px*/
 	}
 }
 
