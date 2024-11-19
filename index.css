@@ -613,7 +613,7 @@ option {
 	transform: scale(1.1);
 }
 
-.lightmode, .github-logo, .discord-logo, .reddit-logo, .modrinth-logo, .curseforge-logo, .mail-logo {
+.lightmode, .github-logo, .discord-logo, .reddit-logo, .modrinth-logo, .curseforge-logo, .gitlab-logo, .mail-logo {
 	position: relative;
 	fill: var(--navicons-color);
 	transition: 0.2s;
@@ -654,6 +654,10 @@ option {
 }
 
 .curseforge-logo:hover:not(:active) {
+	transform: scale(1.1);
+}
+
+.gitlab-logo:hover:not(:active) {
 	transform: scale(1.1);
 }
 
@@ -715,6 +719,7 @@ option {
 	a:has(.reddit-logo),
 	a:has(.modrinth-logo),
 	a:has(.curseforge-logo),
+	a:has(.gitlab-logo),
 	a:has(.mail-logo) {
 		transform: scale(2);
 		position: fixed;
@@ -722,52 +727,57 @@ option {
 
 	a:has(.navbar-close) {
 		top: 30px;
-		z-index: 8;
+		z-index: 9;
 	}
 
 	.language-select {
 		top: 130px;
 		transform: scale(1.3);
-		z-index: 7;
+		z-index: 8;
 	}
 
 	a:has(.lightmode) {
 		top: 250px;
-		z-index: 6;
+		z-index: 7;
 	}
 
 	a:has(.github-logo) {
 		top: 370px;
-		z-index: 5;
+		z-index: 6;
 	}
 
 	a:has(.discord-logo) {
 		top: 490px;
-		z-index: 4;
+		z-index: 5;
 	}
 
 	a:has(.reddit-logo) {
 		top: 610px;
-		z-index: 3;
+		z-index: 4;
 	}
 
 	a:has(.modrinth-logo) {
 		top: 730px;
-		z-index: 2;
+		z-index: 3;
 	}
 
 	a:has(.curseforge-logo) {
 		top: 850px;
+		z-index: 2;
+	}
+
+	a:has(.gitlab-logo) {
+		top: 970px;
 		z-index: 1;
 	}
 
 	a:has(.mail-logo) {
-		top: 970px;
+		top: 1090px;
 		z-index: 0;
 	}
 }
 
-.navbar-open:active, .navbar-close:active, .lightmode:active, .github-logo:active, .discord-logo:active, .reddit-logo:active, .modrinth-logo:active, .curseforge-logo:active {
+.navbar-open:active, .navbar-close:active, .lightmode:active, .github-logo:active, .discord-logo:active, .reddit-logo:active, .modrinth-logo:active, .curseforge-logo:active, .gitlab-logo:active {
 	filter: brightness(50%);
 }
 
@@ -799,6 +809,22 @@ option {
 
 .curseforge-logo:hover {
 	fill: #F16436;
+}
+
+.gitlab-logo * {
+	transition: 0.2s;
+}
+
+.gitlab-logo:hover .gitlab-1 {
+	fill: #e24329;
+}
+
+.gitlab-logo:hover .gitlab-2 {
+	fill: #fc6d26;
+}
+
+.gitlab-logo:hover .gitlab-3 {
+	fill: #fca326;
 }
 
 .mail-logo:hover {
@@ -1109,6 +1135,7 @@ use {
 #article-text {
 	padding: 20px;
 	margin-bottom: 50px;
+	margin-top: 20px;
 }
 
 #article-text img {
