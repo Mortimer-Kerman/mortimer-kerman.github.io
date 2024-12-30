@@ -4,7 +4,7 @@
 Howdy!
 
 Sorry for the long wait.\
-During the last two months, I was busy with exams, Christmas, and my collaboration with [Clouser](youtube.com/@C1OUS3R) (non-related to Mineterstellar, so you won't get news about it here)
+During the last two months, I was busy with exams, Christmas, and my collaboration with [Clouser](https://youtube.com/@C1OUS3R) (non-related to Mineterstellar, so you won't get news about it here)
 
 I've also been really busy with the Ranger development, so maybe you'll get a sneak peak in a few weeks!
 
