@@ -1199,15 +1199,31 @@ use {
 }
 
 #articles-list:empty::after {
-	position:relative;
-	top:50%;
+	position: relative;
+	top: 50%;
 	content: "Hmm... There's nothing here. Is JavaScript enabled?";
 }
 
 @media only screen and (max-width: 1000px)
 {
+	#articles-list:empty::after {
+		font-size: 40px;
+	}
+
 	#article-text h1 {
+		font-size: 60px;
+	}
+
+	#article-text h2 {
 		font-size: 50px;
+	}
+
+	#article-text h3 {
+		font-size: 45px;
+	}
+
+	#article-text ::marker {
+		font-size: 40px;
 	}
 
 	#article-text p {
