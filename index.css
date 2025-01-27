@@ -299,6 +299,7 @@ p {
 .buddiesPP {
 	flex-basis: calc(100% / 8);
 	text-align: center;
+	overflow-wrap: anywhere;
 }
 
 .buddiesPP p {
