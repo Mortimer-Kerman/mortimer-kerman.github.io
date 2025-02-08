@@ -1,6 +1,6 @@
 @import url("https://giscus.app/themes/light.css");
 
-/*@media only screen and (max-width: 1000px) {*/
+@media only screen and (max-width: 1000px) {
 	h1 {
 		font-size:3.4em;
 	}
@@ -139,4 +139,4 @@
 		transform: scale(1.7);
 		margin:8px;
 	}
-/*}*/
+}
