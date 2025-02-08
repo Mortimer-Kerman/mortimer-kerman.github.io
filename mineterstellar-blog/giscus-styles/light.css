@@ -2,114 +2,141 @@
 
 /*@media only screen and (max-width: 1000px) {*/
 	h1 {
-		font-size:inherit;
+		font-size:3.4em;
 	}
 	h2 {
-		font-size:inherit;
+		font-size:2.55em;
 	}
 	h3 {
-		font-size:inherit;
+		font-size:2em;
 	}
 	h4 {
-		font-size:inherit;
+		font-size:1.7em;
 	}
 	h5 {
-		font-size:inherit;
+		font-size:1.4em;
 	}
 	h6 {
-		font-size:inherit;
+		font-size:1.14;
 	}
 	code, kbd, pre, samp {
-		font-size:1em;
+		font-size:1.7em;
 	}
 	small {
-		font-size:80%;
+		font-size:136%;
 	}
 	sub, sup {
-		font-size:75%;
+		font-size:128%;
 	}
 	button, input, optgroup, select, textarea {
-		font-size:100%;
+		font-size:170%;
 	}
 	#__next .text-sm {
-		font-size:.875rem;
+		font-size:1.5rem;
 	}
 	#__next .text-xs {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	/*html {
 		font-size:5vw 
-	}*/
+	}
+	*/
 	.f6 {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	.lh-condensed {
-		line-height:1.25;
-	}
-	.text-bold {
-		font-weight:600;
+		line-height:2.13;
 	}
 	.commit-tease-sha {
-		font-size:90% 
+		font-size:153% 
 	}
 	.blob-num {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	.blob-code-inner {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	.email-hidden-toggle a {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	.gsc-loading-text {
-		font-size:.875rem;
-	}
-	.gsc-comment {
-		font-size:.875rem;
-	}
-	.gsc-pagination-button {
-		font-size:.875rem;
-	}
-	.gsc-comment-box {
-		font-size:.875rem;
-	}
-	.gsc-comment-box-markdown-hint {
-		font-size:.75rem;
-	}
-	.gsc-social-reaction-summary-item {
-		font-size:.75rem;
-	}
-	.gsc-reactions-button {
-		font-size:.75rem;
-	}
-	.markdown h1 {
-		font-size:1.875rem;
-	}
-	.markdown h2 {
 		font-size:1.5rem;
 	}
+	.gsc-comment {
+		font-size:1.5rem;
+	}
+	.gsc-pagination-button {
+		font-size:1.5rem;
+	}
+	.gsc-comment-box {
+		font-size:1.5rem;
+	}
+	.gsc-comment-box-markdown-hint {
+		font-size:1.28rem;
+	}
+	.gsc-social-reaction-summary-item {
+		font-size:1.28rem;
+	}
+	.gsc-reactions-button {
+		font-size:1.28rem;
+	}
+	.markdown h1 {
+		font-size:3.2rem;
+	}
+	.markdown h2 {
+		font-size:2.55rem;
+	}
 	.markdown h3 {
-		font-size:1.25rem;
+		font-size:2.13rem;
 	}
 	.markdown h4 {
-		font-size:1rem;
+		font-size:1.7rem;
 	}
 	.markdown h5 {
-		font-size:.875rem;
+		font-size:1.5rem;
 	}
 	.markdown h6 {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	.markdown .highlight pre, .markdown pre {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	.markdown code:not(pre>code), .markdown tt {
-		font-size:.75rem;
+		font-size:1.28rem;
 	}
 	.markdown kbd {
-		font-size:11px;
+		font-size:18.7px;
 	}
 	.markdown .footnotes {
-		font-size:.75rem;
+		font-size:1.28rem;
+	}
+	.btn {
+		font-size:1.5rem;
+		padding-bottom: .5rem !important;
+		padding-top: .5rem !important;
+	}
+	.gsc-direct-reaction-button-emoji {
+		width: 1.7rem;
+		height: 1.7rem;
+		line-height: 0;
+	}
+	textarea {
+		line-height: 1.4;
+	}
+	#__next .py-2 {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+	#__next .py-1 {
+		padding-bottom: 1.2rem;
+		padding-top: 0.5rem;
+	}
+	.gsc-reactions-popover {
+		width: 220px;
+	}
+	.gsc-emoji-button {
+		font-size: 70%;
+		transform: scale(1.7);
+		margin:8px;
 	}
 /*}*/
