@@ -598,6 +598,10 @@ option {
 	transition: 0.2s;
 }
 
+option:checked {
+	background-color: var(--select-hover-color);
+}
+
 .language-select {
 	transform: translate(-70px, 3px);
 	--flagurl: url("https://flagicons.lipis.dev/flags/4x3/gb.svg");
