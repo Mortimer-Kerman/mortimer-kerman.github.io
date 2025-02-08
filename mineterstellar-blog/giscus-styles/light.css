@@ -1,4 +1,115 @@
 @import url("https://giscus.app/themes/light.css");
 
-
-
+@media only screen and (max-width: 1000px) {
+	h1 {
+		font-size:inherit;
+	}
+	h2 {
+		font-size:inherit;
+	}
+	h3 {
+		font-size:inherit;
+	}
+	h4 {
+		font-size:inherit;
+	}
+	h5 {
+		font-size:inherit;
+	}
+	h6 {
+		font-size:inherit;
+	}
+	code, kbd, pre, samp {
+		font-size:1em;
+	}
+	small {
+		font-size:80%;
+	}
+	sub, sup {
+		font-size:75%;
+	}
+	button, input, optgroup, select, textarea {
+		font-size:100%;
+	}
+	#__next .text-sm {
+		font-size:.875rem;
+	}
+	#__next .text-xs {
+		font-size:.75rem;
+	}
+	/*html {
+		font-size:5vw 
+	}*/
+	.f6 {
+		font-size:.75rem;
+	}
+	.lh-condensed {
+		line-height:1.25;
+	}
+	.text-bold {
+		font-weight:600;
+	}
+	.commit-tease-sha {
+		font-size:90% 
+	}
+	.blob-num {
+		font-size:.75rem;
+	}
+	.blob-code-inner {
+		font-size:.75rem;
+	}
+	.email-hidden-toggle a {
+		font-size:.75rem;
+	}
+	.gsc-loading-text {
+		font-size:.875rem;
+	}
+	.gsc-comment {
+		font-size:.875rem;
+	}
+	.gsc-pagination-button {
+		font-size:.875rem;
+	}
+	.gsc-comment-box {
+		font-size:.875rem;
+	}
+	.gsc-comment-box-markdown-hint {
+		font-size:.75rem;
+	}
+	.gsc-social-reaction-summary-item {
+		font-size:.75rem;
+	}
+	.gsc-reactions-button {
+		font-size:.75rem;
+	}
+	.markdown h1 {
+		font-size:1.875rem;
+	}
+	.markdown h2 {
+		font-size:1.5rem;
+	}
+	.markdown h3 {
+		font-size:1.25rem;
+	}
+	.markdown h4 {
+		font-size:1rem;
+	}
+	.markdown h5 {
+		font-size:.875rem;
+	}
+	.markdown h6 {
+		font-size:.75rem;
+	}
+	.markdown .highlight pre, .markdown pre {
+		font-size:.75rem;
+	}
+	.markdown code:not(pre>code), .markdown tt {
+		font-size:.75rem;
+	}
+	.markdown kbd {
+		font-size:11px;
+	}
+	.markdown .footnotes {
+		font-size:.75rem;
+	}
+}
