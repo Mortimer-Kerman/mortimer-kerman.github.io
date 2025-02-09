@@ -23,12 +23,27 @@
 			script.dataset.reactionsEnabled = "1";
 			script.dataset.emitMetadata = "0";
 			script.dataset.inputPosition = "top";
-			script.dataset.theme = `https://mortimer-kerman.github.io/mineterstellar-blog/giscus-styles/${urlParams.get("style")}.css`;
+			script.dataset.theme = urlParams.get("style");
 			script.dataset.lang = urlParams.get("lang");
 			script.dataset.loading = "lazy";
 			script.crossOrigin = "anonymous";
 			script.async = true;
 			document.body.appendChild(script);
+
+			window.addEventListener("message", (event) => {
+			if (typeof event.data.mobile === "boolean")
+				{
+					if (event.data.mobile) document.body.classList.add("mobile");
+					else document.body.classList.remove("mobile");
+				}
+			});
 		</script>
+		<style>
+			body.mobile {
+				transform: scale(2);
+				transform-origin: top left;
+				width: 50vw;
+			}
+		</style>
 	</body>
 </html>

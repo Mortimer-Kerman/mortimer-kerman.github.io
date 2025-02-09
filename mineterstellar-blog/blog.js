@@ -267,8 +267,17 @@ function closeArticle()
     window.history.replaceState({}, "", newUrl);
 }
 
-function updateCommentsHeight() {
-    comments.style.height = (comments.contentWindow.document.body.scrollHeight + 20) + "px";
+function updateCommentsHeight()
+{
+    let mobileComments = isMobile();
+
+    let commentsHeight = comments.contentWindow.document.body.scrollHeight;
+
+    if(mobileComments) commentsHeight *= 2;
+
+    comments.contentWindow.postMessage({ mobile : mobileComments }, "*");
+    
+    comments.style.height = (commentsHeight + 20) + "px";
 }
 
 function articleOpen() {
