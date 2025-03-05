@@ -3,6 +3,18 @@ const urlParams = new URLSearchParams(window.location.search);
 
 function initLoc()
 {
+    if (document.referrer)
+    {
+        const referrerUrl = new URL(document.referrer);
+
+        if (referrerUrl.origin === window.location.origin)
+        {
+            const langParam = referrerUrl.searchParams.get("lang");
+
+            if (langParam && !urlParams.has("lang")) urlParams.set("lang", langParam);
+        }
+    }
+
     var language = (navigator.language || navigator.userLanguage).toLowerCase();
     
     let languageFound = false;
@@ -37,6 +49,8 @@ function UpdateLanguage()
 
     languageSelector.parentElement.style.setProperty("--flagurl", `url(https://flagicons.lipis.dev/flags/4x3/${flag}.svg)`);
     
+    if (flag == "tok") languageSelector.parentElement.style.setProperty("--flagurl", `url(https://upload.wikimedia.org/wikipedia/commons/2/20/Toki_Pona_trans_flag.svg)`);
+
     document.querySelectorAll("[loc]").forEach(function(element)
     {
         element.innerHTML = getLoc(element.getAttribute("loc"), element.innerHTML);
@@ -70,17 +84,23 @@ function getLocLang(locKey, defaultLoc, lang)
     return defaultLoc;
 }
 
+const locParseMap = {
+    "\n": "<br/>",
+    "CARLCASEY_LINK": `<a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`,
+    "MODRINTH_HOLLOWKNIGHT": `<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`,
+    "BUDDY_FRABLOCK": `<a onclick="mentionBuddy('Frablock')">Frablock</a>`,
+    "BUDDY_ENIGMA": `<a onclick="mentionBuddy('Enigma')">Enigma</a>`,
+    "BUDDY_ANATOM": `<a onclick="mentionBuddy('Anatom')">Anatom</a>`,
+};
+
 function parseLoc(loc) {
-    return loc.replaceAll("\n","<br/>")
-    .replaceAll("CARLCASEY_LINK",`<a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`)
-    .replaceAll("MODRINTH_HOLLOWKNIGHT",`<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`)
-    .replaceAll("BUDDY_FRABLOCK",`<a onclick="mentionBuddy('Frablock')">Frablock</a>`)
-    .replaceAll("BUDDY_ENIGMA",`<a onclick="mentionBuddy('Enigma')">Enigma</a>`);
+    return loc.replace(/CARLCASEY_LINK|MODRINTH_HOLLOWKNIGHT|BUDDY_FRABLOCK|BUDDY_ENIGMA|BUDDY_ANATOM|\n/g, match => locParseMap[match]);
 }
 
 function getFlagEmote(countryCode)
 {
-    if(countryCode == "en") return "🇬🇧";
+    if (countryCode == "en") return "🇬🇧";
+    if (countryCode == "tok") return "🇹🇵";
     const codePoints = countryCode.toUpperCase().split("").map(char => 127397 + char.charCodeAt());
     return String.fromCodePoint(...codePoints);
 }
@@ -90,6 +110,7 @@ function getLocDict(lang)
     if (lang == "fr") return frDict;
     if (lang == "es") return esDict;
     if (lang == "de") return deDict;
+    if (lang == "tok") return tokDict;
     return enDict;
 }
 
@@ -621,6 +642,138 @@ Bitte beachten Sie, dass die Artikel auf Englisch veröffentlicht werden und nic
 
 "videoplayer": `Ihr Browser unterstützt keine Videowiedergabe`,
 "translation": `Diese Seite wurde von ChatGPT 4o übersetzt und von eine nicht professionelle Person korrigiert.`
+}
+
+var tokDict = {
+"langName": `toki pona`,
+"me": `mi`,
+"maindesc":
+`toki. mi li jan Motime Kejaman.
+mi jan pi tomo sona pi ma Kanse. tenpo ken mi la mi jan lawa pi ilo nanpa. mi weka e tomo sona wawa. tenpo ni la mi lon tomo sona pi lawa pi ilo nanpa IUT.
+mi pali e wile mute. ni mute li lon poka monsi pi kulupu ilo.
+mi musi e sona pali e ma weka e pali ma.
+
+tenpo ale la mi wile kalama Pelin.`,
+"copiedUsername": `nimi jan Discord li kama e poki lipu: `,
+"copiedLink": `nasin li kama e poki lipu`,
+"lightmode": `lukin walo`,
+"darkmode": `lukin pimeja`,
+
+"languages.process": `lawa mi ken pali e toki ni:`,
+"languages.html": `HTML/CSS (mi sona. ona li toki lawa lon ala.)`,
+"languages.toolsused": `tenpo lon ni mi kepeken e ilo ni:`,
+"languages.vscode": `VSCode (jan kulupu nasa)`,
+"languages.github": `Github (ni li nasa mute. mi sona.)`,
+"languages.libs": `poki lipu pi mute ike`,
+"languages.doc": `lipu sona mute`,
+"languages.helloworld": `toki ni la mi ken toki e toki hello world:`,
+"languages.hlsl": `HLSL (mi sona. toki HLSL la lipu li lon ala)`,
+
+"projects": `wile mi`,
+"projects.repo": `poki lawa Github`,
+"back": `monsi`,
+"copyarticle": `o nasin pi lipu sona li kama e poki lipu`,
+
+"cosmoswanderer.desc":
+`musi Cosmos Wanderer li musi pi lipu sona e utala lon ma weka. mi pali e ni.
+sina ken lawa e ilo tawa pi ma weka. sina ken tawa insa kiwen en ike ante ni: ilo tawa ike en jaki en ilo alasa.`,
+"cosmoswanderer.lowaction": `wawa lili`,
+"cosmoswanderer.highaction": `wawa suli`,
+"cosmoswanderer.desc2":
+`sina ken pali pona e ilo tawa li ken alasa e lukin sin li ken alasa e pali pini sin.
+tenpo kama la musi li lon lipu Google Play Store pi mani ala.`,
+"cosmoswanderer.maxaction": `WAWA ALE A!`,
+"cosmoswanderer.carlcasey": `kalama li tan CARLCASEY_LINK`,
+
+"spacefactory":
+`musi SpaceFactory li wile kulupu pi mi en BUDDY_FRABLOCK. musi li tawa tenpo Trophées NSI pi sike nanpa 2023. tenpo ni li utala pi tomo sona NSI pi ma Kanse ale.
+musi li pali e toki python en poki Pygame. musi li musi pi pali suli e ma weka. sina ken pali e tomo pali sina tawa alasa en pona e mani.`,
+"spacefactory.normalday": `suno pi nasa ala lon musi SpaceFactory`,
+"spacefactory.buildmenu": `lipu pali`,
+"spacefactory.opportunities": `lipu tenpo`,
+"spacefactory.bestproject": `pini utala la musi SpaceFactory li wile nanpa wan pi sike Terminale lon ma Peson.`,
+"spacefactory.website": `lipu pi utala Trophées NSI`,
+
+"planetar.desc":
+`ilo Planetar li ilo lili pi lipu mun. tenpo ni la mi pali e ilo.
+ilo li tawa ilo Windows kepeken poki .NET. tenpo lili la sina ken pali e lipu mun kepeken ilo.`,
+"planetar.screenshot": `sitelen pi ilo Planetar`,
+"planetar.maps": `sitelen pi sewi en telo kon`,
+"planetar.desc2":
+`sina ken ante ijo mute. sina ken ante e sewi telo e kule kasi e mute pi ma suli.
+
+pini la ilo ken sitelen e lukin mun lon ma sijelo.`,
+"planetar.exported": `lipu mun pini`,
+
+"hollowknight.desc":
+`Clouser's Hollow Knight physics mod est un mod Minecraft créé pour la map Minecraft Hollow Knight de Clouser.
+Fait pour Minecraft Fabric 1.20.4, il ajoute plusieurs commandes et gamerules pour modifier la physique du joueur de manière à répliquer la physique de Hollow Knight.
+La map est disponible au téléchargement sur MODRINTH_HOLLOWKNIGHT.`,
+"hollowknight.desc2":
+`Dans Hollow Knight, dès que le joueur relâche les touches de déplacement, il s'arrête dans les airs et peut immédiatement commencer à aller dans une autre direction.
+Le saut est également sensible à la pression. Ça veut dire que plus vous appuyez, plus vous sautez haut.
+Dans certaines circonstances, le joueur a également accès à un double saut, qui lui permet de répéter le saut sensible à la pression dans les airs.
+
+Ce mod recrée ces effects et quelques autres.`,
+"hollowknight.instantstop": `Physique d'arrêt immédiat`,
+"hollowknight.pressurejump": `Saut sensible à la pression`,
+"hollowknight.doublejump": `Double saut`,
+"hollowknight.video": `Vidéo originale de Clouser`,
+"hollowknight.map": `Lien de téléchargement de la map`,
+
+"mineterstellar.desc":
+`Mineterstellar est un mod Minecraft recréant dans Minecraft le film Interstellar, de Christopher Nolan.
+Il ajoute les planètes, les combinaisons spatiales, TARS, la musique, et les environnements du film.`,
+"mineterstellar.desc2":
+`J'ai démarré ce projet il y a plusieurs années pour Minecraft Forge 1.12.2.
+Avec les années, cette version est devenue de plus en plus obsolète, et mon mod accumulait une énorme dette technique.
+C'est pourquoi j'ai décidé en Août 2024 de le refaire entièrement depuis zéro pour Fabric 1.21.`,
+"mineterstellar.miller": `La planète de Miller`,
+"mineterstellar.edmund": `La planète d'Edmund`,
+"mineterstellar.mann1": `La planète de Mann`,
+"mineterstellar.mann2": `TARS sur la planète de Mann`,
+"mineterstellar.mann3": `"Putain de lâche..."`,
+"mineterstellar.blog": `Blog de développement de Mineterstellar`,
+"mineterstellar.blog.desc":
+`Sur cette page, je publierai des courts articles sur l'avancée du développement de Mineterstellar.
+Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits.`,
+"mineterstellar.curseforge": `Page Curseforge originale de Mineterstellar`,
+
+"gallery": `Galerie de trucs aléatoires`,
+"gallery.wallpaper": `Mon fond d'écran de PC (J'adore SpaceEngine)`,
+"gallery.reason": `La raison pour laquelle mon UI fait n'importe quoi`,
+"gallery.stellarsystem": `La fois où j'ai joué avec de la génération de systèmes stellaires`,
+"gallery.mountains": `Une fois j'ai fait des montagnes procédurales`,
+"gallery.robot": `Un jour j'ai fait un pitit robot mignon pour un jeu d'énigmes en 3D`,
+"gallery.tootempting": `C'était trop tentant`,
+"gallery.grass": `Preuve que je suis toujours un humain`,
+"gallery.lod": `LODs montagneux`,
+"gallery.globama": `Globama dans OpenGL`,
+"gallery.crystals": `Génération de cristaux dans Minecraft`,
+"gallery.platform": `Une petite plateforme volante pour mon robot`,
+"gallery.blackhole": `Un trou noir, moddé dans Minecraft`,
+"gallery.totally2d": `C'est une planète en 2D. OUI.`,
+"gallery.mars": `Une fois j'ai fait un site du futur sur la colonisation martienne pour l'école`,
+"gallery.jug": `Je n'ai pas créé cette merveille`,
+"gallery.atmosphere": `Expérimentations de rendu d'atmosphère procédurale en 2D`,
+"gallery.scattering": `J'ai simulé avec BUDDY_ENIGMA une atmosphère dans Godot pour mon TIPE`,
+
+"buddies": `Mes potes développeurs`,
+"buddies.frablock": `Communiste`,
+"buddies.ertalite": `Pousse des cailloux`,
+"buddies.awkaze": `Dieu du copier-coller`,
+"buddies.jordi": `Catalan`,
+"buddies.vexmea": `Femboy`,
+"buddies.crafto": `Empile des caisses`,
+"buddies.anatom": `Furry`,
+"buddies.enigma": `Pense en 5D`,
+"buddies.nyanmaths": `Hippie en claquettes`,
+"buddies.yapudjus": `CHAAAAAAAATTTT`,
+"buddies.axelatlantid": `Entité`,
+"buddies.rypoint": `Entrepreneur`,
+
+"videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`,
+"translation": `Page traduite par BUDDY_ANATOM et BUDDY_ENIGMA :3`
 }
 
 initLoc();

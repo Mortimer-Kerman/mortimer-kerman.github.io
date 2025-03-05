@@ -280,13 +280,11 @@ function switchLightmode()
         flashbangaudio.play();
         flashbanged = true;
         flashbang.classList.add("flashbang");
-        switchLightmode();
-        return;
     }
 
     document.body.classList.toggle("light");
 
-    if (lighticon.getAttribute("href") == "/sprites.svg#lightmode")
+    if (["/sprites.svg#lightmode", "sprites.svg#lightmode"].includes(lighticon.getAttribute("href")))
     {
         lighticon.setAttribute("href", "/sprites.svg#darkmode");
         lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
