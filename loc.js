@@ -90,11 +90,11 @@ const locParseMap = {
     "MODRINTH_HOLLOWKNIGHT": `<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`,
     "BUDDY_FRABLOCK": `<a onclick="mentionBuddy('Frablock')">Frablock</a>`,
     "BUDDY_ENIGMA": `<a onclick="mentionBuddy('Enigma')">Enigma</a>`,
-    "BUDDY_ANATOM": `<a onclick="mentionBuddy('Anatom')">Anatom</a>`,
+    "BUDDY_ZOWEPSILON": `<a onclick="mentionBuddy('Zowepsilon')">Zowε</a>`,
 };
 
 function parseLoc(loc) {
-    return loc.replace(/CARLCASEY_LINK|MODRINTH_HOLLOWKNIGHT|BUDDY_FRABLOCK|BUDDY_ENIGMA|BUDDY_ANATOM|\n/g, match => locParseMap[match]);
+    return loc.replace(/CARLCASEY_LINK|MODRINTH_HOLLOWKNIGHT|BUDDY_FRABLOCK|BUDDY_ENIGMA|BUDDY_ZOWEPSILON|\n/g, match => locParseMap[match]);
 }
 
 function getFlagEmote(countryCode)
@@ -237,7 +237,7 @@ Please note that the articles are published in english and are not translated.`,
 "buddies.jordi": `Catalan`,
 "buddies.vexmea": `Femboy`,
 "buddies.crafto": `Box stacker`,
-"buddies.anatom": `Furry`,
+"buddies.zowepsilon": `Furry`,
 "buddies.enigma": `Thinking in 5D`,
 "buddies.nyanmaths": `Hippie in flip flops`,
 "buddies.yapudjus": `CAAAAAAAAATTTT`,
@@ -369,7 +369,7 @@ Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits
 "buddies.jordi": `Catalan`,
 "buddies.vexmea": `Femboy`,
 "buddies.crafto": `Empile des caisses`,
-"buddies.anatom": `Furry`,
+"buddies.zowepsilon": `Furry`,
 "buddies.enigma": `Pense en 5D`,
 "buddies.nyanmaths": `Hippie en claquettes`,
 "buddies.yapudjus": `CHAAAAAAAATTTT`,
@@ -501,7 +501,7 @@ Tenga en cuenta que los artículos se publican en inglés y no se traducen.`,
 "buddies.jordi": `Catalán`,
 "buddies.vexmea": `Femboy`,
 "buddies.crafto": `Apila cajas`,
-"buddies.anatom": `Furry`,
+"buddies.zowepsilon": `Furry`,
 "buddies.enigma": `Piensa en 5D`,
 "buddies.nyanmaths": `Hippie con chanclas`,
 "buddies.yapudjus": `GAAAAAATOOOOOO`,
@@ -633,7 +633,7 @@ Bitte beachten Sie, dass die Artikel auf Englisch veröffentlicht werden und nic
 "buddies.jordi": `Katalane`,
 "buddies.vexmea": `Femboy`,
 "buddies.crafto": `Kisten stapeln`,
-"buddies.anatom": `Furry`,
+"buddies.zowepsilon": `Furry`,
 "buddies.enigma": `Denkt in 5D`,
 "buddies.nyanmaths": `Hippie in Flip-Flops`,
 "buddies.yapudjus": `KAAAAAATZEEEEE`,
@@ -765,7 +765,7 @@ Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits
 "buddies.jordi": `Catalan`,
 "buddies.vexmea": `Femboy`,
 "buddies.crafto": `Empile des caisses`,
-"buddies.anatom": `Furry`,
+"buddies.zowepsilon": `Furry`,
 "buddies.enigma": `Pense en 5D`,
 "buddies.nyanmaths": `Hippie en claquettes`,
 "buddies.yapudjus": `CHAAAAAAAATTTT`,
@@ -773,7 +773,7 @@ Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits
 "buddies.rypoint": `Entrepreneur`,
 
 "videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`,
-"translation": `Page traduite par BUDDY_ANATOM et BUDDY_ENIGMA :3`
+"translation": `Page traduite par BUDDY_ZOWEPSILON et BUDDY_ENIGMA :3`
 }
 
 initLoc();
