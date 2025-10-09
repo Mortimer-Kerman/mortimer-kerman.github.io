@@ -168,9 +168,9 @@ Made in python with Pygame, it's a factory game in space, where you can build yo
 
 "planetar.desc":
 `Planetar is a small WIP planet map generation tool.
-Made for Windows with the .NET framework, it allows you to generate planet maps in real time.`,
+Made in Java with Swing and FlatLaf, it allows you to generate planet maps in real time through the GPU.`,
 "planetar.screenshot": `Planetar, the screenshot`,
-"planetar.maps": `Height and humidity maps`,
+"planetar.maps": `Height map`,
 "planetar.desc2":
 `You can parameter a lot of aspects, like sea level, vegetation color, mountains amount...
 
@@ -192,6 +192,16 @@ This mod recreates these effects and some more.`,
 "hollowknight.doublejump": `Double jump`,
 "hollowknight.video": `Clouser's original video`,
 "hollowknight.map": `Official map download`,
+
+"defense.desc":
+`Defense is a Minecraft mod to allow players to disable PVP.
+Available for Mincraft 1.21+, it provides a PVP toggle button in the survival player inventory.`,
+"defense.desc2":`When enabled, it stays on for a configurable amount of time, protecting you from any player attack, and an icon is displayed right to your username, visible to any player!`,
+"defense.desc3":`This mod was originally made for the youtuber Knarfy, for the Empty World SMP.`,
+"defense.toggle":`The toggle button`,
+"defense.icons":`The icons selection menu`,
+"defense.video":`Knarfy's presentation video`,
+"defense.mod":`Defense Modrinth page`,
 
 "mineterstellar.desc":
 `Mineterstellar is a Minecraft mod reprducing the 2014 Christopher Nolan's Interstellar movie into Minecraft.
@@ -300,9 +310,9 @@ Fait en python avec Pygame, c'est un factory game dans l'espace, où vous pouvez
 
 "planetar.desc":
 `Planetar est un petit outil de génération de cartes de planètes en cours de développement.
-Fait pour Windows avec le framework .NET, il vous permet de générer des cartes de planètes en temps réel.`,
+Fait en Java avec Swing et FlatLaf, il vous permet de générer des cartes de planètes en temps réel sur le GPU.`,
 "planetar.screenshot": `Planetar, la capture d'écran`,
-"planetar.maps": `Cartes d'altitude et d'humidité`,
+"planetar.maps": `Carte d'altitude`,
 "planetar.desc2":
 `Vous pouvez paramétrer beaucoup d'aspects, comme le niveau de la mer, la couleur de la végétation, la quantité de montagnes...
 
@@ -324,6 +334,16 @@ Ce mod recrée ces effects et quelques autres.`,
 "hollowknight.doublejump": `Double saut`,
 "hollowknight.video": `Vidéo originale de Clouser`,
 "hollowknight.map": `Lien de téléchargement de la map`,
+
+"defense.desc":
+`Defense est un mod Minecraft pour permettre aux joueurs de désactiver le PVP.
+Disponible pour Mincraft 1.21+, il ajoute un bouton pour basculer le PVP dans l'inventaire survie.`,
+"defense.desc2":`Quand il est allumé, il reste actif pour une durée configurable vous protégeant de toutes les attaques de joueurs, et une icône s'affiche à côté de votre pseudo, visible par tous les joueurs !`,
+"defense.desc3":`Ce mod a été créé à l'origine pour le youtubeur Knarfy, pour le Empty World SMP.`,
+"defense.toggle":`Le bouton d'activation`,
+"defense.icons":`Le menu de sélection des icônes`,
+"defense.video":`Vidéo de présentation de Knarfy`,
+"defense.mod":`Page Modrinth de Defense`,
 
 "mineterstellar.desc":
 `Mineterstellar est un mod Minecraft recréant dans Minecraft le film Interstellar, de Christopher Nolan.
@@ -432,9 +452,9 @@ Hecho en python con Pygame, es un juego de fábrica en el espacio donde puede co
 
 "planetar.desc":
 `Planetar es una pequeña herramienta para generar mapas de planetas que está en vías de desarollo.
-Hecha para Windows con el framework .NET, permite generar mapas de planetas en tiempo real.`,
+Hecha en Java con Swing y FlatLaf, permite generar mapas de planetas en tiempo real en la GPU.`,
 "planetar.screenshot": `Planetar, la captura de pantalla`,
-"planetar.maps": `Mapas de altitud y humedad`,
+"planetar.maps": `Mapa de altitud`,
 "planetar.desc2":
 `Puede configurar muchos aspectos como el nivel del mar, el color de la vegetación, la cantidad de montañas…
 
@@ -456,6 +476,16 @@ Este mod reproduce estos efectos y algunos otros.`,
 "hollowknight.doublejump": `Doble salto`,
 "hollowknight.video": `Vídeo original de Clouser`,
 "hollowknight.map": `Enlace de descarga del mapa`,
+
+"defense.desc": 
+`Defense es un mod de Minecraft que permite a los jugadores desactivar el PVP.
+Disponible para Minecraft 1.21+, añade un botón para alternar el PVP en el inventario de supervivencia.`,
+"defense.desc2": `Cuando está activado, permanece encendido durante un tiempo configurable, protegiéndote de cualquier ataque de otros jugadores, y se muestra un icono a la derecha de tu nombre de usuario, visible para todos los jugadores.`,
+"defense.desc3": `Este mod fue creado originalmente para el youtuber Knarfy, para el servidor Empty World SMP.`,
+"defense.toggle": `El botón de activación`,
+"defense.icons": `El menú de selección de iconos`,
+"defense.video": `Video de presentación de Knarfy`,
+"defense.mod": `Página de Modrinth de Defense`,
 
 "mineterstellar.desc":
 `Mineterstellar es un mod Minecraft que reproduce la peli Interstellar por Christopher Nolan en Minecraft.
@@ -564,9 +594,9 @@ Es wurde in Python mit Pygame erstellt und ist ein Fabrikspiel im Weltraum, in d
 
 "planetar.desc":
 `Planetar ist ein kleines WIP-Werkzeug zur Generierung von Planetenkarten.
-Es wurde für Windows mit dem .NET-Framework erstellt und ermöglicht es dir, Planetenkarten in Echtzeit zu generieren.`,
+Es wurde in Java mit Swing und FlatLaf erstellt und ermöglicht es dir, Planetenkarten in Echtzeit zu generieren auf der GPU.`,
 "planetar.screenshot": `Planetar, der Screenshot`,
-"planetar.maps": `Höhen- und Feuchtigkeitskarten`,
+"planetar.maps": `Höhenkarte`,
 "planetar.desc2":
 `Du kannst viele Aspekte anpassen, wie den Meeresspiegel, die Vegetationsfarbe, die Anzahl der Berge...
 
@@ -588,6 +618,16 @@ Dieser Mod rekreiert diese Effekte und noch mehr.`,
 "hollowknight.doublejump": `Doppelter Sprung`,
 "hollowknight.video": `Clousers originales Video`,
 "hollowknight.map": `Offizieller Kartendownload`,
+
+"defense.desc":
+`Defense ist eine Minecraft-Mod, mit der Spieler PVP deaktivieren können.
+Verfügbar für Minecraft 1.21+, fügt sie im Überlebens-Inventar eine Schaltfläche zum Umschalten von PVP hinzu.`,
+"defense.desc2": `Wenn sie aktiviert ist, bleibt sie für eine konfigurierbare Zeit aktiv, schützt dich vor Angriffen anderer Spieler, und ein Symbol wird rechts neben deinem Spielernamen angezeigt, das für alle sichtbar ist!`,
+"defense.desc3": `Diese Mod wurde ursprünglich für den YouTuber Knarfy für das Empty World SMP erstellt.`,
+"defense.toggle": `Der Umschaltknopf`,
+"defense.icons": `Das Symbolauswahlmenü`,
+"defense.video": `Knarfys Vorstellungsvideo`,
+"defense.mod": `Defense-Modrinth-Seite`,
 
 "mineterstellar.desc": 
 `Mineterstellar ist eine Minecraft-Mod, die den Film Interstellar von Christopher Nolan aus dem Jahr 2014 in Minecraft nachbildet.
@@ -698,7 +738,7 @@ musi li pali e toki python en poki Pygame. musi li musi pi pali suli e ma weka. 
 `ilo Planetar li ilo lili pi lipu mun. tenpo ni la mi pali e ilo.
 ilo li tawa ilo Windows kepeken poki .NET. tenpo lili la sina ken pali e lipu mun kepeken ilo.`,
 "planetar.screenshot": `sitelen pi ilo Planetar`,
-"planetar.maps": `sitelen pi sewi en telo kon`,
+"planetar.maps": `sitelen pi sewi`,
 "planetar.desc2":
 `sina ken ante ijo mute. sina ken ante e sewi telo e kule kasi e mute pi ma suli.
 
@@ -720,6 +760,16 @@ Ce mod recrée ces effects et quelques autres.`,
 "hollowknight.doublejump": `Double saut`,
 "hollowknight.video": `Vidéo originale de Clouser`,
 "hollowknight.map": `Lien de téléchargement de la map`,
+
+"defense.desc":
+`Defense est un mod Minecraft pour permettre aux joueurs de désactiver le PVP.
+Disponible pour Mincraft 1.21+, il ajoute un bouton pour basculer le PVP dans l'inventaire survie.`,
+"defense.desc2":`Quand il est allumé, il reste actif pour une durée configurable vous protégeant de toutes les attaques de joueurs, et une icône s'affiche à côté de votre pseudo, visible par tous les joueurs !`,
+"defense.desc3":`Ce mod a été créé à l'origine pour le youtubeur Knarfy, pour le Empty World SMP.`,
+"defense.toggle":`Le bouton d'activation`,
+"defense.icons":`Le menu de sélection des icônes`,
+"defense.video":`Vidéo de présentation de Knarfy`,
+"defense.mod":`Page Modrinth de Defense`,
 
 "mineterstellar.desc":
 `Mineterstellar est un mod Minecraft recréant dans Minecraft le film Interstellar, de Christopher Nolan.

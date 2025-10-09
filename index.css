@@ -77,7 +77,7 @@ body.no-transition * {
 	transition: 0.2s;
 }
 
-@media only screen and (min-width: 1001px)
+@media only screen and (min-width: 769px)
 {
 	.content {
 		border-radius: 10px;
@@ -100,14 +100,13 @@ body.no-transition * {
 	height: 80px;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	h1:not(.top-title), h2 {
 		text-align: center;
 	}
 
 	h1.top-title {
-		font-size: 50px;
 		width: calc(100% - 60px);
 	}
 }
@@ -118,10 +117,8 @@ body.no-transition * {
 	background-color: var(--bg-color);
 	top: -200px;
 	left: -20px;
-	width:250px;
-	max-width:250px;
-	height:250px;
-	max-height:250px;
+	width: 250px;
+	height: 250px;
 	display: block;
 	margin-bottom: -200px;
 	transition: 0.2s;
@@ -132,9 +129,24 @@ body.no-transition * {
 	position: relative;
 	top: 25px;
 	left: 25px;
-	width:200px;
-	max-width:200px;
+	width: 200px;
 	margin-bottom: -150px;
+}
+
+@media only screen and (max-width: 768px)
+{
+	.pp_container {
+		top: -150px;
+		width: 180px;
+		height: 180px;
+		margin-bottom: -150px;
+	}
+
+	.pp {
+		top: 0px;
+		left: 15px;
+		width: 150px;
+	}
 }
 
 .title-bar {
@@ -151,15 +163,44 @@ body.no-transition * {
 	transition: 0.2s;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.small-title-bar {
 		margin: 0 auto;
+		margin-top: 20px;
 	}
 }
 
 h1 {
 	z-index: 1;
+}
+
+h3 {
+	font-size: 23px;
+}
+
+li {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+p {
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.2s;
+	color: var(--link-color);
+}
+
+a:visited {
+	color: var(--link-visited-color);
+}
+
+a:hover {
+	color: var(--link-hover-color);
+	text-decoration: underline;
 }
 
 .scriptonly {
@@ -193,7 +234,7 @@ h1 {
 	outline: var(--outline);
 }
 
-@media only screen and (min-width: 1001px)
+@media only screen and (min-width: 769px)
 {
 	.image-container img,
 	.image-container video {
@@ -202,11 +243,11 @@ h1 {
 	}
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.image-container img,
 	.image-container video {
-		width: 70%;
+		width: 80%;
 		height: auto;
 	}
 }
@@ -224,14 +265,14 @@ h1 {
 	transition: 0.2s;
 }
 
-@media only screen and (min-width: 1001px)
+@media only screen and (min-width: 769px)
 {
 	.playIcon:hover {
 		transform: translate(-50%, -50%) scale(1.1);
 	}
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.playIcon {
 		transform: translate(-50%, -50%) scale(0.7);
@@ -246,11 +287,11 @@ h1 {
 	margin-top: 20px;
 	border-radius: 10px;
 	height: 100px;
-	width: min-content;
+	width: auto;
 	transition: 0.2s;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.project {
 		display: flex;
@@ -258,28 +299,16 @@ h1 {
 	}
 
 	.project-icon {
-		height: 150px;
-		margin-top: 20px;
 		margin-left: auto;
 		margin-right: auto;
+		max-width: 80%;
+		height: auto;
+		max-height: 100px;
 	}
 }
 
 .project-icon.theme-sensitive {
 	filter: invert(var(--invert-filter));
-}
-
-h3 {
-	font-size: 23px;
-}
-
-li {
-	margin-bottom: 10px;
-	font-size: 20px;
-}
-
-p {
-	font-size: 20px;
 }
 
 .buddies-gallery {
@@ -288,7 +317,7 @@ p {
 	justify-content: center;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.buddies-gallery {
 		display: grid;
@@ -302,15 +331,14 @@ p {
 	overflow-wrap: anywhere;
 }
 
-.buddiesPP p {
-	margin-bottom: 0.5em;
-}
+
 
 .buddiesPP img {
 	border-radius: 50%;
 	transition: 0.2s;
 	transform-style: preserve-3d;
 	outline: var(--outline);
+	width: 150px;
 }
 
 .buddiesPP img:hover:not(:active) {
@@ -321,18 +349,25 @@ p {
 	filter: brightness(50%);
 }
 
-@media only screen and (min-width: 1001px)
+@media only screen and (min-width: 769px)
 {
 	.buddiesPP {
 		padding: 10px;
 	}
+
+	.buddiesPP p {
+		margin-bottom: 0.5em;
+	}
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
-	.buddiesPP {
-		padding: 30px;
-		min-width: 200px;
+	.buddiesPP p {
+		margin-bottom: 0.1em;
+	}
+
+	.buddiesPP img {
+		width: 80px;
 	}
 }
 
@@ -373,7 +408,7 @@ p {
 	display: inline-block;
 }
 
-@media only screen and (min-width: 1001px)
+@media only screen and (min-width: 769px)
 {
 	.alignedBlocksContainer {
 		display: flex;
@@ -390,26 +425,27 @@ p {
 	}
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.alignedBlock {
 		display: block;
 	}
 }
 
-a {
-	text-decoration: none;
-	transition: 0.2s;
-	color: var(--link-color);
+.footer-container {
+	bottom: 0;
+	left: 0;
+	width: calc(100%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-a:visited {
-	color: var(--link-visited-color);
-}
-
-a:hover {
-	color: var(--link-hover-color);
-	text-decoration: underline;
+.footer-container p {
+	font-size: initial;
+	text-align: right;
+	margin: 0;
+	margin-left: 20px;
 }
 
 .linkcopy {
@@ -418,9 +454,10 @@ a:hover {
 }
 
 .linkcopy::after {
+	position: absolute;
 	content: var(--linkcopy-icon);
-	width: 1em;
-	height: 1em;
+	width: 0em;
+	height: 0em;
 	opacity: 0%;
 	transform: scale(0);
 	display: inline-block;
@@ -431,15 +468,21 @@ a:hover {
 }
 
 .linkcopy:hover::after {
+	position: inherit;
 	opacity: 100%;
 	transform: scale(1);
+	width: 1em;
+	height: 1em;
 }
 
 .linkcopy:active::after {
+	position: inherit;
 	transform: scale(1.5);
+	width: 1em;
+	height: 1em;
 }
 
-@media only screen and (min-width: 1001px)
+@media only screen and (min-width: 769px)
 {
 	.linkcopy::after {
 		vertical-align: -0.2em;
@@ -520,7 +563,7 @@ a:hover {
 	height: 100%;
 }
 
-@media only screen and (min-width: 1001px)
+@media only screen and (min-width: 769px)
 {
 	#modal-neighbour {
 		display: none;
@@ -531,7 +574,7 @@ a:hover {
 	position: absolute;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	#modal {
 		background-color: black;
@@ -683,13 +726,14 @@ option:checked {
 	float: right;
 	fill: var(--text-color);
 	transition: fill 0.2s;
+	font-size: 10px;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.navbuttons-container {
 		height: 100%;
-		width: 135px;
+		width: 75px;
 		position: fixed;
 		z-index: 1;
 		top: 40px;
@@ -733,59 +777,58 @@ option:checked {
 	a:has(.curseforge-logo),
 	a:has(.gitlab-logo),
 	a:has(.mail-logo) {
-		transform: scale(2);
 		position: fixed;
 	}
 
 	a:has(.navbar-close) {
-		top: 30px;
+		top: 20px;
 		z-index: 9;
 	}
 
 	.language-select {
-		top: 130px;
-		transform: scale(1.3);
+		top: 80px;
+		left: 78px;
 		z-index: 8;
 	}
 
 	a:has(.lightmode) {
-		top: 250px;
+		top: 140px;
 		z-index: 7;
 	}
 
 	a:has(.github-logo) {
-		top: 370px;
+		top: 200px;
 		z-index: 6;
 	}
 
 	a:has(.discord-logo) {
-		top: 490px;
+		top: 260px;
 		z-index: 5;
 	}
 
 	a:has(.reddit-logo) {
-		top: 610px;
+		top: 320px;
 		z-index: 4;
 	}
 
 	a:has(.modrinth-logo) {
-		top: 730px;
+		top: 380px;
 		z-index: 3;
 	}
 
 	a:has(.curseforge-logo) {
-		top: 850px;
+		top: 440px;
 		z-index: 2;
 	}
 
 	/*a:has(.gitlab-logo) {
-		top: 970px;
+		top: 500px;
 		z-index: 1;
 	}*/
 
 	a:has(.mail-logo) {
-		top: 970px;
-		z-index: 0;/*gitlab: 1090px*/
+		top: 500px;/*gitlab: 560px*/
+		z-index: 0;
 	}
 }
 
@@ -872,7 +915,7 @@ use {
 	transform: translate(0%, 5px);
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	[desc]:not(.language-select)::after,
 	.language-select[desc]:has(> select:not(:focus))::before {
@@ -909,10 +952,10 @@ use {
 	display: flex;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	#snackbar {
-		width: 90%;
+		width: 85%;
 		left: 5%;
 	}
 }
@@ -970,7 +1013,7 @@ use {
 	animation-fill-mode: forwards;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	#no-js {
 		width: 90%;
@@ -983,7 +1026,7 @@ use {
 	white-space: pre;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	#no-js {
 		-webkit-animation-delay: 7s;
@@ -1067,7 +1110,7 @@ use {
 	display: block;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	.article-sum {
 		margin: 0 auto;
@@ -1122,7 +1165,7 @@ use {
 	padding: 0;
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
 	#article-content {
 		width: 100%;
@@ -1130,17 +1173,6 @@ use {
 		
 		border-radius: 0px;
 		margin: 0px;
-	}
-
-	.reaction {
-		font-size: 35px;
-		padding: 6px;
-		padding-right: 12px;
-		border: 4px solid var(--titlebar-color);
-	}
-
-	.reaction svg {
-		transform: translateY(6px);
 	}
 }
 
@@ -1209,48 +1241,16 @@ use {
 	content: "Hmm... There's nothing here. Is JavaScript enabled?";
 }
 
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 768px)
 {
-	#articles-list:empty::after {
-		font-size: 40px;
-	}
-
-	#article-text h1 {
-		font-size: 60px;
-	}
-
-	#article-text h2 {
-		font-size: 50px;
-	}
-
-	#article-text h3 {
-		font-size: 45px;
-	}
-
-	#article-text ::marker {
-		font-size: 40px;
-	}
-
-	#article-text p {
-		font-size: 40px;
+	#copyArticle {
+		top: 20px;
+		left: 20px;
 	}
 
 	.close-article {
-		transform: scale(2);
-	}
-
-	.close-article:hover {
-		transform: scale(2.2);
-	}
-	
-	#copyArticle {
-		transform: scale(2);
-		top: 30px;
-		left: 30px;
-	}
-	
-	#copyArticle:hover:not(:active) {
-		transform: scale(2.2);
+		top: 10px;
+		right: 25px;
 	}
 
 	#article-text img {

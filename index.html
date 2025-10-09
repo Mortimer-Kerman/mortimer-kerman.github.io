@@ -10,6 +10,7 @@
 		<meta property="og:description" content="A showcase web page for my developer projects"/>
 		<meta property="og:image" content="https://mortimer-kerman.github.io/icon.png"/>
 		<meta name="robots" content="index" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="index.css" />
 		<link rel="icon" type="image/png" sizes="583x583" href="icon.png"/>
 	</head>
@@ -108,6 +109,8 @@
 								<li>.NET</li>
 								<li>Winforms</li>
 								<li>Godot</li>
+								<li>Java Swing</li>
+								<li>JavaFX</li>
 								<li loc="languages.github">Github (wow so surprising)</li>
 								<li loc="languages.libs">Too many libraries I guess</li>
 								<li loc="languages.doc">A lot of documentation</li>
@@ -133,7 +136,7 @@
 						<img src="projects/icons/cosmoswanderer.png" loading="lazy" class="project-icon">
 						<h2 id="projects-cosmoswanderer" class="linkcopy">Cosmos Wanderer</h2>
 						<div class="image-container">
-							<img src="projects/cosmoswanderer.jpg" alt="Cosmos Wanderer" loading="lazy">
+							<img src="projects/cosmoswanderer/cosmoswanderer.jpg" alt="Cosmos Wanderer" loading="lazy">
 							<div class="caption">Cosmos Wanderer</div>
 						</div>
 						<p loc="cosmoswanderer.desc">
@@ -141,11 +144,11 @@
 							You can take the control of a space ship and travel through asteroids, and many other obstacles, such as enemy ships, debris, homing missiles...
 						</p>
 						<div class="image-container">
-							<img src="projects/lowaction.jpg" alt="low action" loading="lazy">
+							<img src="projects/cosmoswanderer/lowaction.jpg" alt="low action" loading="lazy">
 							<div class="caption" loc="cosmoswanderer.lowaction">Low action</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/highaction.jpg" alt="high action" loading="lazy">
+							<img src="projects/cosmoswanderer/highaction.jpg" alt="high action" loading="lazy">
 							<div class="caption" loc="cosmoswanderer.highaction">High action</div>
 						</div>
 						<p loc="cosmoswanderer.desc2">
@@ -153,7 +156,7 @@
 							It will be available on the Google Play Store for free.
 						</p>
 						<div class="image-container">
-							<img src="projects/maxaction.jpg" alt="max action" loading="lazy">
+							<img src="projects/cosmoswanderer/maxaction.jpg" alt="max action" loading="lazy">
 							<div class="caption" loc="cosmoswanderer.maxaction">MAX ACTION !</div>
 						</div>
 						<p loc="cosmoswanderer.carlcasey">
@@ -162,22 +165,22 @@
 					</section>
 					<div class="small-title-bar"></div>
 					<section class="project">
-						<img src="projects/icons/SPFTR.png" loading="lazy" class="project-icon theme-sensitive">
+						<img src="projects/icons/spacefactory.png" loading="lazy" class="project-icon theme-sensitive">
 						<h2 id="projects-spacefactory" class="linkcopy">SpaceFactory</h2>
 						<p loc="spacefactory">
 							SpaceFactory was a group project with Frablock made for the 2023 edition of the "Trophées NSI", a competition between French high school computer classes.<br/>
 							Made in python with Pygame, it's a factory game in space, where you can build your own factory to extract and refine resources.<br/>
 						</p>
 						<div class="image-container">
-							<img src="projects/spacefactory.jpg" alt="SpaceFactory" loading="lazy">
+							<img src="projects/spacefactory/spacefactory.jpg" alt="SpaceFactory" loading="lazy">
 							<div class="caption" loc="spacefactory.normalday">A normal day in SpaceFactory</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/buildmenu.jpg" alt="build menu" loading="lazy">
+							<img src="projects/spacefactory/buildmenu.jpg" alt="build menu" loading="lazy">
 							<div class="caption" loc="spacefactory.buildmenu">The build menu</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/opportunities.jpg" alt="opportunities" loading="lazy">
+							<img src="projects/spacefactory/opportunities.jpg" alt="opportunities" loading="lazy">
 							<div class="caption" loc="spacefactory.opportunities">Opportunities menu</div>
 						</div>
 						<p loc="spacefactory.bestproject">
@@ -194,15 +197,15 @@
 						<h2 id="projects-planetar" class="linkcopy">Planetar</h2>
 						<p loc="planetar.desc">
 							Planetar is a small WIP planet map generation tool.<br/>
-							Made for Windows with the .NET framework, it allows you to generate planet maps in real time.
+							Made in Java with Swing and FlatLaf, it allows you to generate planet maps in real time through the GPU.
 						</p>
 						<div class="image-container">
-							<img src="projects/planetar.jpg" alt="Planetar" loading="lazy">
+							<img src="projects/planetar/planetar.jpg" alt="Planetar" loading="lazy">
 							<div class="caption" loc="planetar.screenshot">Planetar, the screenshot</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/planetarmaps.jpg" alt="Planetar" loading="lazy">
-							<div class="caption" loc="planetar.maps">Height and humidity maps</div>
+							<img src="projects/planetar/planetarmaps.jpg" alt="Planetar" loading="lazy">
+							<div class="caption" loc="planetar.maps">Height map</div>
 						</div>
 						<p loc="planetar.desc2">
 							You can parameter a lot of aspects, like sea level, vegetation color, mountains amount...
@@ -210,12 +213,12 @@
 							Comes with a 3D view of the planet.
 						</p>
 						<div class="image-container">
-							<img src="projects/exportedmap.jpg" alt="Exported map" loading="lazy">
+							<img src="projects/planetar/exportedmap.jpg" alt="Exported map" loading="lazy">
 							<div class="caption" loc="planetar.exported">An example of exported map</div>
 						</div>
 					</section>
 					<div class="small-title-bar"></div>
-					<section class="project">
+					<!--<section class="project">
 						<img src="projects/icons/clouserhollowknight.png" height="100px" loading="lazy" class="project-icon">
 						<h2 id="projects-clouserhollowknightphysicsmod" class="linkcopy">Clouser's Hollow Knight physics mod</h2>
 						<p loc="hollowknight.desc">
@@ -224,7 +227,7 @@
 							The map is available for download on <a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>.
 						</p>
 						<div class="image-container">
-							<img src="projects/hollowknight.jpg" alt="Hollow Knight" loading="lazy">
+							<img src="projects/clouserhollowknight/hollowknight.jpg" alt="Hollow Knight" loading="lazy">
 						</div>
 						<p loc="hollowknight.desc2">
 							In Hollow Knight, as soon as the player releases movement keys, they stops mid-air, and can immediately start to move in another direction.<br/>
@@ -234,21 +237,52 @@
 							This mod recreates these effects and some more.
 						</p>
 						<div class="image-container">
-							<img src="projects/instantstop.gif" alt="Hollow Knight" loading="lazy">
+							<img src="projects/clouserhollowknight/instantstop.gif" alt="Hollow Knight" loading="lazy">
 							<div class="caption" loc="hollowknight.instantstop">Instant stop physics</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/pressurejump.gif" alt="Hollow Knight" loading="lazy">
+							<img src="projects/clouserhollowknight/pressurejump.gif" alt="Hollow Knight" loading="lazy">
 							<div class="caption" loc="hollowknight.pressurejump">Pressure sensitive jump</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/doublejump.gif" alt="Hollow Knight" loading="lazy">
+							<img src="projects/clouserhollowknight/doublejump.gif" alt="Hollow Knight" loading="lazy">
 							<div class="caption" loc="hollowknight.doublejump">Double jump</div>
 						</div>
 						<p>
 							<a href="https://github.com/Mortimer-Kerman/ClouserHollowKnightPhysicsMod" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a><br/>
 							<a href="https://youtu.be/SB0jRHjh9kk" target="_blank" rel="noopener noreferrer" loc="hollowknight.video">Clouser's original video</a><br/>
 							<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer" loc="hollowknight.map">Official map download</a>
+						</p>
+					</section>
+					<div class="small-title-bar"></div>-->
+					<section class="project">
+						<img src="projects/icons/defense.png" height="100px" loading="lazy" class="project-icon">
+						<h2 id="projects-defense" class="linkcopy">Defense</h2>
+						<p loc="defense.desc">
+							Defense is a Minecraft mod to allow players to disable PVP.<br/>
+							Available for Mincraft 1.21+, it provides a PVP toggle button in the survival player inventory.
+						</p>
+						<div class="image-container">
+							<img src="projects/defense/defense.jpg" alt="Defense" loading="lazy">
+						</div>
+						<p loc="defense.desc2">
+							When enabled, it stays on for a configurable amount of time, protecting you from any player attack, and an icon is displayed right to your username, visible to any player! 
+						</p>
+						<div class="image-container">
+							<img src="projects/defense/toggle.jpg" alt="Defense" loading="lazy">
+							<div class="caption" loc="defense.toggle">The toggle button</div>
+						</div>
+						<div class="image-container">
+							<img src="projects/defense/icons.jpg" alt="Defense" loading="lazy">
+							<div class="caption" loc="defense.icons">The icons selection menu</div>
+						</div>
+						<p loc="defense.desc3">
+							This mod was originally made for the youtuber Knarfy, for the Empty World SMP.
+						</p>
+						<p>
+							<a href="https://github.com/Mortimer-Kerman/Defense" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a><br/>
+							<a href="https://youtu.be/mpuUZzXjm7I" target="_blank" rel="noopener noreferrer" loc="defense.video">Knarfy's presentation video</a><br/>
+							<a href="https://modrinth.com/mod/defense" target="_blank" rel="noopener noreferrer" loc="defense.mod">Defense Modrinth page</a>
 						</p>
 					</section>
 					<div class="small-title-bar"></div>
@@ -260,11 +294,11 @@
 							It adds planets, space suits, TARS, music, and environments from the movie.
 						</p>
 						<div class="image-container">
-							<img src="projects/mann1.jpg" alt="Mineterstellar" loading="lazy">
+							<img src="projects/mineterstellar/mann1.jpg" alt="Mineterstellar" loading="lazy">
 							<div class="caption" loc="mineterstellar.mann1">Mann's planet</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/miller.jpg" alt="Mineterstellar" loading="lazy">
+							<img src="projects/mineterstellar/miller.jpg" alt="Mineterstellar" loading="lazy">
 							<div class="caption" loc="mineterstellar.miller">Miller's planet</div>
 						</div>
 						<p loc="mineterstellar.desc2">
@@ -273,15 +307,15 @@
 							That's why I decided in August 2024 to remake it entirely from scratch for Fabric 1.21.
 						</p>
 						<div class="image-container">
-							<img src="projects/edmund.jpg" alt="Mineterstellar" loading="lazy">
+							<img src="projects/mineterstellar/edmund.jpg" alt="Mineterstellar" loading="lazy">
 							<div class="caption" loc="mineterstellar.edmund">Edmund's planet</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/mann2.jpg" alt="Mineterstellar" loading="lazy">
+							<img src="projects/mineterstellar/mann2.jpg" alt="Mineterstellar" loading="lazy">
 							<div class="caption" loc="mineterstellar.mann2">TARS on Mann's planet</div>
 						</div>
 						<div class="image-container">
-							<img src="projects/mann3.jpg" alt="Mineterstellar" loading="lazy">
+							<img src="projects/mineterstellar/mann3.jpg" alt="Mineterstellar" loading="lazy">
 							<div class="caption" loc="mineterstellar.mann3">"You fucking coward..."</div>
 						</div>
 						<p>
@@ -379,79 +413,81 @@
 					<div class="buddiesPP">
 						<p>Frablock</p>
 						<a href="https://github.com/Frablock" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/frablock.jpg" width="150px" id="Frablock"></a>
+							<img src="buddies/frablock.jpg" id="Frablock"></a>
 						<div loc="buddies.frablock">Communist</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Ertalite</p>
 						<a href="https://github.com/ertalite" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/ertalite.jpg" width="150px" id="Ertalite"></a>
+							<img src="buddies/ertalite.jpg" id="Ertalite"></a>
 						<div loc="buddies.ertalite">Pushing rocks</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Awkaze</p>
 						<a href="https://github.com/awkaze" target="_blank" rel="noopener noreferrer">
-							<img src="https://avatars.githubusercontent.com/u/148548893?v=4" width="150px" id="Awkaze"></a>
+							<img src="https://avatars.githubusercontent.com/u/148548893?v=4" id="Awkaze"></a>
 						<div loc="buddies.awkaze">Copy/paste god</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Jordi</p>
 						<a href="https://github.com/Jordi-R66" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/jordi.jpg" width="150px" id="Jordi"></a>
+							<img src="buddies/jordi.jpg" id="Jordi"></a>
 						<div loc="buddies.jordi">Catalan</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Vexmea</p>
 						<a href="https://vexmae.github.io" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/vexmea.jpg" width="150px" id="Vexmea"></a>
+							<img src="buddies/vexmea.jpg" id="Vexmea"></a>
 						<div loc="buddies.vexmea">Femboy</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Crafto</p>
 						<a href="https://instagram.com/malidevgames/" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/crafto.jpg" width="150px" id="Crafto"></a>
+							<img src="buddies/crafto.jpg" id="Crafto"></a>
 						<div loc="buddies.crafto">Box stacker</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Zowε</p>
 						<a href="https://github.com/zowepsilon" target="_blank" rel="noopener noreferrer">
-							<img src="https://avatars.githubusercontent.com/u/49984698?v=4" width="150px" id="Zowepsilon"></a>
+							<img src="https://avatars.githubusercontent.com/u/49984698?v=4" id="Zowepsilon"></a>
 						<div loc="buddies.zowepsilon">Furry</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Enigma</p>
 						<a href="https://github.com/Checkmate6659" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/enigma.jpg" width="150px" id="Enigma"></a>
+							<img src="buddies/enigma.jpg" id="Enigma"></a>
 						<div loc="buddies.enigma">Thinking in 5D</div>
 					</div>
 					<div class="buddiesPP">
 						<p>NyanMaths</p>
 						<a href="https://github.com/NyanMaths" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/nyanmaths.jpg" width="150px" id="NyanMaths"></a>
+							<img src="buddies/nyanmaths.jpg" id="NyanMaths"></a>
 						<div loc="buddies.nyanmaths">Hippie in flip flops</div>
 					</div>
 					<div class="buddiesPP">
 						<p>yapudjus</p>
 						<a href="https://github.com/yapudjus" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/yapudjus.jpg" width="150px" id="yapudjus"></a>
+							<img src="buddies/yapudjus.jpg" id="yapudjus"></a>
 						<div loc="buddies.yapudjus">CAAAAAAAAATTTT</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Axel Atlantid</p>
 						<a onclick="copyDiscordID('axelatlantid')" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/axelatlantid.jpg" width="150px" id="AxelAtlantid"></a>
+							<img src="buddies/axelatlantid.jpg" id="AxelAtlantid"></a>
 						<div loc="buddies.axelatlantid">Entity</div>
 					</div>
 					<div class="buddiesPP">
 						<p>Rypoint</p>
 						<a href="https://github.com/Rip01nt" target="_blank" rel="noopener noreferrer">
-							<img src="buddies/rypoint.png" width="150px" id="Rypoint"></a>
+							<img src="buddies/rypoint.png" id="Rypoint"></a>
 						<div loc="buddies.rypoint">Entrepreneur</div>
 					</div>
 				</section>
 				<div class="small-title-bar" style="margin-top:30px; margin-bottom: 30px;"></div>
-				<a href="https://github.com/Mortimer-Kerman/mortimer-kerman.github.io" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a>
-				<p loc="translation" style="position:absolute; right: 20px; bottom: 0px; font-size: medium;"></p>
+				<div class="footer-container">
+					<a href="https://github.com/Mortimer-Kerman/mortimer-kerman.github.io" target="_blank" rel="noopener noreferrer" loc="projects.repo">Github repo</a>
+					<p loc="translation"></p>
+				</div>
 			</div>
 		</div>
 		<div id="modal">
