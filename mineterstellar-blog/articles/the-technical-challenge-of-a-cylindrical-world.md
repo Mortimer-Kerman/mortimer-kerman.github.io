@@ -44,7 +44,7 @@ There are two solutions to this issue:
 This method is really easy to implement. However, it can drastically slow down the game, especially on low end computers.\
 It was used for the tests, but I need another method, more robust:
 
-- ### Adapth the culling to a circular world
+- ### Adapt the culling to a circular world
 Once implemented, this method could allow the culling to stay enabled without getting visual glitches.\
 However, this method turned out to be very hard to implement, and I'm still working on it.
 

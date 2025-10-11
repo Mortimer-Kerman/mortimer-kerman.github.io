@@ -195,7 +195,7 @@ This mod recreates these effects and some more.`,
 
 "defense.desc":
 `Defense is a Minecraft mod to allow players to disable PVP.
-Available for Mincraft 1.21+, it provides a PVP toggle button in the survival player inventory.`,
+Available for Minecraft 1.21+, it provides a PVP toggle button in the survival player inventory.`,
 "defense.desc2":`When enabled, it stays on for a configurable amount of time, protecting you from any player attack, and an icon is displayed right to your username, visible to any player!`,
 "defense.desc3":`This mod was originally made for the youtuber Knarfy, for the Empty World SMP.`,
 "defense.toggle":`The toggle button`,
@@ -337,7 +337,7 @@ Ce mod recrée ces effects et quelques autres.`,
 
 "defense.desc":
 `Defense est un mod Minecraft pour permettre aux joueurs de désactiver le PVP.
-Disponible pour Mincraft 1.21+, il ajoute un bouton pour basculer le PVP dans l'inventaire survie.`,
+Disponible pour Minecraft 1.21+, il ajoute un bouton pour basculer le PVP dans l'inventaire survie.`,
 "defense.desc2":`Quand il est allumé, il reste actif pour une durée configurable vous protégeant de toutes les attaques de joueurs, et une icône s'affiche à côté de votre pseudo, visible par tous les joueurs !`,
 "defense.desc3":`Ce mod a été créé à l'origine pour le youtubeur Knarfy, pour le Empty World SMP.`,
 "defense.toggle":`Le bouton d'activation`,
@@ -478,14 +478,14 @@ Este mod reproduce estos efectos y algunos otros.`,
 "hollowknight.map": `Enlace de descarga del mapa`,
 
 "defense.desc": 
-`Defense es un mod de Minecraft que permite a los jugadores desactivar el PVP.
-Disponible para Minecraft 1.21+, añade un botón para alternar el PVP en el inventario de supervivencia.`,
-"defense.desc2": `Cuando está activado, permanece encendido durante un tiempo configurable, protegiéndote de cualquier ataque de otros jugadores, y se muestra un icono a la derecha de tu nombre de usuario, visible para todos los jugadores.`,
-"defense.desc3": `Este mod fue creado originalmente para el youtuber Knarfy, para el servidor Empty World SMP.`,
+`Defense es un mod Minecraft que permite a los jugadores deshabilitar el PVP.
+Disponible para Minecraft 1.21+, añade un botón para volcar el PVP en el inventario de supervivencia.`,
+"defense.desc2": `Cuando está activado, se queda así durante un rato configurable y le protege de todas las ofensivas de jugadores. ¡Un icono aparece al lado de su pseudónimo que es visible para otros jugadores!`,
+"defense.desc3": `Este mod fue creado originalmente para el YouTuber Knarfy, para el Empty World SMP.`,
 "defense.toggle": `El botón de activación`,
 "defense.icons": `El menú de selección de iconos`,
-"defense.video": `Video de presentación de Knarfy`,
-"defense.mod": `Página de Modrinth de Defense`,
+"defense.video": `El video de presentación de Knarfy`,
+"defense.mod": `Página Modrinth de Defense`,
 
 "mineterstellar.desc":
 `Mineterstellar es un mod Minecraft que reproduce la peli Interstellar por Christopher Nolan en Minecraft.
@@ -763,7 +763,7 @@ Ce mod recrée ces effects et quelques autres.`,
 
 "defense.desc":
 `Defense est un mod Minecraft pour permettre aux joueurs de désactiver le PVP.
-Disponible pour Mincraft 1.21+, il ajoute un bouton pour basculer le PVP dans l'inventaire survie.`,
+Disponible pour Minecraft 1.21+, il ajoute un bouton pour basculer le PVP dans l'inventaire survie.`,
 "defense.desc2":`Quand il est allumé, il reste actif pour une durée configurable vous protégeant de toutes les attaques de joueurs, et une icône s'affiche à côté de votre pseudo, visible par tous les joueurs !`,
 "defense.desc3":`Ce mod a été créé à l'origine pour le youtubeur Knarfy, pour le Empty World SMP.`,
 "defense.toggle":`Le bouton d'activation`,
