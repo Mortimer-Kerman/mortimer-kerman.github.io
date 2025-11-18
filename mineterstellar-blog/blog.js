@@ -81,7 +81,6 @@ async function getArticleStats(id) {
         }
 
         try {
-            console.log(response);
             const json = await response.json();
 
             stats.comments = json.comments;
@@ -92,7 +91,7 @@ async function getArticleStats(id) {
             stats.rocket = json.reactions.rocket;
             stats.eyes = json.reactions.eyes;
         }
-        catch (jsonError) { throw new Error(`JSON error: ${jsonError}`); }
+        catch (jsonError) { }
     }
     catch (error) {
         console.error(`Error for ${id} :`, error);
