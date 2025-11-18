@@ -9,7 +9,7 @@ let articlesIds = [];
 
 async function loadArticles() {
     try {
-        const response = await fetch("articles/articleslist.txt");
+        const response = await fetch("./articles/articleslist.txt");
 
         if (!response.ok) throw new Error("Articles list couldn't be retreived");
 
@@ -74,13 +74,14 @@ async function getArticleStats(id) {
     }
 
     try {
-        const response = await fetch(`https://discode.fr/api/git_com/get_number.php?user=Mortimer-Kerman&repo=mortimer-kerman.github.io&title=${id}`);
+        const response = await fetch(`/api/github_discussions.php?user=Mortimer-Kerman&repo=mortimer-kerman.github.io&title=${id}`);
 
         if (!response.ok) {
             throw new Error(`Failed to load ${id}`);
         }
 
         try {
+            console.log(response);
             const json = await response.json();
 
             stats.comments = json.comments;
