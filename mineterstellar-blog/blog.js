@@ -92,7 +92,7 @@ async function getArticleStats(id) {
             stats.rocket = json.reactions.rocket;
             stats.eyes = json.reactions.eyes;
         }
-        catch (jsonError) { }
+        catch (jsonError) { throw new Error(`JSON error: ${jsonError}`); }
     }
     catch (error) {
         console.error(`Error for ${id} :`, error);
