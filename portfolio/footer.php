@@ -1,3 +1,7 @@
+				<div class="small-title-bar" style="margin-top:30px; margin-bottom: 30px;"></div>
+				<div class="footer-container">
+					<a href="https://github.com/Mortimer-Kerman/mortimer-kerman.github.io" target="_blank" rel="noopener noreferrer">Dépôt Github du site</a>
+				</div>
 			</div>
         </div>
 		<div id="modal">

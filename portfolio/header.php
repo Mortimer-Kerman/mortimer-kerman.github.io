@@ -15,8 +15,6 @@
 		<link rel="icon" type="image/png" sizes="583x583" href="/icon.png"/>
 	</head>
 	<body>
-		
-		
 		<?php if (isset($bgOverride)): ?>
 			<div class="fixed-background" style='--bg-image: url("<?= $bgOverride ?>")'>
 		<?php else: ?>
