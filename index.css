@@ -746,6 +746,8 @@ option:checked {
 		margin: 0;
 		display: grid;
 		place-items: center;
+		grid-template-rows: 90px;
+		grid-auto-rows: 70px;
 	}
 
 	.navbar-open, .navbar-close {
@@ -767,68 +769,9 @@ option:checked {
 		transform: scale(1.1);
 	}
 
-	a:has(.navbar-close),
-	.language-select,
-	a:has(.lightmode),
-	a:has(.github-logo),
-	a:has(.discord-logo),
-	a:has(.reddit-logo),
-	a:has(.modrinth-logo),
-	a:has(.curseforge-logo),
-	a:has(.gitlab-logo),
-	a:has(.mail-logo) {
-		position: fixed;
-	}
-
-	a:has(.navbar-close) {
-		top: 20px;
-		z-index: 9;
-	}
-
 	.language-select {
-		top: 80px;
-		left: 78px;
-		z-index: 8;
-	}
-
-	a:has(.lightmode) {
-		top: 140px;
-		z-index: 7;
-	}
-
-	a:has(.github-logo) {
-		top: 200px;
-		z-index: 6;
-	}
-
-	a:has(.discord-logo) {
-		top: 260px;
-		z-index: 5;
-	}
-
-	a:has(.reddit-logo) {
-		top: 320px;
-		z-index: 4;
-	}
-
-	a:has(.modrinth-logo) {
-		top: 380px;
-		z-index: 3;
-	}
-
-	a:has(.curseforge-logo) {
-		top: 440px;
-		z-index: 2;
-	}
-
-	/*a:has(.gitlab-logo) {
-		top: 500px;
-		z-index: 1;
-	}*/
-
-	a:has(.mail-logo) {
-		top: 500px;/*gitlab: 560px*/
-		z-index: 0;
+		position: unset;
+		transform: translate(0px, -11px);
 	}
 }
 
@@ -919,11 +862,13 @@ use {
 {
 	[desc]:not(.language-select)::after,
 	.language-select[desc]:has(> select:not(:focus))::before {
-		transform: translateX(-100%);
+		top: unset;
+		transform: translate(-100%, 50px);
+		z-index: 10;
 	}
 
 	.language-select[desc]::before {
-		transform: translate(-25%, 15px) scale(1.5) !important;
+		transform: translate(-25%, 50px) !important;
 	}
 }
 

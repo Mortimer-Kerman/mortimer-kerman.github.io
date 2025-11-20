@@ -39,7 +39,7 @@ document.querySelectorAll(".linkcopy").forEach(element => {
 });
 
 function isMobile() {
-    return window.matchMedia("(max-width: 1000px)").matches;
+    return window.matchMedia("(max-width: 768px)").matches;
 }
 
 function modalOpen() {

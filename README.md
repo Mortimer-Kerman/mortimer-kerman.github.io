@@ -1,4 +1,4 @@
-# [mortimer-kerman.github.io](https://mortimer-kerman.github.io)
+# [mortimer-kerman.fr](https://mortimer-kerman.fr)
 A showcase web page for my developer projects
 
 > [!NOTE]
