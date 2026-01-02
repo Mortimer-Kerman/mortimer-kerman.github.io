@@ -10,12 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
 
 $queryString = $_SERVER["QUERY_STRING"] ?? "";
 
-if ($queryString === "") {
-    http_response_code(400);
-    echo "Missing query";
-    exit;
-}
-
 $apiUrl = "https://ssd.jpl.nasa.gov/api/horizons.api?" . $queryString;
 
 $ch = curl_init();
