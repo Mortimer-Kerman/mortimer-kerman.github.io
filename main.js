@@ -331,3 +331,8 @@ document.addEventListener("keydown", function(e) {
     }
     else konamiIndex = 0;
 });
+
+if (Math.random() < 0.5) {
+    const vexname = document.getElementById("vexname");
+    if (vexname) vexname.textContent = "Vexmae";
+}
