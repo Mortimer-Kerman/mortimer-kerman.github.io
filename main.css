@@ -5,8 +5,8 @@
 	--text-color: #ffffff;
 	--snack-color: #363636;
 	--titlebar-color: #575757;
-	--select-border-color: #363636;
-	--select-hover-color: #575757;
+	--button-border-color: #363636;
+	--button-hover-color: #575757;
 	--navmenu-color: #252525;
 	--navicons-color: #ffffff;
 	--link-color: #007bff;
@@ -34,8 +34,8 @@ body.light {
 	--text-color: #000000;
 	--snack-color: #ffffff;
 	--titlebar-color: #757575;
-	--select-border-color: #999999;
-	--select-hover-color: #cccccc;/*dddddd*/
+	--button-border-color: #999999;
+	--button-hover-color: #cccccc;/*dddddd*/
 	--navmenu-color: #bbbbbb;/*cccccc*/
 	--navicons-color: #363636;
 	--link-color: #0000EE;
@@ -152,6 +152,8 @@ body.no-transition * {
 .title-bar {
 	width: 100%;
 	height: 2px;
+	min-height: 2px;
+	max-height: 2px;
 	background-color: var(--titlebar-color);
 	transition: 0.2s;
 }
@@ -159,6 +161,8 @@ body.no-transition * {
 .small-title-bar {
 	width: 50%;
 	height: 2px;
+	min-height: 2px;
+	max-height: 2px;
 	background-color: var(--titlebar-color);
 	transition: 0.2s;
 }
@@ -609,28 +613,34 @@ a:hover {
 	position: fixed;
 }
 
-select {
-	width: 60px;
-	height: 40px;
+button, select, input[type=text] {
 	border-radius: 10px;
-	border: solid var(--select-border-color);
+	border: solid var(--button-border-color);
 	background-color: var(--navmenu-color);
+	color: var(--text-color);
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+button, select {
 	font-size: 20px;
-	text-indent: -1000px;
+}
+
+select {
+	height: 40px;
+	padding-right: 25px;
 	appearance: none;
 	background-image: var(--select-icon);
 	background-repeat: no-repeat;
 	background-position: right 0.5rem top 50%;
 	background-size: 0.65rem auto;
-	transition: 0.2s;
-	cursor: pointer;
 }
 
-select:hover {
-	background-color: var(--select-hover-color);
+button:hover, select:hover, input[type=text]:hover {
+	background-color: var(--button-hover-color);
 }
 
-select:focus {
+button:focus, select:focus, input[type=text]:focus {
 	outline: none;
 }
 
@@ -640,7 +650,13 @@ option {
 }
 
 option:checked {
-	background-color: var(--select-hover-color);
+	background-color: var(--button-hover-color);
+}
+
+#language {
+	width: 60px;
+	text-indent: -1000px;
+	padding-right: initial;
 }
 
 .language-select {
@@ -756,11 +772,11 @@ option:checked {
 	}
 
 	.navbar-open {
-		transform: translate(-20px, 45px) scale(4);
+		transform: translate(-10px, 40px);
 	}
 
 	.navbar-open:hover:not(:active) {
-		transform: translate(-20px, 45px) scale(4.5);
+		transform: translate(-10px, 40px) scale(1.1);
 	}
 
 	.navbar-close:hover:not(:active) {
@@ -1027,7 +1043,7 @@ use {
 .article-sum {
 	border-radius: 10px;
 	background-color: var(--bg-color-variation);
-	box-shadow: var(--select-border-color) 2px 2px;
+	box-shadow: var(--button-border-color) 2px 2px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 6px;

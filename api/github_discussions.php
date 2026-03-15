@@ -1,13 +1,8 @@
 <?php
 //This was originally hosted by Frablock on his own website. https://github.com/Frablock
 
-//Custom .env file reader
-$lines = file(__DIR__ . "/../.env", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-foreach ($lines as $line) {
-    if (str_starts_with(trim($line), '#')) continue;
-    [$name, $value] = explode('=', $line, 2);
-    putenv(sprintf('%s=%s', $name, $value));
-}
+//.env content
+$env = parse_ini_file(__DIR__."/../.env");
 
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
@@ -24,7 +19,7 @@ $url = "https://api.github.com/repos/".$user."/".$repo."/discussions";
 // Initialize cURL session
 $ch = curl_init();
 
-$githubToken = getenv("GITHUB_TOKEN");
+$githubToken = $env["GITHUB_TOKEN"];
 
 // Set cURL options
 curl_setopt($ch, CURLOPT_URL, $url);
