@@ -463,7 +463,7 @@ Donc si quelque chose vous embête à propos de votre compte Github sur ce site,
 Vous pouvez également modifier ou supprimer vos messages via Github en cliquant sur le compteur de commentaire en haut des sections de commentaires.`,
 "privacy.logs": `Journalisation (logs)`,
 "privacy.logs.desc":
-`Je journalise toutes les connections sur ce site (Adresse IP, pages consulté, <i>user agent</i>) pour détecter les bots, les bugs et les hackers.
+`Je journalise toutes les connections sur ce site (Adresse IP, pages consultées, <i>user agent</i>) pour détecter les bots, les bugs et les hackers.
 Pour rester compatible avec le RGPD, toutes les connections journalisées sont gardées seulement 15 jours puis disparaissent dans les limbes.
 Elles ne quittent jamais mon serveur. <small>Et parfois je ne les lis même pas :3</small>`,
 "privacy.not": `Ce que je ne fais pas`,
@@ -649,7 +649,7 @@ Así que si algo relacionado con tu cuenta de Github en este sitio te molesta, p
 También puedes editar o eliminar tus mensajes desde Github haciendo clic en el contador de comentarios en la parte superior de cada sección.`,
 "privacy.logs": `Registros (logs)`,
 "privacy.logs.desc":
-`Registro cualquier conexión en este sitio (dirección IP, páginas consultadas, user agent) para detectar bots, bugs y hackers.
+`Registro cualquier conexión en este sitio (dirección IP, páginas consultadas, <i>user agent</i>) para detectar bots, bugs y hackers.
 Para cumplir con el RGPD, los registros de conexión se conservan solo 15 días y después desaparecen en el limbo.
 Nunca salen de mi servidor. <small>Y a veces ni los leo :3</small>`,
 "privacy.not": `Lo que no hago`,
@@ -835,7 +835,7 @@ Wenn dich also irgendetwas rund um dein Github-Konto auf dieser Website stört, 
 Du kannst deine Nachrichten auch über Github bearbeiten oder löschen, indem du auf den Kommentarzähler oben in einem Kommentarbereich klickst.`,
 "privacy.logs": `Logs`,
 "privacy.logs.desc":
-`Ich protokolliere jede Verbindung auf dieser Website (IP-Adresse, aufgerufene Seiten, User Agent), um Bots, Bugs und Hacker zu erkennen.
+`Ich protokolliere jede Verbindung auf dieser Website (IP-Adresse, aufgerufene Seiten, <i>User Agent</i>), um Bots, Bugs und Hacker zu erkennen.
 Um DSGVO-konform zu bleiben, werden alle Verbindungslogs nur 15 Tage lang aufbewahrt und verschwinden danach im Nichts.
 Sie verlassen meinen Server nie. <small>Und manchmal lese ich sie nicht mal :3</small>`,
 "privacy.not": `Was ich nicht tue`,
@@ -1021,7 +1021,7 @@ Donc si quelque chose vous embête à propos de votre compte Github sur ce site,
 Vous pouvez également modifier ou supprimer vos messages via Github en cliquant sur le compteur de commentaire en haut des sections de commentaires.`,
 "privacy.logs": `Journalisation (logs)`,
 "privacy.logs.desc":
-`Je journalise toutes les connections sur ce site (Adresse IP, pages consulté, <i>user agent</i>) pour détecter les bots, les bugs et les hackers.
+`Je journalise toutes les connections sur ce site (Adresse IP, pages consultées, <i>user agent</i>) pour détecter les bots, les bugs et les hackers.
 Pour rester compatible avec le RGPD, toutes les connections journalisées sont gardées seulement 15 jours puis disparaissent dans les limbes.
 Elles ne quittent jamais mon serveur. <small>Et parfois je ne les lis même pas :3</small>`,
 "privacy.not": `Ce que je ne fais pas`,
