@@ -1,4 +1,4 @@
-const languageSelector = document.getElementById("language");
+const languageSelector = document.getElementById("language") ?? new Object();
 const urlParams = new URLSearchParams(window.location.search);
 
 function initLoc()
@@ -29,7 +29,7 @@ function initLoc()
         var option = document.createElement("option");
         option.value = lang;
         option.textContent = getFlagEmote(lang) + " " + getLocLang("langName", lang, lang);
-        languageSelector.appendChild(option);
+        if (languageSelector.appendChild) languageSelector.appendChild(option);
     });
     if(!languageFound) language = "en";
     
@@ -37,7 +37,7 @@ function initLoc()
     
     languageSelector.value = language;
     
-    languageSelector.addEventListener("change", UpdateLanguage);
+    if (languageSelector.addEventListener) languageSelector.addEventListener("change", UpdateLanguage);
 }
 
 function UpdateLanguage()
@@ -47,9 +47,10 @@ function UpdateLanguage()
     var flag = language;
     if (flag == "en") flag = "gb";
 
-    languageSelector.parentElement.style.setProperty("--flagurl", `url(https://flagicons.lipis.dev/flags/4x3/${flag}.svg)`);
-    
-    if (flag == "tok") languageSelector.parentElement.style.setProperty("--flagurl", `url(https://upload.wikimedia.org/wikipedia/commons/2/20/Toki_Pona_trans_flag.svg)`);
+    if (languageSelector.parentElement) {
+        languageSelector.parentElement.style.setProperty("--flagurl", `url(https://flagicons.lipis.dev/flags/4x3/${flag}.svg)`);
+        if (flag == "tok") languageSelector.parentElement.style.setProperty("--flagurl", `url(https://upload.wikimedia.org/wikipedia/commons/2/20/Toki_Pona_trans_flag.svg)`);
+    }
 
     document.querySelectorAll("[loc]").forEach(function(element)
     {
@@ -65,7 +66,7 @@ function UpdateLanguage()
     const newUrl = `${window.location.pathname}?${urlParams.toString()}${window.location.hash}`;
     window.history.replaceState({}, "", newUrl);
 
-    languageSelector.blur();
+    if (languageSelector.blur) languageSelector.blur();
 }
 
 function getLoc(locKey, defaultLoc)
@@ -88,13 +89,14 @@ const locParseMap = {
     "\n": "<br/>",
     "CARLCASEY_LINK": `<a href="https://youtube.com/@WhiteBatAudio" target="_blank" rel="noopener noreferrer">Carl Casey @White Bat Audio</a>`,
     "MODRINTH_HOLLOWKNIGHT": `<a href="https://modrinth.com/modpack/hollowknight" target="_blank" rel="noopener noreferrer">Modrinth</a>`,
+    "GISCUS_LINK": `<a target="_blank" rel="noopener noreferrer" href="https://giscus.app">Giscus</a>`,
     "BUDDY_FRABLOCK": `<a onclick="mentionBuddy('Frablock')">Frablock</a>`,
     "BUDDY_ENIGMA": `<a onclick="mentionBuddy('Enigma')">Enigma</a>`,
     "BUDDY_ZOWEPSILON": `<a onclick="mentionBuddy('Zowepsilon')">Zowε</a>`,
 };
 
 function parseLoc(loc) {
-    return loc.replace(/CARLCASEY_LINK|MODRINTH_HOLLOWKNIGHT|BUDDY_FRABLOCK|BUDDY_ENIGMA|BUDDY_ZOWEPSILON|\n/g, match => locParseMap[match]);
+    return loc.replace(/CARLCASEY_LINK|MODRINTH_HOLLOWKNIGHT|GISCUS_LINK|BUDDY_FRABLOCK|BUDDY_ENIGMA|BUDDY_ZOWEPSILON|\n/g, match => locParseMap[match]);
 }
 
 function getFlagEmote(countryCode)
@@ -255,7 +257,51 @@ Please note that the articles are published in english and are not translated.`,
 "buddies.rypoint": `Entrepreneur`,
 
 "videoplayer": `Your navigator does not support video playing`,
-"translation": ``
+"translation": ``,
+
+"404.title": `Oops!`,
+"404.desc": `Well, it looks like you lost yourself in space, because this page doesn't exist.`,
+"404.home": `Go back to charted territory`,
+
+"privacy.title": `Privacy Policy`,
+"privacy.forced": `I was bound to write that down eventually.`,
+"privacy.cookies": `Cookies`,
+"privacy.cookies.desc":
+`When you're on this website, your browser has to store a cookie on your device to know your theme preferences and remember them across pages.
+I never get to see them, it never leaves your device. If you want to delete it, just wipe your cookies in your browser settings.`,
+"privacy.giscus.desc":
+`I did not want to store accounts and comments, so I just used GISCUS_LINK for the blog.
+Yes, I'm lazy.
+If you log in with your account and post a comment, I can't manage them, they are stored on Github (so by Microsoft).
+So if something is bothering you about your Github account on this website, ask questions to Microsoft. I'm not the boss here. <small>I don't even know if this specific data stays in the EU.</small>
+Also, you can edit or delete your messages through Github by clicking on the comments count on top of any comment section.`,
+"privacy.logs": `Logs`,
+"privacy.logs.desc":
+`I'm logging any connection on this website (IP address, consulted pages, user agent) to detect, bots, bugs, and hackers.
+To stay GDPR-compliant, any connection log on this website is kept only 15 days and then gets lost in the limbo after this point.
+They never leave my server. <small>And sometimes I never read them :3</small>`,
+"privacy.not": `What I don't do`,
+"privacy.not.sell": `I'm not selling your data`,
+"privacy.not.bet": `I don't bet your data in a casino`,
+"privacy.not.marble": `I don't engrave your data in marble`,
+"privacy.not.print": `I don't print your data on flyers to distribute them in the street`,
+"privacy.not.unattended": `I don't leave your data unattended`,
+"privacy.not.toys": `I don't give your data toys with small parts`,
+"privacy.not.harm": `I don't do anything that could remotely harm you`,
+"privacy.rights": `Your rights`,
+"privacy.rights.desc1": `Thanks to the GDPR, you can ask to get your data:`,
+"privacy.rights.deleted": `Deleted`,
+"privacy.rights.rectified": `Rectified`,
+"privacy.rights.given": `Given to you in a readable format`,
+"privacy.rights.dust": `Turned into dust`,
+"privacy.rights.desc2":
+`If you want to do so, just send me a message. <small>Or just wait 15 days for them to disappear.</small>
+You can also contact the ICO/FTC/whatever if you want to be harsh.`,
+"privacy.contact": `Contact`,
+"privacy.contact.desc":
+`If you want to ask me questions, give me feedback or send me a meme, all of my socials (mail, Discord...) are on top of the <a href="/">main page</a>. I'll answer within a month.
+<span class="mobileonly">Just open the side menu with the hamburger button.</span>`,
+"privacy.host": `Hosted with Apache, OVH and one braincell in Gravelines (France)`
 }
 
 var frDict = {
@@ -397,7 +443,51 @@ Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits
 "buddies.rypoint": `Entrepreneur`,
 
 "videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`,
-"translation": ``
+"translation": ``,
+
+"404.title": `Oups!`,
+"404.desc": `Eh bien, on dirait que vous vous êtes perdus dans l'espace, parce que cette page n'existe pas.`,
+"404.home": `Retourner en terrain connu`,
+
+"privacy.title": `Politique de confidentialité`,
+"privacy.forced": `Fallait bien que j'écrive ça un jour.`,
+"privacy.cookies": `Cookies`,
+"privacy.cookies.desc":
+`Quand vous êtes sur ce site, votre navigateur doit stocker un cookie sur votre appareil pour connaître votre choix de thème et s'en rappeler entre les pages.
+Je n'ai jamais l'occasion de les voir, il ne quitte jamais votre appareil. Si vous voulez le supprimer, purgez les cookies dans les paramètres de votre navigateur.`,
+"privacy.giscus.desc":
+`Je ne voulais pas stocker de comptes et de commentaires, donc j'ai juste utilisé GISCUS_LINK pour le blog.
+Oui, je suis flemmard.
+Si vous voulez vous connecter avec votre compte et poster un commentaire, je ne peux pas les gérer, ils sont stockés sur Github (donc par Microsoft).
+Donc si quelque chose vous embête à propos de votre compte Github sur ce site, demandez à Microsoft. C'est pas moi le patron. <small>Je ne sais même pas si ces données là restent dans l'UE.</small>
+Vous pouvez également modifier ou supprimer vos messages via Github en cliquant sur le compteur de commentaire en haut des sections de commentaires.`,
+"privacy.logs": `Journalisation (logs)`,
+"privacy.logs.desc":
+`Je journalise toutes les connections sur ce site (Adresse IP, pages consulté, <i>user agent</i>) pour détecter les bots, les bugs et les hackers.
+Pour rester compatible avec le RGPD, toutes les connections journalisées sont gardées seulement 15 jours puis disparaissent dans les limbes.
+Elles ne quittent jamais mon serveur. <small>Et parfois je ne les lis même pas :3</small>`,
+"privacy.not": `Ce que je ne fais pas`,
+"privacy.not.sell": `Je ne vends pas vos données`,
+"privacy.not.bet": `Je ne parie pas vos données dans un casino`,
+"privacy.not.marble": `Je ne grave pas vos données dans le marbre`,
+"privacy.not.print": `Je n'imprime pas vos données sur des flyers pour les distribuer dans la rue`,
+"privacy.not.unattended": `Je ne laisse pas vos données sans surveillance`,
+"privacy.not.toys": `Je ne donne pas à vos données des jouets avec des petites pièces`,
+"privacy.not.harm": `Je ne fais rien qui pourrait vous faire du mal de quelque manière que ce soit`,
+"privacy.rights": `Vos droits`,
+"privacy.rights.desc1": `Grâce au RGPD, vous pouvez demander à avoir vos données:`,
+"privacy.rights.deleted": `Supprimées`,
+"privacy.rights.rectified": `Rectifiées`,
+"privacy.rights.given": `Transmises à vous dans un format lisible`,
+"privacy.rights.dust": `Transformées en poussière`,
+"privacy.rights.desc2":
+`Si vous le voulez envoyez-moi un message. <small>Ou attendez juste 15 jours qu'elles disparaissent.</small>
+Vous pouvez aussi saisir la CNIL ou équivalent si vous voulez faire mal.`,
+"privacy.contact": `Contact`,
+"privacy.contact.desc":
+`Si vous voulez me poser des questions, me donner un retour ou m'envoyer des memes, tous mes contacts (email, Discord...) sont en haut de la <a href="/">page d'accueil</a>. Je répondrai d'ici un mois.
+<span class="mobileonly">Ouvrez simplement le menu latéral avec le bouton hamburger.</span>`,
+"privacy.host": `Hébergé avec Apache, OVH et un neurone à Gravelines (France)`
 }
 
 var esDict = {
@@ -539,7 +629,51 @@ Tenga en cuenta que los artículos se publican en inglés y no se traducen.`,
 "buddies.rypoint": `Emprendedor`,
 
 "videoplayer": `Su navegador no soporta la lectura de vídeos`,
-"translation": `No traduje esta página, mi español es demasiado inestable por desgracia :(`//Esta página no ha sido traducida por mí, mi español está demasiado oxidado para eso :(
+"translation": `No traduje esta página, mi español es demasiado inestable por desgracia :(`,//Esta página no ha sido traducida por mí, mi español está demasiado oxidado para eso :(
+
+"404.title": `Oops!`,
+"404.desc": `Well, it looks like you lost yourself in space, because this page doesn't exist.`,
+"404.home": `Go back to charted territory`,
+
+"privacy.title": `Política de privacidad`,
+"privacy.forced": `Tarde o temprano tenía que escribir esto.`,
+"privacy.cookies": `Cookies`,
+"privacy.cookies.desc":
+`Cuando estás en este sitio, tu navegador tiene que guardar una cookie en tu dispositivo para recordar tus preferencias de tema entre páginas.
+Yo nunca llego a verlas, no salen de tu dispositivo. Si quieres borrarla, limpia las cookies desde los ajustes de tu navegador.`,
+"privacy.giscus.desc":
+`No quería gestionar cuentas ni comentarios, así que simplemente usé GISCUS_LINK para el blog.
+Sí, soy un vago.
+Si te conectas con tu cuenta y publicas un comentario, no puedo gestionarlos, están almacenados en Github (es decir, en Microsoft).
+Así que si algo relacionado con tu cuenta de Github en este sitio te molesta, pregúntale a Microsoft. Aquí no mando yo. <small>Ni siquiera sé si esos datos se quedan dentro de la UE.</small>
+También puedes editar o eliminar tus mensajes desde Github haciendo clic en el contador de comentarios en la parte superior de cada sección.`,
+"privacy.logs": `Registros (logs)`,
+"privacy.logs.desc":
+`Registro cualquier conexión en este sitio (dirección IP, páginas consultadas, user agent) para detectar bots, bugs y hackers.
+Para cumplir con el RGPD, los registros de conexión se conservan solo 15 días y después desaparecen en el limbo.
+Nunca salen de mi servidor. <small>Y a veces ni los leo :3</small>`,
+"privacy.not": `Lo que no hago`,
+"privacy.not.sell": `No vendo tus datos`,
+"privacy.not.bet": `No apuesto tus datos en un casino`,
+"privacy.not.marble": `No grabo tus datos en mármol`,
+"privacy.not.print": `No imprimo tus datos en flyers para repartirlos por la calle`,
+"privacy.not.unattended": `No dejo tus datos desatendidos`,
+"privacy.not.toys": `No le doy a tus datos juguetes con piezas pequeñas`,
+"privacy.not.harm": `No hago nada que pueda perjudicarte de ninguna manera`,
+"privacy.rights": `Tus derechos`,
+"privacy.rights.desc1": `Gracias al RGPD, puedes pedir que tus datos sean:`,
+"privacy.rights.deleted": `Eliminados`,
+"privacy.rights.rectified": `Rectificados`,
+"privacy.rights.given": `Entregados en un formato legible`,
+"privacy.rights.dust": `Convertidos en polvo`,
+"privacy.rights.desc2":
+`Si quieres hacerlo, mándame un mensaje. <small>O espera 15 días a que desaparezcan solos.</small>
+También puedes contactar con la AEPD o equivalente si quieres ponerte en modo serio.`,
+"privacy.contact": `Contacto`,
+"privacy.contact.desc":
+`Si quieres hacerme preguntas, darme feedback o mandarme un meme, todos mis contactos (correo, Discord...) están arriba del todo en la <a href="/">página principal</a>. Respondo en menos de un mes.
+<span class="mobileonly">Abre el menú lateral con el botón hamburguesa.</span>`,
+"privacy.host": `Alojado con Apache, OVH y una neurona en Gravelines (Francia)`
 }
 
 var deDict = {
@@ -681,7 +815,51 @@ Bitte beachten Sie, dass die Artikel auf Englisch veröffentlicht werden und nic
 "buddies.rypoint": `Unternehmer`,
 
 "videoplayer": `Ihr Browser unterstützt keine Videowiedergabe`,
-"translation": `Diese Seite wurde von ChatGPT 4o übersetzt und von eine nicht professionelle Person korrigiert.`
+"translation": `Diese Seite wurde von ChatGPT 4o übersetzt und von eine nicht professionelle Person korrigiert.`,
+
+"404.title": `Oops!`,
+"404.desc": `Well, it looks like you lost yourself in space, because this page doesn't exist.`,
+"404.home": `Go back to charted territory`,
+
+"privacy.title": `Datenschutzerklärung`,
+"privacy.forced": `Das musste ja irgendwann mal aufgeschrieben werden.`,
+"privacy.cookies": `Cookies`,
+"privacy.cookies.desc":
+`Wenn du auf dieser Website bist, muss dein Browser ein Cookie auf deinem Gerät speichern, um deine Theme-Einstellungen zu kennen und seitenübergreifend zu merken.
+Ich sehe sie nie, sie verlassen dein Gerät nicht. Wenn du es löschen möchtest, lösch einfach die Cookies in deinen Browsereinstellungen.`,
+"privacy.giscus.desc":
+`Ich wollte keine Konten und Kommentare selbst verwalten, also hab ich einfach GISCUS_LINK für den Blog verwendet.
+Ja, ich bin faul.
+Wenn du dich mit deinem Konto einloggst und einen Kommentar postest, kann ich diese nicht verwalten – sie werden bei Github gespeichert (also bei Microsoft).
+Wenn dich also irgendetwas rund um dein Github-Konto auf dieser Website stört, frag Microsoft. Ich bin hier nicht der Chef. <small>Ich weiß nicht mal, ob diese Daten in der EU bleiben.</small>
+Du kannst deine Nachrichten auch über Github bearbeiten oder löschen, indem du auf den Kommentarzähler oben in einem Kommentarbereich klickst.`,
+"privacy.logs": `Logs`,
+"privacy.logs.desc":
+`Ich protokolliere jede Verbindung auf dieser Website (IP-Adresse, aufgerufene Seiten, User Agent), um Bots, Bugs und Hacker zu erkennen.
+Um DSGVO-konform zu bleiben, werden alle Verbindungslogs nur 15 Tage lang aufbewahrt und verschwinden danach im Nichts.
+Sie verlassen meinen Server nie. <small>Und manchmal lese ich sie nicht mal :3</small>`,
+"privacy.not": `Was ich nicht tue`,
+"privacy.not.sell": `Ich verkaufe deine Daten nicht`,
+"privacy.not.bet": `Ich verspiele deine Daten nicht im Casino`,
+"privacy.not.marble": `Ich graviere deine Daten nicht in Marmor`,
+"privacy.not.print": `Ich drucke deine Daten nicht auf Flyer, um sie auf der Straße zu verteilen`,
+"privacy.not.unattended": `Ich lasse deine Daten nicht unbeaufsichtigt`,
+"privacy.not.toys": `Ich gebe deinen Daten kein Spielzeug mit Kleinteilen`,
+"privacy.not.harm": `Ich tue nichts, was dir auch nur ansatzweise schaden könnte`,
+"privacy.rights": `Deine Rechte`,
+"privacy.rights.desc1": `Dank der DSGVO kannst du verlangen, dass deine Daten:`,
+"privacy.rights.deleted": `Gelöscht werden`,
+"privacy.rights.rectified": `Berichtigt werden`,
+"privacy.rights.given": `Dir in einem lesbaren Format übergeben werden`,
+"privacy.rights.dust": `Zu Staub werden`,
+"privacy.rights.desc2":
+`Wenn du das möchtest, schick mir einfach eine Nachricht. <small>Oder warte einfach 15 Tage, bis sie von selbst verschwinden.</small>
+Du kannst dich auch an den BfDI oder eine ähnliche Behörde wenden, wenn du es auf die harte Tour willst.`,
+"privacy.contact": `Kontakt`,
+"privacy.contact.desc":
+`Wenn du mir Fragen stellen, Feedback geben oder ein Meme schicken möchtest, sind alle meine Kontaktmöglichkeiten (Mail, Discord...) oben auf der <a href="/">Startseite</a>. Ich antworte innerhalb eines Monats.
+<span class="mobileonly">Öffne das Seitenmenü einfach über den Hamburger-Button.</span>`,
+"privacy.host": `Gehostet mit Apache, OVH und einer einzigen Gehirnzelle in Gravelines (Frankreich)`
 }
 
 var tokDict = {
@@ -823,7 +1001,51 @@ Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits
 "buddies.rypoint": `Entrepreneur`,
 
 "videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`,
-"translation": `Page traduite par BUDDY_ZOWEPSILON et BUDDY_ENIGMA :3`
+"translation": `Page traduite par BUDDY_ZOWEPSILON et BUDDY_ENIGMA :3`,
+
+"404.title": `Oups!`,
+"404.desc": `Eh bien, on dirait que vous vous êtes perdus dans l'espace, parce que cette page n'existe pas.`,
+"404.home": `Retourner en terrain connu`,
+
+"privacy.title": `Politique de confidentialité`,
+"privacy.forced": `Fallait bien que j'écrive ça un jour.`,
+"privacy.cookies": `Cookies`,
+"privacy.cookies.desc":
+`Quand vous êtes sur ce site, votre navigateur doit stocker un cookie sur votre appareil pour connaître votre choix de thème et s'en rappeler entre les pages.
+Je n'ai jamais l'occasion de les voir, il ne quitte jamais votre appareil. Si vous voulez le supprimer, purgez les cookies dans les paramètres de votre navigateur.`,
+"privacy.giscus.desc":
+`Je ne voulais pas stocker de comptes et de commentaires, donc j'ai juste utilisé GISCUS_LINK pour le blog.
+Oui, je suis flemmard.
+Si vous voulez vous connecter avec votre compte et poster un commentaire, je ne peux pas les gérer, ils sont stockés sur Github (donc par Microsoft).
+Donc si quelque chose vous embête à propos de votre compte Github sur ce site, demandez à Microsoft. C'est pas moi le patron. <small>Je ne sais même pas si ces données là restent dans l'UE.</small>
+Vous pouvez également modifier ou supprimer vos messages via Github en cliquant sur le compteur de commentaire en haut des sections de commentaires.`,
+"privacy.logs": `Journalisation (logs)`,
+"privacy.logs.desc":
+`Je journalise toutes les connections sur ce site (Adresse IP, pages consulté, <i>user agent</i>) pour détecter les bots, les bugs et les hackers.
+Pour rester compatible avec le RGPD, toutes les connections journalisées sont gardées seulement 15 jours puis disparaissent dans les limbes.
+Elles ne quittent jamais mon serveur. <small>Et parfois je ne les lis même pas :3</small>`,
+"privacy.not": `Ce que je ne fais pas`,
+"privacy.not.sell": `Je ne vends pas vos données`,
+"privacy.not.bet": `Je ne parie pas vos données dans un casino`,
+"privacy.not.marble": `Je ne grave pas vos données dans le marbre`,
+"privacy.not.print": `Je n'imprime pas vos données sur des flyers pour les distribuer dans la rue`,
+"privacy.not.unattended": `Je ne laisse pas vos données sans surveillance`,
+"privacy.not.toys": `Je ne donne pas à vos données des jouets avec des petites pièces`,
+"privacy.not.harm": `Je ne fais rien qui pourrait vous faire du mal de quelque manière que ce soit`,
+"privacy.rights": `Vos droits`,
+"privacy.rights.desc1": `Grâce au RGPD, vous pouvez demander à avoir vos données:`,
+"privacy.rights.deleted": `Supprimées`,
+"privacy.rights.rectified": `Rectifiées`,
+"privacy.rights.given": `Transmises à vous dans un format lisible`,
+"privacy.rights.dust": `Transformées en poussière`,
+"privacy.rights.desc2":
+`Si vous le voulez envoyez-moi un message. <small>Ou attendez juste 15 jours qu'elles disparaissent.</small>
+Vous pouvez aussi saisir la CNIL ou équivalent si vous voulez faire mal.`,
+"privacy.contact": `Contact`,
+"privacy.contact.desc":
+`Si vous voulez me poser des questions, me donner un retour ou m'envoyer des memes, tous mes contacts (email, Discord...) sont en haut de la <a href="/">page d'accueil</a>. Je répondrai d'ici un mois.
+<span class="mobileonly">Ouvrez simplement le menu latéral avec le bouton hamburger.</span>`,
+"privacy.host": `Hébergé avec Apache, OVH et un neurone à Gravelines (France)`
 }
 
 initLoc();

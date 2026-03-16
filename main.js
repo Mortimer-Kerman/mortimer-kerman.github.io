@@ -1,11 +1,13 @@
 const imageContainers = document.querySelectorAll(".image-container");
 const modal = document.getElementById("modal");
-const modalMedia = document.getElementById("modal-media"); modalMedia.displayed = 0;
+const modalMedia = document.getElementById("modal-media"); 
 const closeModal = document.querySelector(".close");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 const caption = document.getElementById("caption");
 const snackbar = document.getElementById("snackbar");
+
+if(modalMedia) modalMedia.displayed = 0;
 
 var snackTimeout = null;
 
@@ -43,7 +45,7 @@ function isMobile() {
 }
 
 function modalOpen() {
-    return modal.style.display === "flex";
+    return modal && modal.style.display === "flex";
 }
 
 function displayImage(index, media, displayCaption) {
@@ -102,17 +104,17 @@ function closeDisplay() {
     modal.style.display = "none";
     document.body.style.overflow = "auto";
 }
-closeModal.addEventListener("click", closeDisplay);
+if (closeModal) closeModal.addEventListener("click", closeDisplay);
 
 function prevImage() {
     displayImage(mod(modalMedia.displayed - 1, imageContainers.length), modalMedia, true);
 }
-prevButton.addEventListener("click", prevImage);
+if (prevButton) prevButton.addEventListener("click", prevImage);
 
 function nextImage() {
     displayImage(mod(modalMedia.displayed + 1, imageContainers.length), modalMedia, true);
 }
-nextButton.addEventListener("click", nextImage);
+if (nextButton) nextButton.addEventListener("click", nextImage);
 
 document.addEventListener("keydown", (event) => {
     if (modalOpen()) {
@@ -258,6 +260,7 @@ function resetNavBar()
 
 function updateNavBar()
 {
+    if (!navcontainer) return;
     if (isMobile())
     {
         if (!navBarOpen) closeNavBar();
@@ -307,9 +310,12 @@ if (sessionStorage.getItem("lightMode") === "true")
     document.body.classList.add("no-transition");
 
     document.body.classList.toggle("light");
-    lighticon.setAttribute("href", "/sprites.svg#darkmode");
-    lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
-    lighticon.parentElement.parentElement.setAttribute("desc", "Dark theme");
+    if (lighticon) {
+        lighticon.setAttribute("href", "/sprites.svg#darkmode");
+        lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
+        lighticon.parentElement.parentElement.setAttribute("desc", "Dark theme");
+    }
+
 
     document.body.offsetHeight;
 
