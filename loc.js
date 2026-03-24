@@ -254,7 +254,7 @@ Please note that the articles are published in english and are not translated.`,
 "buddies.nyanmaths": `Hippie in flip flops`,
 "buddies.yapudjus": `CAAAAAAAAATTTT`,
 "buddies.axelatlantid": `Entity`,
-"buddies.rypoint": `Entrepreneur`,
+"buddies.elementia": `try { developper, writer } catch() { still trying }`,
 
 "videoplayer": `Your navigator does not support video playing`,
 "translation": ``,
@@ -440,7 +440,7 @@ Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits
 "buddies.nyanmaths": `Hippie en claquettes`,
 "buddies.yapudjus": `CHAAAAAAAATTTT`,
 "buddies.axelatlantid": `Entité`,
-"buddies.rypoint": `Entrepreneur`,
+"buddies.elementia": `try { développeur, écrivain } catch() { essaie toujours }`,
 
 "videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`,
 "translation": ``,
@@ -626,7 +626,7 @@ Tenga en cuenta que los artículos se publican en inglés y no se traducen.`,
 "buddies.nyanmaths": `Hippie con chanclas`,
 "buddies.yapudjus": `GAAAAAATOOOOOO`,
 "buddies.axelatlantid": `Entidad`,
-"buddies.rypoint": `Emprendedor`,
+"buddies.elementia": `try { desarrollador, escritor } catch() { sigue intentando }`,
 
 "videoplayer": `Su navegador no soporta la lectura de vídeos`,
 "translation": `No traduje esta página, mi español es demasiado inestable por desgracia :(`,//Esta página no ha sido traducida por mí, mi español está demasiado oxidado para eso :(
@@ -812,7 +812,7 @@ Bitte beachten Sie, dass die Artikel auf Englisch veröffentlicht werden und nic
 "buddies.nyanmaths": `Hippie in Flip-Flops`,
 "buddies.yapudjus": `KAAAAAATZEEEEE`,
 "buddies.axelatlantid": `Objekt`,
-"buddies.rypoint": `Unternehmer`,
+"buddies.elementia": `try { Entwickler, Schriftsteller } catch() { versucht es weiter }`,
 
 "videoplayer": `Ihr Browser unterstützt keine Videowiedergabe`,
 "translation": `Diese Seite wurde von ChatGPT 4o übersetzt und von eine nicht professionelle Person korrigiert.`,
@@ -998,7 +998,7 @@ Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits
 "buddies.nyanmaths": `Hippie en claquettes`,
 "buddies.yapudjus": `CHAAAAAAAATTTT`,
 "buddies.axelatlantid": `Entité`,
-"buddies.rypoint": `Entrepreneur`,
+"buddies.elementia": `try { développeur, écrivain } catch() { essaie toujours }`,
 
 "videoplayer": `Votre navigateur ne supporte pas la lecture de vidéos`,
 "translation": `Page traduite par BUDDY_ZOWEPSILON et BUDDY_ENIGMA :3`,
