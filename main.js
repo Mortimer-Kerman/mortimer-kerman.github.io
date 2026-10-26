@@ -7,7 +7,7 @@ const nextButton = document.querySelector(".next");
 const caption = document.getElementById("caption");
 const snackbar = document.getElementById("snackbar");
 
-if(modalMedia) modalMedia.displayed = 0;
+if (modalMedia) modalMedia.displayed = 0;
 
 var snackTimeout = null;
 
@@ -55,8 +55,7 @@ function displayImage(index, media, displayCaption) {
     const image = imageContainers[index].querySelector("img");
     const imageCaption = imageContainers[index].querySelector(".caption");
 
-    if (image.src.includes("videothumbs/"))
-    {
+    if (image.src.includes("videothumbs/")) {
         modalImage.style.display = "none";
         modalVideo.style.display = "";
         modalImage.src = "";
@@ -78,16 +77,14 @@ function displayImage(index, media, displayCaption) {
         });
 
     }
-    else
-    {
+    else {
         modalImage.style.display = ""
         modalVideo.style.display = "none";
         modalImage.src = image.src;
         modalVideo.src = "";
     }
 
-    if (imageCaption != null)
-    {
+    if (imageCaption != null) {
         if (displayCaption) caption.textContent = imageCaption.textContent;
     }
     else caption.textContent = "";
@@ -146,8 +143,7 @@ document.addEventListener("touchmove", e => {
 
 document.addEventListener("touchend", e => {
     touchendX = e.changedTouches[0].screenX;
-    if(modalOpen())
-    {
+    if(modalOpen()) {
         if(Math.abs(touchendX-touchstartX)>(window.screen.width/2) || touchspeedX>(window.screen.width/30) ) {
             if (touchendX > touchstartX) {
                 modalMedia.style.transform = `translateX(${-window.screen.width*2}px)`;
@@ -237,32 +233,27 @@ function mentionBuddy(buddy) {
     setTimeout(function () { buddyPP.classList.remove("rotate"); }, 1000);
 }
 
-function openNavBar()
-{
+function openNavBar() {
     navcontainer.style.right = "0px";
     navcontainer.style.overflowX = "visible";
     navBarOpen = true;
 }
   
-function closeNavBar()
-{
+function closeNavBar() {
     navcontainer.style.right = "-180px";
     navcontainer.style.overflowX = "hidden";
     navBarOpen = false;
 }
 
-function resetNavBar()
-{
+function resetNavBar() {
     navcontainer.style.right = "unset";
     navcontainer.style.overflowX = "unset";
     navBarOpen = false;
 }
 
-function updateNavBar()
-{
+function updateNavBar() {
     if (!navcontainer) return;
-    if (isMobile())
-    {
+    if (isMobile()) {
         if (!navBarOpen) closeNavBar();
     }
     else resetNavBar();
@@ -276,10 +267,8 @@ let flashbanged = false;
 
 flashbangaudio.load();
 
-function switchLightmode()
-{
-    if (!flashbanged)
-    {
+function switchLightmode() {
+    if (!flashbanged) {
         flashbangaudio.play();
         flashbanged = true;
         flashbang.classList.add("flashbang");
@@ -287,14 +276,12 @@ function switchLightmode()
 
     document.body.classList.toggle("light");
 
-    if (["/sprites.svg#lightmode", "sprites.svg#lightmode"].includes(lighticon.getAttribute("href")))
-    {
+    if (["/sprites.svg#lightmode", "sprites.svg#lightmode"].includes(lighticon.getAttribute("href"))) {
         lighticon.setAttribute("href", "/sprites.svg#darkmode");
         lighticon.parentElement.parentElement.setAttribute("descloc", "darkmode");
         lighticon.parentElement.parentElement.setAttribute("desc", getLoc("darkmode", "Dark theme"));
     }
-    else
-    {
+    else {
         lighticon.setAttribute("href", "/sprites.svg#lightmode");
         lighticon.parentElement.parentElement.setAttribute("descloc", "lightmode");
         lighticon.parentElement.parentElement.setAttribute("desc", getLoc("lightmode", "Light theme"));
@@ -303,8 +290,7 @@ function switchLightmode()
     sessionStorage.setItem("lightMode", document.body.classList.contains("light"));
 }
 
-if (sessionStorage.getItem("lightMode") === "true")
-{
+if (sessionStorage.getItem("lightMode") === "true") {
     flashbanged = true;
 
     document.body.classList.add("no-transition");
@@ -316,7 +302,6 @@ if (sessionStorage.getItem("lightMode") === "true")
         lighticon.parentElement.parentElement.setAttribute("desc", "Dark theme");
     }
 
-
     document.body.offsetHeight;
 
     document.body.classList.remove("no-transition");
@@ -325,12 +310,10 @@ if (sessionStorage.getItem("lightMode") === "true")
 const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
 let konamiIndex = 0;
 
-document.addEventListener("keydown", function(e) {
-    if (e.key == konamiCode[konamiIndex])
-    {
+document.addEventListener("keydown", (e) => {
+    if (e.key == konamiCode[konamiIndex]) {
         konamiIndex++;
-        if (konamiIndex == konamiCode.length)
-        {
+        if (konamiIndex == konamiCode.length) {
             window.open("https://youtu.be/dQw4w9WgXcQ", "_blank");
             konamiIndex = 0;
         }

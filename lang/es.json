@@ -1,0 +1,205 @@
+{
+	"langName": "Español",
+	"me": "Yo",
+	"maindesc": [
+		"Hola, soy Mortimer Kerman.",
+		"Soy un estudiante francés y un desarrollador sobre mi tiempo libre. Sobrevivió de la clase preparatoria y ahora me desenvuelvo en instituto de tecnología en informática.",
+		"Principalmente backend, me paso el tiempo en varios proyectos.",
+		"Me interesan la tecnología, el espacio y la generación de terreno.",
+		"",
+		"Adicto al ruido Perlin."
+	],
+	"copiedUsername": "Nombre de usuario Discord copiado en el portapapeles: ",
+	"copiedLink": "Enlace copiado en el portapapeles",
+	"lightmode": "Modo claro",
+	"darkmode": "Mobo oscuro",
+
+	"languages.process": "Lenguajes que mi cerebro puede manejar:",
+	"languages.html": "HTML/CSS (lo sé, no son realmente lenguajes de programación)",
+	"languages.toolsused": "Herramientas que me he tomado la molestia para usar:",
+	"languages.vscode": "VSCode (su hermano extraño)",
+	"languages.github": "Github (sorprendente, ¿ eh ?)",
+	"languages.libs": "Me parece que hay demasiado bibliotecas",
+	"languages.doc": "Un montón de documentaciones",
+	"languages.helloworld": "Lenguajes con los cuales sé escribir hello world:",
+	"languages.hlsl": "HLSL (lo sé, no hay consola en HLSL)",
+
+	"projects": "Mis proyectos",
+	"projects.repo": "Repositorio Github",
+	"back": "Atrás",
+	"copyarticle": "Copiar enlace del artículo",
+
+	"cosmoswanderer.desc": [
+		"Cosmos Wanderer es un juego móvil de shooter espacial en vías de desarrollo.",
+		"Puede tomar el control de una nave espacial y navegar entre los asteroides y otros obstáculos como naves enemigas, desechos, misiles guiados..."
+	],
+	"cosmoswanderer.lowaction": "Menor acción",
+	"cosmoswanderer.highaction": "Mayor acción",
+	"cosmoswanderer.desc2": [
+		"Puede también mejorar su nave, conseguir nuevas skins, conseguir logros…",
+		"Estará accesible gratuitamente en el Google Play Store."
+	],
+	"cosmoswanderer.maxaction": "¡ACCIÓN  MAXIMA!",
+	"cosmoswanderer.carlcasey": "Música por CARLCASEY_LINK",
+
+	"spacefactory": [
+		"SpaceFactory fue un proyecto de grupo con BUDDY_FRABLOCK hecho por la edición 2023 de los “Trophées NSI”, una competición entre clases de bachillerato de informática en toda Francia.",
+		"Hecho en python con Pygame, es un juego de fábrica en el espacio donde puede construir su propia fábrica para extraer y refinar recursos."
+	],
+	"spacefactory.normalday": "Un día común en SpaceFactory",
+	"spacefactory.buildmenu": "El menú de construcción",
+	"spacefactory.opportunities": "El menú de oportunidades",
+	"spacefactory.bestproject": "SpaceFactory fue elegido mejor proyecto “Terminale” de la región Bretaña.",
+	"spacefactory.website": "Sitio oficial de los Trophées NSI",
+
+	"planetar.desc": [
+		"Planetar es una pequeña herramienta para generar mapas de planetas que está en vías de desarollo.",
+		"Hecha en Java con Swing y FlatLaf, permite generar mapas de planetas en tiempo real en la GPU."
+	],
+	"planetar.screenshot": "Planetar, la captura de pantalla",
+	"planetar.maps": "Mapa de altitud",
+	"planetar.desc2": [
+		"Puede configurar muchos aspectos como el nivel del mar, el color de la vegetación, la cantidad de montañas…",
+		"",
+		"Entregado con una vista 3D del planeta."
+	],
+	"planetar.exported": "Un ejemplo de mapa exportado",
+
+	"hollowknight.desc": [
+		"Clouser's Hollow Knight physics mod es un mod Minecraft creado por el mapa Minecraft Hollow Knight de Clouser.",
+		"Hecho para Minecraft Fabric 1.20.4, añade varios comandos y Gamerules para cambiar la física del jugador a fin de reproducir la física de Hollow Knight.",
+		"El mapa está disponible para descargarlo en MODRINTH_HOLLOWKNIGHT."
+	],
+	"hollowknight.desc2": [
+		"En Hollow Knight, tan pronto como el jugador suelte las teclas de dirección, se para en el aire y puede dirigirse en otra dirección.",
+		"También el salto está sensible a la pulsación. Es decir, cuanto más pulsa, más alto salta.",
+		"En algunas condiciones, el jugador tiene también acceso a un doble salto que le permite reiterar el salto sensible a la pulsación en el aire.",
+		"",
+		"Este mod reproduce estos efectos y algunos otros."
+	],
+	"hollowknight.instantstop": "Física de parada inmediata",
+	"hollowknight.pressurejump": "Salto sensible a la pulsación",
+	"hollowknight.doublejump": "Doble salto",
+	"hollowknight.video": "Vídeo original de Clouser",
+	"hollowknight.map": "Enlace de descarga del mapa",
+
+	"defense.desc": [
+		"Defense es un mod Minecraft que permite a los jugadores deshabilitar el PVP.",
+		"Disponible para Minecraft 1.21+, añade un botón para volcar el PVP en el inventario de supervivencia."
+	],
+	"defense.desc2": "Cuando está activado, se queda así durante un rato configurable y le protege de todas las ofensivas de jugadores. ¡Un icono aparece al lado de su pseudónimo que es visible para otros jugadores!",
+	"defense.desc3": "Este mod fue creado originalmente para el YouTuber Knarfy, para el Empty World SMP.",
+	"defense.toggle": "El botón de activación",
+	"defense.icons": "El menú de selección de iconos",
+	"defense.video": "El video de presentación de Knarfy",
+	"defense.mod": "Página Modrinth de Defense",
+
+	"mineterstellar.desc": [
+		"Mineterstellar es un mod Minecraft que reproduce la peli Interstellar por Christopher Nolan en Minecraft.",
+		"Añade planetas, trajes espaciales, TARS, la música y el entorno de la pelí."
+	],
+	"mineterstellar.desc2": [
+		"Empecé este proyecto hace unos años para Minecraft Forge 1.12.2.",
+		"Con el tiempo, esta versión volvió cada vez más anticuado y mi mod amontonó una inmensa deuda técnica.",
+		"Por ello decidí en Agosto de 2024 hacerlo de nuevo desde cero para Fabric 1.21."
+	],
+	"mineterstellar.miller": "El planeta de Miller",
+	"mineterstellar.edmund": "El planeta de Edmunds",
+	"mineterstellar.mann1": "El planeta de Mann",
+	"mineterstellar.mann2": "TARS en el planeta de Mann",
+	"mineterstellar.mann3": "\"Eres un desgraciado...\"",
+	"mineterstellar.blog": "Blog de desarrollo de Mineterstellar",
+	"mineterstellar.blog.desc": [
+		"En esta página, publicaré pequeños artículos sobre el progreso del desarrollo de Mineterstellar.",
+		"Tenga en cuenta que los artículos se publican en inglés y no se traducen."
+	],
+	"mineterstellar.curseforge": "Página Curseforge original de Mineterstellar",
+
+	"gallery": "Galería de cosas casuales",
+	"gallery.wallpaper": "El fondo de pantalla de mi PC (Me encanta SpaceEngine)",
+	"gallery.reason": "La razón por la que mi UI hace tonterías",
+	"gallery.stellarsystem": "Esa vez que juegué con la generación de sistemas estelares",
+	"gallery.mountains": "Una vez hice montañas procedimentales",
+	"gallery.robot": "Un día, hice un pequeñito robot lindo para un juego de enigmas en 3D",
+	"gallery.tootempting": "No pude resistir",
+	"gallery.grass": "Prueba que todavía soy un ser humano",
+	"gallery.lod": "LODs de montañas",
+	"gallery.globama": "Globama en OpenGL",
+	"gallery.crystals": "Generación de cristales en Minecraft",
+	"gallery.platform": "Una pequeña plataforma volaroda para mi robot",
+	"gallery.blackhole": "Un agujero negro creado en Minecraft",
+	"gallery.totally2d": "Es un planeta en 2D. SÍ.",
+	"gallery.mars": "Una vez hice un sitio del futuro sobre la colonización marciana para mi escuela",
+	"gallery.jug": "Por desgracia, no creé esto",
+	"gallery.atmosphere": "Pruebas de reproducción de atmosfera procedimental en 2D",
+	"gallery.scattering": "Simulé con BUDDY_ENIGMA una atmosfera in Godot para mi proyecto final de clase preparatoria",
+
+	"buddies": "Mis compañeros desarrolladores",
+	"buddies.frablock": "Comunista",
+	"buddies.ertalite": "Empuja rocas",
+	"buddies.awkaze": "Dios para copiar y pegar",
+	"buddies.jordi": "Catalán",
+	"buddies.vexmea": "Tgirl",
+	"buddies.crafto": "Apila cajas",
+	"buddies.zowepsilon": "Furry",
+	"buddies.enigma": "Piensa en 5D",
+	"buddies.nyanmaths": "Hippie con chanclas",
+	"buddies.yapudjus": "GAAAAAATOOOOOO",
+	"buddies.axelatlantid": "Entidad",
+	"buddies.elementia": "try { desarrollador, escritor } catch() { sigue intentando }",
+	"buddies.epic": "secret chinese no sleeper build",
+	"buddies.clouser": "Crónicamente offline",
+	"buddies.snavesutit": "Una persona humana normal",
+
+	"videoplayer": "Su navegador no soporta la lectura de vídeos",
+	"translation": "No traduje esta página, mi español es demasiado inestable por desgracia :(",
+
+	"404.title": "Oops!",
+	"404.desc": "Well, it looks like you lost yourself in space, because this page doesn't exist.",
+	"404.home": "Go back to charted territory",
+	
+	"privacy.title": "Política de privacidad",
+	"privacy.forced": "Tarde o temprano tenía que escribir esto.",
+	"privacy.cookies": "Cookies",
+	"privacy.cookies.desc": [
+		"Cuando estás en este sitio, tu navegador tiene que guardar una cookie en tu dispositivo para recordar tus preferencias de tema entre páginas.",
+		"Yo nunca llego a verlas, no salen de tu dispositivo. Si quieres borrarla, limpia las cookies desde los ajustes de tu navegador."
+	],
+	"privacy.giscus.desc": [
+		"No quería gestionar cuentas ni comentarios, así que simplemente usé GISCUS_LINK para el blog.",
+		"Sí, soy un vago.",
+		"Si te conectas con tu cuenta y publicas un comentario, no puedo gestionarlos, están almacenados en Github (es decir, en Microsoft).",
+		"Así que si algo relacionado con tu cuenta de Github en este sitio te molesta, pregúntale a Microsoft. Aquí no mando yo. <small>Ni siquiera sé si esos datos se quedan dentro de la UE.</small>",
+		"También puedes editar o eliminar tus mensajes desde Github haciendo clic en el contador de comentarios en la parte superior de cada sección."
+	],
+	"privacy.logs": "Registros (logs)",
+	"privacy.logs.desc": [
+		"Registro cualquier conexión en este sitio (dirección IP, páginas consultadas, <i>user agent</i>) para detectar bots, bugs y hackers.",
+		"Para cumplir con el RGPD, los registros de conexión se conservan solo 15 días y después desaparecen en el limbo.",
+		"Nunca salen de mi servidor. <small>Y a veces ni los leo :3</small>"
+	],
+	"privacy.not": "Lo que no hago",
+	"privacy.not.sell": "No vendo tus datos",
+	"privacy.not.bet": "No apuesto tus datos en un casino",
+	"privacy.not.marble": "No grabo tus datos en mármol",
+	"privacy.not.print": "No imprimo tus datos en flyers para repartirlos por la calle",
+	"privacy.not.unattended": "No dejo tus datos desatendidos",
+	"privacy.not.toys": "No le doy a tus datos juguetes con piezas pequeñas",
+	"privacy.not.harm": "No hago nada que pueda perjudicarte de ninguna manera",
+	"privacy.rights": "Tus derechos",
+	"privacy.rights.desc1": "Gracias al RGPD, puedes pedir que tus datos sean:",
+	"privacy.rights.deleted": "Eliminados",
+	"privacy.rights.rectified": "Rectificados",
+	"privacy.rights.given": "Entregados en un formato legible",
+	"privacy.rights.dust": "Convertidos en polvo",
+	"privacy.rights.desc2": [
+		"Si quieres hacerlo, mándame un mensaje. <small>O espera 15 días a que desaparezcan solos.</small>",
+		"También puedes contactar con la AEPD o equivalente si quieres ponerte en modo serio."
+	],
+	"privacy.contact": "Contacto",
+	"privacy.contact.desc": [
+		"Si quieres hacerme preguntas, darme feedback o mandarme un meme, todos mis contactos (correo, Discord...) están arriba del todo en la <a href=\"/\">página principal</a>. Respondo en menos de un mes.",
+		"<span class=\"mobileonly\">Abre el menú lateral con el botón hamburguesa.</span>"
+	],
+	"privacy.host": "Alojado con Apache, OVH y una neurona en Gravelines (Francia)"
+}

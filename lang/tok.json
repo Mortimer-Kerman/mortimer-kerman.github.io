@@ -1,0 +1,205 @@
+{
+	"langName": "toki pona",
+	"me": "mi",
+	"maindesc": [
+		"toki. mi li jan Motime Kejaman.",
+		"mi jan pi tomo sona pi ma Kanse. tenpo ken mi la mi jan lawa pi ilo nanpa. mi weka e tomo sona wawa. tenpo ni la mi lon tomo sona pi lawa pi ilo nanpa IUT.",
+		"mi pali e wile mute. ni mute li lon poka monsi pi kulupu ilo.",
+		"mi musi e sona pali e ma weka e pali ma.",
+		"",
+		"tenpo ale la mi wile kalama Pelin."
+	],
+	"copiedUsername": "nimi jan Discord li kama e poki lipu: ",
+	"copiedLink": "nasin li kama e poki lipu",
+	"lightmode": "lukin walo",
+	"darkmode": "lukin pimeja",
+
+	"languages.process": "lawa mi ken pali e toki ni:",
+	"languages.html": "HTML/CSS (mi sona. ona li toki lawa lon ala.)",
+	"languages.toolsused": "tenpo lon ni mi kepeken e ilo ni:",
+	"languages.vscode": "VSCode (jan kulupu nasa)",
+	"languages.github": "Github (ni li nasa mute. mi sona.)",
+	"languages.libs": "poki lipu pi mute ike",
+	"languages.doc": "lipu sona mute",
+	"languages.helloworld": "toki ni la mi ken toki e toki hello world:",
+	"languages.hlsl": "HLSL (mi sona. toki HLSL la lipu li lon ala)",
+
+	"projects": "wile mi",
+	"projects.repo": "poki lawa Github",
+	"back": "monsi",
+	"copyarticle": "o nasin pi lipu sona li kama e poki lipu",
+
+	"cosmoswanderer.desc": [
+		"musi Cosmos Wanderer li musi pi lipu sona e utala lon ma weka. mi pali e ni.",
+		"sina ken lawa e ilo tawa pi ma weka. sina ken tawa insa kiwen en ike ante ni: ilo tawa ike en jaki en ilo alasa."
+	],
+	"cosmoswanderer.lowaction": "wawa lili",
+	"cosmoswanderer.highaction": "wawa suli",
+	"cosmoswanderer.desc2": [
+		"sina ken pali pona e ilo tawa li ken alasa e lukin sin li ken alasa e pali pini sin.",
+		"tenpo kama la musi li lon lipu Google Play Store pi mani ala."
+	],
+	"cosmoswanderer.maxaction": "WAWA ALE A!",
+	"cosmoswanderer.carlcasey": "kalama li tan CARLCASEY_LINK",
+
+	"spacefactory": [
+		"musi SpaceFactory li wile kulupu pi mi en BUDDY_FRABLOCK. musi li tawa tenpo Trophées NSI pi sike nanpa 2023. tenpo ni li utala pi tomo sona NSI pi ma Kanse ale.",
+		"musi li pali e toki python en poki Pygame. musi li musi pi pali suli e ma weka. sina ken pali e tomo pali sina tawa alasa en pona e mani."
+	],
+	"spacefactory.normalday": "suno pi nasa ala lon musi SpaceFactory",
+	"spacefactory.buildmenu": "lipu pali",
+	"spacefactory.opportunities": "lipu tenpo",
+	"spacefactory.bestproject": "pini utala la musi SpaceFactory li wile nanpa wan pi sike Terminale lon ma Peson.",
+	"spacefactory.website": "lipu pi utala Trophées NSI",
+
+	"planetar.desc": [
+		"ilo Planetar li ilo lili pi lipu mun. tenpo ni la mi pali e ilo.",
+		"ilo li tawa ilo Windows kepeken poki .NET. tenpo lili la sina ken pali e lipu mun kepeken ilo."
+	],
+	"planetar.screenshot": "sitelen pi ilo Planetar",
+	"planetar.maps": "sitelen pi sewi",
+	"planetar.desc2": [
+		"sina ken ante ijo mute. sina ken ante e sewi telo e kule kasi e mute pi ma suli.",
+		"",
+		"pini la ilo ken sitelen e lukin mun lon ma sijelo."
+	],
+	"planetar.exported": "lipu mun pini",
+
+	"hollowknight.desc": [
+		"Clouser's Hollow Knight physics mod est un mod Minecraft créé pour la map Minecraft Hollow Knight de Clouser.",
+		"Fait pour Minecraft Fabric 1.20.4, il ajoute plusieurs commandes et gamerules pour modifier la physique du joueur de manière à répliquer la physique de Hollow Knight.",
+		"La map est disponible au téléchargement sur MODRINTH_HOLLOWKNIGHT."
+	],
+	"hollowknight.desc2": [
+		"Dans Hollow Knight, dès que le joueur relâche les touches de déplacement, il s'arrête dans les airs et peut immédiatement commencer à aller dans une autre direction.",
+		"Le saut est également sensible à la pression. Ça veut dire que plus vous appuyez, plus vous sautez haut.",
+		"Dans certaines circonstances, le joueur a également accès à un double saut, qui lui permet de répéter le saut sensible à la pression dans les airs.",
+		"",
+		"Ce mod recrée ces effects et quelques autres."
+	],
+	"hollowknight.instantstop": "Physique d'arrêt immédiat",
+	"hollowknight.pressurejump": "Saut sensible à la pression",
+	"hollowknight.doublejump": "Double saut",
+	"hollowknight.video": "Vidéo originale de Clouser",
+	"hollowknight.map": "Lien de téléchargement de la map",
+
+	"defense.desc": [
+		"Defense est un mod Minecraft pour permettre aux joueurs de désactiver le PVP.",
+		"Disponible pour Minecraft 1.21+, il ajoute un bouton pour basculer le PVP dans l'inventaire survie."
+	],
+	"defense.desc2": "Quand il est allumé, il reste actif pour une durée configurable vous protégeant de toutes les attaques de joueurs, et une icône s'affiche à côté de votre pseudo, visible par tous les joueurs !",
+	"defense.desc3": "Ce mod a été créé à l'origine pour le youtubeur Knarfy, pour le Empty World SMP.",
+	"defense.toggle": "Le bouton d'activation",
+	"defense.icons": "Le menu de sélection des icônes",
+	"defense.video": "Vidéo de présentation de Knarfy",
+	"defense.mod": "Page Modrinth de Defense",
+
+	"mineterstellar.desc": [
+		"Mineterstellar est un mod Minecraft recréant dans Minecraft le film Interstellar, de Christopher Nolan.",
+		"Il ajoute les planètes, les combinaisons spatiales, TARS, la musique, et les environnements du film."
+	],
+	"mineterstellar.desc2": [
+		"J'ai démarré ce projet il y a plusieurs années pour Minecraft Forge 1.12.2.",
+		"Avec les années, cette version est devenue de plus en plus obsolète, et mon mod accumulait une énorme dette technique.",
+		"C'est pourquoi j'ai décidé en Août 2024 de le refaire entièrement depuis zéro pour Fabric 1.21."
+	],
+	"mineterstellar.miller": "La planète de Miller",
+	"mineterstellar.edmund": "La planète d'Edmund",
+	"mineterstellar.mann1": "La planète de Mann",
+	"mineterstellar.mann2": "TARS sur la planète de Mann",
+	"mineterstellar.mann3": "\"Putain de lâche...\"",
+	"mineterstellar.blog": "Blog de développement de Mineterstellar",
+	"mineterstellar.blog.desc": [
+		"Sur cette page, je publierai des courts articles sur l'avancée du développement de Mineterstellar.",
+		"Veuillez noter que les articles sont publiés en anglais et ne sont pas traduits."
+	],
+	"mineterstellar.curseforge": "Page Curseforge originale de Mineterstellar",
+
+	"gallery": "Galerie de trucs aléatoires",
+	"gallery.wallpaper": "Mon fond d'écran de PC (J'adore SpaceEngine)",
+	"gallery.reason": "La raison pour laquelle mon UI fait n'importe quoi",
+	"gallery.stellarsystem": "La fois où j'ai joué avec de la génération de systèmes stellaires",
+	"gallery.mountains": "Une fois j'ai fait des montagnes procédurales",
+	"gallery.robot": "Un jour j'ai fait un pitit robot mignon pour un jeu d'énigmes en 3D",
+	"gallery.tootempting": "C'était trop tentant",
+	"gallery.grass": "Preuve que je suis toujours un humain",
+	"gallery.lod": "LODs montagneux",
+	"gallery.globama": "Globama dans OpenGL",
+	"gallery.crystals": "Génération de cristaux dans Minecraft",
+	"gallery.platform": "Une petite plateforme volante pour mon robot",
+	"gallery.blackhole": "Un trou noir, moddé dans Minecraft",
+	"gallery.totally2d": "C'est une planète en 2D. OUI.",
+	"gallery.mars": "Une fois j'ai fait un site du futur sur la colonisation martienne pour l'école",
+	"gallery.jug": "Je n'ai pas créé cette merveille",
+	"gallery.atmosphere": "Expérimentations de rendu d'atmosphère procédurale en 2D",
+	"gallery.scattering": "J'ai simulé avec BUDDY_ENIGMA une atmosphère dans Godot pour mon TIPE",
+
+	"buddies": "Mes potes développeurs",
+	"buddies.frablock": "Communiste",
+	"buddies.ertalite": "Pousse des cailloux",
+	"buddies.awkaze": "Dieu du copier-coller",
+	"buddies.jordi": "Catalan",
+	"buddies.vexmea": "Tgirl",
+	"buddies.crafto": "Empile des caisses",
+	"buddies.zowepsilon": "Furry",
+	"buddies.enigma": "Pense en 5D",
+	"buddies.nyanmaths": "Hippie en claquettes",
+	"buddies.yapudjus": "CHAAAAAAAATTTT",
+	"buddies.axelatlantid": "Entité",
+	"buddies.elementia": "try { développeur, écrivain } catch() { essaie toujours }",
+	"buddies.epic": "build chinois secret sous caféine",
+	"buddies.clouser": "Ultra-déconnecté",
+	"buddies.snavesutit": "Un être humain normal",
+
+	"videoplayer": "Votre navigateur ne supporte pas la lecture de vidéos",
+	"translation": "Page traduite par BUDDY_ZOWEPSILON et BUDDY_ENIGMA :3",
+
+	"404.title": "Oups!",
+	"404.desc": "Eh bien, on dirait que vous vous êtes perdus dans l'espace, parce que cette page n'existe pas.",
+	"404.home": "Retourner en terrain connu",
+	
+	"privacy.title": "Politique de confidentialité",
+	"privacy.forced": "Fallait bien que j'écrive ça un jour.",
+	"privacy.cookies": "Cookies",
+	"privacy.cookies.desc": [
+		"Quand vous êtes sur ce site, votre navigateur doit stocker un cookie sur votre appareil pour connaître votre choix de thème et s'en rappeler entre les pages.",
+		"Je n'ai jamais l'occasion de les voir, il ne quitte jamais votre appareil. Si vous voulez le supprimer, purgez les cookies dans les paramètres de votre navigateur."
+	],
+	"privacy.giscus.desc": [
+		"Je ne voulais pas stocker de comptes et de commentaires, donc j'ai juste utilisé GISCUS_LINK pour le blog.",
+		"Oui, je suis flemmard.",
+		"Si vous voulez vous connecter avec votre compte et poster un commentaire, je ne peux pas les gérer, ils sont stockés sur Github (donc par Microsoft).",
+		"Donc si quelque chose vous embête à propos de votre compte Github sur ce site, demandez à Microsoft. C'est pas moi le patron. <small>Je ne sais même pas si ces données là restent dans l'UE.</small>",
+		"Vous pouvez également modifier ou supprimer vos messages via Github en cliquant sur le compteur de commentaire en haut des sections de commentaires."
+	],
+	"privacy.logs": "Journalisation (logs)",
+	"privacy.logs.desc": [
+		"Je journalise toutes les connections sur ce site (Adresse IP, pages consultées, <i>user agent</i>) pour détecter les bots, les bugs et les hackers.",
+		"Pour rester compatible avec le RGPD, toutes les connections journalisées sont gardées seulement 15 jours puis disparaissent dans les limbes.",
+		"Elles ne quittent jamais mon serveur. <small>Et parfois je ne les lis même pas :3</small>"
+	],
+	"privacy.not": "Ce que je ne fais pas",
+	"privacy.not.sell": "Je ne vends pas vos données",
+	"privacy.not.bet": "Je ne parie pas vos données dans un casino",
+	"privacy.not.marble": "Je ne grave pas vos données dans le marbre",
+	"privacy.not.print": "Je n'imprime pas vos données sur des flyers pour les distribuer dans la rue",
+	"privacy.not.unattended": "Je ne laisse pas vos données sans surveillance",
+	"privacy.not.toys": "Je ne donne pas à vos données des jouets avec des petites pièces",
+	"privacy.not.harm": "Je ne fais rien qui pourrait vous faire du mal de quelque manière que ce soit",
+	"privacy.rights": "Vos droits",
+	"privacy.rights.desc1": "Grâce au RGPD, vous pouvez demander à avoir vos données:",
+	"privacy.rights.deleted": "Supprimées",
+	"privacy.rights.rectified": "Rectifiées",
+	"privacy.rights.given": "Transmises à vous dans un format lisible",
+	"privacy.rights.dust": "Transformées en poussière",
+	"privacy.rights.desc2": [
+		"Si vous le voulez envoyez-moi un message. <small>Ou attendez juste 15 jours qu'elles disparaissent.</small>",
+		"Vous pouvez aussi saisir la CNIL ou équivalent si vous voulez faire mal."
+	],
+	"privacy.contact": "Contact",
+	"privacy.contact.desc": [
+		"Si vous voulez me poser des questions, me donner un retour ou m'envoyer des memes, tous mes contacts (email, Discord...) sont en haut de la <a href=\"/\">page d'accueil</a>. Je répondrai d'ici un mois.",
+		"<span class=\"mobileonly\">Ouvrez simplement le menu latéral avec le bouton hamburger.</span>"
+	],
+	"privacy.host": "Hébergé avec Apache, OVH et un neurone à Gravelines (France)"
+}

@@ -1,0 +1,205 @@
+{
+	"langName": "English",
+	"me": "Me",
+	"maindesc": [
+		"Hi, I'm Mortimer Kerman.",
+		"French student, dev on my free time, survivor of prep class, I am currently sailing in IT IUT.",
+		"Mostly backend, I spend my time on multiple projects.",
+		"I'm interested in tech, space, and terrain generation.",
+		"",
+		"Perlin noise addict."
+	],
+	"copiedUsername": "Copied Discord username to clipboard: ",
+	"copiedLink": "Copied link to clipboard",
+	"lightmode": "Light theme",
+	"darkmode": "Dark theme",
+
+	"languages.process": "Languages that my brain can process:",
+	"languages.html": "HTML/CSS (yes those aren't really programming languages)",
+	"languages.toolsused": "Tools that I bothered myself to use:",
+	"languages.vscode": "VSCode (its uncanny brother)",
+	"languages.github": "Github (wow so surprising)",
+	"languages.libs": "Too many libraries I guess",
+	"languages.doc": "A lot of documentation",
+	"languages.helloworld": "Languages where I know how to print hello world:",
+	"languages.hlsl": "HLSL (yes there is no console in HLSL)",
+
+	"projects": "My projects",
+	"projects.repo": "Github repo",
+	"back": "Back",
+	"copyarticle": "Copy article link",
+
+	"cosmoswanderer.desc": [
+		"Cosmos Wanderer is a mobile space shooter game under developpement.",
+		"You can take the control of a space ship and travel through asteroids, and many other obstacles, such as enemy ships, debris, homing missiles..."
+	],
+	"cosmoswanderer.lowaction": "Low action",
+	"cosmoswanderer.highaction": "High action",
+	"cosmoswanderer.desc2": [
+		"You can also upgrade your ship, get new skins, meet achievements...",
+		"It will be available on the Google Play Store for free."
+	],
+	"cosmoswanderer.maxaction": "MAX ACTION!",
+	"cosmoswanderer.carlcasey": "Musics by CARLCASEY_LINK",
+
+	"spacefactory": [
+		"SpaceFactory was a group project with BUDDY_FRABLOCK made for the 2023 edition of the \"Trophées NSI\", a competition between French high school computer classes.",
+		"Made in python with Pygame, it's a factory game in space, where you can build your own factory to extract and refine resources."
+	],
+	"spacefactory.normalday": "A normal day in SpaceFactory",
+	"spacefactory.buildmenu": "The build menu",
+	"spacefactory.opportunities": "Opportunities menu",
+	"spacefactory.bestproject": "SpaceFactory was elected as the best <i>Terminale</i> project of the Brittany region.",
+	"spacefactory.website": "Trophées NSI official website",
+
+	"planetar.desc": [
+		"Planetar is a small WIP planet map generation tool.",
+		"Made in Java with Swing and FlatLaf, it allows you to generate planet maps in real time through the GPU."
+	],
+	"planetar.screenshot": "Planetar, the screenshot",
+	"planetar.maps": "Height map",
+	"planetar.desc2": [
+		"You can parameter a lot of aspects, like sea level, vegetation color, mountains amount...",
+		"",
+		"Comes with a 3D view of the planet."
+	],
+	"planetar.exported": "An example of exported map",
+
+	"hollowknight.desc": [
+		"Clouser's Hollow Knight physics mod is a Minecraft mod made for Clouser's Hollow Knight Minecraft map.",
+		"Made for Minecraft Fabric 1.20.4, it adds multiple commands and gamerules to edit player's physics in order to replicate Hollow Knight's physics.",
+		"The map is available for download on MODRINTH_HOLLOWKNIGHT."
+	],
+	"hollowknight.desc2": [
+		"In Hollow Knight, as soon as the player releases movement keys, they stops mid-air, and can immediately start to move in another direction.",
+		"Also, the jump is pressure sensitive. It means that the longer you press it, the higher you go.",
+		"In some circumstances, the player also has a double jump ability, which allows them to repeat the pressure sensitive jump mid-air.",
+		"",
+		"This mod recreates these effects and some more."
+	],
+	"hollowknight.instantstop": "Instant stop physics",
+	"hollowknight.pressurejump": "Pressure sensitive jump",
+	"hollowknight.doublejump": "Double jump",
+	"hollowknight.video": "Clouser's original video",
+	"hollowknight.map": "Official map download",
+
+	"defense.desc": [
+		"Defense is a Minecraft mod to allow players to disable PVP.",
+		"Available for Minecraft 1.21+, it provides a PVP toggle button in the survival player inventory."
+	],
+	"defense.desc2": "When enabled, it stays on for a configurable amount of time, protecting you from any player attack, and an icon is displayed right to your username, visible to any player!",
+	"defense.desc3": "This mod was originally made for the youtuber Knarfy, for the Empty World SMP.",
+	"defense.toggle": "The toggle button",
+	"defense.icons": "The icons selection menu",
+	"defense.video": "Knarfy's presentation video",
+	"defense.mod": "Defense Modrinth page",
+
+	"mineterstellar.desc": [
+		"Mineterstellar is a Minecraft mod reprducing the 2014 Christopher Nolan's Interstellar movie into Minecraft.",
+		"It adds planets, space suits, TARS, music, and environments from the movie."
+	],
+	"mineterstellar.desc2": [
+		"I started this project many years ago for Minecraft Forge 1.12.2.",
+		"As the time passed, this version became more and more deprecated, and my mod was getting a huge technical debt.",
+		"That's why I decided in August 2024 to remake it entirely from scratch for Fabric 1.21."
+	],
+	"mineterstellar.miller": "Miller's planet",
+	"mineterstellar.edmund": "Edmund's planet",
+	"mineterstellar.mann1": "Mann's planet",
+	"mineterstellar.mann2": "TARS on Mann's planet",
+	"mineterstellar.mann3": "\"You fucking coward...\"",
+	"mineterstellar.blog": "Mineterstellar dev blog",
+	"mineterstellar.blog.desc": [
+		"On this page, I'll publish short articles about Mineterstellar's development progress.",
+		"Please note that the articles are published in english and are not translated."
+	],
+	"mineterstellar.curseforge": "Original Mineterstellar Curseforge page",
+
+	"gallery": "Random stuff gallery",
+	"gallery.wallpaper": "My PC wallpaper (I love SpaceEngine)",
+	"gallery.reason": "The reason why my UI has flaws",
+	"gallery.stellarsystem": "That one time I played with stellar system generation",
+	"gallery.mountains": "Once, I generated procedural mountains",
+	"gallery.robot": "One day I made a cute lil robot for a 3D puzzle game",
+	"gallery.tootempting": "That was too tempting",
+	"gallery.grass": "Proof that I'm still a human",
+	"gallery.lod": "Mountainous LODs",
+	"gallery.globama": "Globama in OpenGL",
+	"gallery.crystals": "Crystal generation in Minecraft",
+	"gallery.platform": "A tiny flying platform for my robot",
+	"gallery.blackhole": "A black hole, modded into Minecraft",
+	"gallery.totally2d": "This is a 2D planet. YES.",
+	"gallery.mars": "Once I made a mars colonization future website for school",
+	"gallery.jug": "I sadly didn't made this",
+	"gallery.atmosphere": "Experimentations with procedural 2D atmospheric rendering",
+	"gallery.scattering": "I simulated with BUDDY_ENIGMA an atmosphere in Godot for my prep class final project",
+	
+	"buddies": "My dev buddies",
+	"buddies.frablock": "Communist",
+	"buddies.ertalite": "Pushing rocks",
+	"buddies.awkaze": "Copy/paste god",
+	"buddies.jordi": "Catalan",
+	"buddies.vexmea": "Tgirl",
+	"buddies.crafto": "Box stacker",
+	"buddies.zowepsilon": "Furry",
+	"buddies.enigma": "Thinking in 5D",
+	"buddies.nyanmaths": "Hippie in flip flops",
+	"buddies.yapudjus": "CAAAAAAAAATTTT",
+	"buddies.axelatlantid": "Entity",
+	"buddies.elementia": "try { developper, writer } catch() { still trying }",
+	"buddies.epic": "secret chinese no sleeper build",
+	"buddies.clouser": "Chronically offline",
+	"buddies.snavesutit": "A normal human person",
+
+	"videoplayer": "Your navigator does not support video playing",
+	"translation": "",
+
+	"404.title": "Oops!",
+	"404.desc": "Well, it looks like you lost yourself in space, because this page doesn't exist.",
+	"404.home": "Go back to charted territory",
+	
+	"privacy.title": "Privacy Policy",
+	"privacy.forced": "I was bound to write that down eventually.",
+	"privacy.cookies": "Cookies",
+	"privacy.cookies.desc": [
+		"When you're on this website, your browser has to store a cookie on your device to know your theme preferences and remember them across pages.",
+		"I never get to see them, it never leaves your device. If you want to delete it, just wipe your cookies in your browser settings."
+	],
+	"privacy.giscus.desc": [
+		"I did not want to store accounts and comments, so I just used GISCUS_LINK for the blog.",
+		"Yes, I'm lazy.",
+		"If you log in with your account and post a comment, I can't manage them, they are stored on Github (so by Microsoft).",
+		"So if something is bothering you about your Github account on this website, ask questions to Microsoft. I'm not the boss here. <small>I don't even know if this specific data stays in the EU.</small>",
+		"Also, you can edit or delete your messages through Github by clicking on the comments count on top of any comment section."
+	],
+	"privacy.logs": "Logs",
+	"privacy.logs.desc": [
+		"I'm logging any connection on this website (IP address, consulted pages, user agent) to detect, bots, bugs, and hackers.",
+		"To stay GDPR-compliant, any connection log on this website is kept only 15 days and then gets lost in the limbo after this point.",
+		"They never leave my server. <small>And sometimes I never read them :3</small>"
+	],
+	"privacy.not": "What I don't do",
+	"privacy.not.sell": "I'm not selling your data",
+	"privacy.not.bet": "I don't bet your data in a casino",
+	"privacy.not.marble": "I don't engrave your data in marble",
+	"privacy.not.print": "I don't print your data on flyers to distribute them in the street",
+	"privacy.not.unattended": "I don't leave your data unattended",
+	"privacy.not.toys": "I don't give your data toys with small parts",
+	"privacy.not.harm": "I don't do anything that could remotely harm you",
+	"privacy.rights": "Your rights",
+	"privacy.rights.desc1": "Thanks to the GDPR, you can ask to get your data:",
+	"privacy.rights.deleted": "Deleted",
+	"privacy.rights.rectified": "Rectified",
+	"privacy.rights.given": "Given to you in a readable format",
+	"privacy.rights.dust": "Turned into dust",
+	"privacy.rights.desc2": [
+		"If you want to do so, just send me a message. <small>Or just wait 15 days for them to disappear.</small>",
+		"You can also contact the ICO/FTC/whatever if you want to be harsh."
+	],
+	"privacy.contact": "Contact",
+	"privacy.contact.desc": [
+		"If you want to ask me questions, give me feedback or send me a meme, all of my socials (mail, Discord...) are on top of the <a href=\"/\">main page</a>. I'll answer within a month.",
+		"<span class=\"mobileonly\">Just open the side menu with the hamburger button.</span>"
+	],
+	"privacy.host": "Hosted with Apache, OVH and one braincell in Gravelines (France)"
+}

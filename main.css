@@ -220,7 +220,14 @@ a:hover {
 @media only screen and (min-width: 769px)
 {
 	.mobileonly {
-		visibility: collapse;
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px)
+{
+	.nomobile {
+		display: none;
 	}
 }
 
@@ -683,7 +690,7 @@ option:checked {
 	width: 20px;
 	height: 15px;
 	left: 7px;
-	top: 14px;
+	top: 13px;
 	border-radius: 2px;
 	user-select: none;
 	pointer-events: none;
@@ -971,8 +978,9 @@ use {
 	left: 30px;
 	bottom: 30px;
 	font-size: 2vh;
+	font-weight: var(--font-weight);
 	justify-content: center;
-	display: flex;
+	display: block;
 	transition: 0.2s;
 
 	-webkit-animation: fadeout 0.5s;
@@ -987,14 +995,9 @@ use {
 @media only screen and (max-width: 768px)
 {
 	#no-js {
-		width: 90%;
+		width: 85%;
 		left: 5%;
 	}
-}
-
-#no-js::after {
-	content: "JavaScript is disabled!\AThis means you can't change page language, theme,\A copy sections URLs or open images/videos.";
-	white-space: pre;
 }
 
 @media only screen and (max-width: 768px)
@@ -1002,10 +1005,6 @@ use {
 	#no-js {
 		-webkit-animation-delay: 7s;
 		animation-delay: 7s;
-	}
-
-	#no-js::after {
-		content: "JavaScript is disabled!\AThis means you can't change page language, theme,\A copy sections URLs, open the lateral menu or open images/videos.";
 	}
 }
 
